@@ -5,6 +5,11 @@
   flex-direction: column;
   align-items: center;
 }
+@media screen and (max-width: 1240px) {
+  .ActionVedio-wrapper {
+    padding: 0 2rem;
+  }
+}
 
 .ActionVedio-Container {
   background-color: #ffffff;
