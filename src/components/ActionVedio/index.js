@@ -6,6 +6,7 @@ const ActionVedio = () => {
       <h4>See Ekai in action</h4>
       <div className="ActionVedio-Container">
         <svg
+          className="vedioPlay-circle"
           width="120"
           height="120"
           viewBox="0 0 120 120"
@@ -14,6 +15,7 @@ const ActionVedio = () => {
         >
           <circle id="Ellipse 30" cx="60" cy="60" r="60" fill="#C87A3D" />
         </svg>
+
         <svg
           className="VideoPlay-icon"
           width="36"

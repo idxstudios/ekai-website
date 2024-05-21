@@ -26,8 +26,11 @@
   line-height: normal;
   margin: 2.5rem 0 3.5rem;
 }
+.vedioPlay-circle {
+  position: relative;
+}
 .VideoPlay-icon {
   position: absolute;
-  left: 35.125rem;
+  /* left: 35.125rem; */
   top: 21.875rem;
 }
