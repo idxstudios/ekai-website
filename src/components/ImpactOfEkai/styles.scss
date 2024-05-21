@@ -1,6 +1,7 @@
 .impact-of-ekai-cont {
   max-width: 72.25rem;
-  margin: auto;
+  margin-left: 2rem;
+  margin-right: 2rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
   text-align: center;
@@ -49,5 +50,11 @@
 
   .mt-112 {
     margin-top: 7rem;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .impact-of-ekai-cont {
+    margin: auto;
   }
 }
