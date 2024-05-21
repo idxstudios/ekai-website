@@ -11,10 +11,10 @@ function App() {
     <div className="app">
       <EkaiIntro />
       <WhyEkai />
+      <ImpactOfEkai />
       <EkaiWorkflowComponent />
       <ActionVedio />
       <EkaiSecurityFocus />
-      <ImpactOfEkai />
     </div>
   );
 }

@@ -8,19 +8,46 @@
 
   h4 {
     color: #7b4a23;
-    font-size: 1.9375rem;
+    font-size: 1.5rem;
+    margin: 32px 0 2.5rem;
     font-weight: 600;
     line-height: normal;
-    margin: 5rem 0 3.5rem;
+    text-align: center;
+    @media screen and (min-width: 767px) {
+      font-size: 1.9375rem;
+      margin: 2.5rem 0 3.5rem;
+    }
   }
   .List-Container {
     display: flex;
-    column-gap: 3rem;
-    padding: 3rem;
-    max-width: 60rem;
+    padding: 1rem;
+    row-gap: 2rem;
     align-items: center;
-    border-radius: 2.5rem;
+    border-radius: 1.5rem;
     background-color: #fff;
+    flex-direction: column;
+    max-width: calc(100% - 64px);
+    text-align: center;
+
+    svg {
+      width: 6.25rem;
+      height: 6.25rem;
+    }
+
+    @media screen and (min-width: 767px) {
+      flex-direction: row;
+      max-width: 60rem;
+      row-gap: 0;
+      column-gap: 3rem;
+      border-radius: 2.5rem;
+      padding: 3rem;
+      text-align: left;
+      svg {
+        width: 7.5rem;
+        height: 7.5rem;
+      }
+    }
+
     &:not(:last-child) {
       margin-bottom: 3.5rem;
     }
