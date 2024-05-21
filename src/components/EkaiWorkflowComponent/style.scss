@@ -1,0 +1,18 @@
+.workflow-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #faf6ef;
+  flex-direction: column;
+  align-items: center;
+
+  h4 {
+    color: #7b4a23;
+    font-size: 31px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 40px 0 64px;
+  }
+  .gif-container {
+    margin: 0 0 40px;
+  }
+}
