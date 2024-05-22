@@ -10,10 +10,6 @@
     margin-right: 2rem;
   }
 
-  .left-cont {
-    width: 43.77%;
-  }
-
   .app-name {
     color: #141613;
     font-size: 2.375rem;
@@ -27,7 +23,7 @@
 
   .left-cont-heading {
     color: #000;
-    font-size: 3.0625rem;
+    font-size: 2.0625rem;
     font-weight: 700;
     line-height: normal;
     margin-top: 3.5rem;
@@ -39,7 +35,6 @@
     font-size: 1.25rem;
     line-height: normal;
     margin-bottom: 4.5rem;
-    max-width: 21.5rem;
   }
 
   .left-cont-button {
@@ -58,18 +53,34 @@
   .right-cont {
     display: none;
   }
+}
 
-  .right-cont img {
-    width: 100%;
-    height: 100%;
+@media screen and (min-width: 426px) {
+  .ekai-intro-main-cont {
+    .left-cont-heading {
+      font-size: 3.0625rem;
+    }
   }
 }
 
 @media screen and (min-width: 880px) {
   .ekai-intro-main-cont {
+    .left-cont {
+      width: 43.77%;
+    }
+
+    .left-cont-subheading {
+      max-width: 21.5rem;
+    }
+
     .right-cont {
       display: block;
       width: 54.15%;
+    }
+
+    .right-cont img {
+      width: 100%;
+      height: 100%;
     }
   }
   /* styles.css */

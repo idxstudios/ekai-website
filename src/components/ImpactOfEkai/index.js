@@ -10,7 +10,7 @@ export const ImpactOfEkai = () => {
     <div className="impact-of-ekai-cont">
       <h2 className="ekai-cont-head">Impact Ekai can make</h2>
       <h3 className="ekai-cont-sub-head">Add hours for critical thinking</h3>
-      <div className="flex-row flex-container">
+      <div className="flex-container">
         <div className="imapct-ekai-card">
           <div className="img-container">
             <img src={chat} alt="Chat Img" />
@@ -33,7 +33,7 @@ export const ImpactOfEkai = () => {
       <h3 className="ekai-cont-sub-head mt-112">
         Reduce blockers for faster decision making
       </h3>
-      <div className="flex-row flex-container">
+      <div className="flex-container">
         <div className="imapct-ekai-card">
           <div className="img-container">
             <img src={ooo} alt="Chat Img" />
