@@ -1,0 +1,76 @@
+.SecurityCom-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #faf6ef;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem 5rem 1rem;
+
+  h4 {
+    color: #7b4a23;
+    font-size: 1.5rem;
+    margin: 32px 0 2.5rem;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    @media screen and (min-width: 767px) {
+      font-size: 1.9375rem;
+      margin: 2.5rem 0 3.5rem;
+    }
+  }
+  .List-Container {
+    display: flex;
+    padding: 2rem;
+    row-gap: 2rem;
+    align-items: center;
+    border-radius: 1.5rem;
+    background-color: #fff;
+    flex-direction: column;
+    max-width: 60rem;
+    text-align: center;
+
+    svg {
+      width: 6.25rem;
+      height: 6.25rem;
+    }
+
+    @media screen and (min-width: 767px) {
+      flex-direction: row;
+      row-gap: 0;
+      column-gap: 3rem;
+      border-radius: 2.5rem;
+      padding: 3rem;
+      text-align: left;
+      svg {
+        width: 7.5rem;
+        height: 7.5rem;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 3.5rem;
+    }
+    h5 {
+      color: #000;
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 1.25rem;
+    }
+    p {
+      color: var(--text-primary, rgba(0, 0, 0, 0.87));
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.15px;
+    }
+  }
+
+  @media screen and (min-width: 426px) {
+    padding: 0 2rem 5rem 2rem;
+  }
+
+  @media screen and (min-width: 1240px) {
+    padding: 0 0 5rem 0;
+  }
+}

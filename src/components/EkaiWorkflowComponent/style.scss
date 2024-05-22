@@ -1,0 +1,28 @@
+.workflow-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #faf6ef;
+  flex-direction: column;
+  align-items: center;
+
+  h4 {
+    color: #7b4a23;
+    font-size: 1.9375rem;
+    font-size: 1.5rem;
+    margin: 32px 0 2.5rem;
+    line-height: normal;
+    @media screen and (min-width: 767px) {
+      font-size: 1.9375rem;
+      margin: 2.5rem 0 3.5rem;
+    }
+  }
+
+  .gif-container {
+    max-width: 72.25rem;
+    margin: 0 0 2.5rem;
+  }
+
+  .gif-container img {
+    width: 100%;
+  }
+}
