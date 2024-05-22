@@ -10,7 +10,7 @@ const ActionVedio = () => {
     const fetchVideoUrl = async () => {
       const videoRef = ref(
         storage,
-        "gs://eaki-website.appspot.com/Ekai_Teaser.mp4"
+        process.env.REACT_APP_FIREBASE_STORAGE_BUCKET_VIDEO
       );
       const url = await getDownloadURL(videoRef);
       setVideoUrl(url);

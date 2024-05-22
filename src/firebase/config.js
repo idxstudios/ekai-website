@@ -3,13 +3,13 @@ import { initializeApp } from "firebase/app";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBSzFzG85dqHlUWqBO1QbOiwnWORmoHHFs",
-  authDomain: "eaki-website.firebaseapp.com",
-  projectId: "eaki-website",
-  storageBucket: "eaki-website.appspot.com",
-  messagingSenderId: "640640474042",
-  appId: "1:640640474042:web:4da34a63a0ea7ef3cfdb83",
-  measurementId: "G-G7NXCY33V1",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGEING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
