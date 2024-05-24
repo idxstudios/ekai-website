@@ -1,0 +1,175 @@
+.form-dialog {
+  .MuiPaper-root {
+    max-width: 35rem;
+    width: 100%;
+    margin: 1rem;
+    padding: 10px 16px 50px 16px;
+    border-radius: 32px;
+  }
+
+  .MuiDialogContent-root {
+    padding: 0;
+  }
+
+  .MuiDialogTitle-root {
+    padding: 0;
+  }
+
+  .MuiDialogContentText-root {
+    max-width: 24.5rem;
+    width: 100%;
+    padding: 0;
+  }
+
+  .form-dialog-head {
+    font-family: "Montserrat", sans-serif;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .MuiFormLabel-root {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .MuiInputBase-input {
+    cursor: pointer;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .MuiFormLabel-root.Mui-focused {
+    color: #c87c3c;
+  }
+
+  .MuiOutlinedInput-root fieldset {
+    cursor: pointer;
+    border-radius: 12px;
+  }
+
+  .MuiOutlinedInput-root.Mui-focused fieldset {
+    border-color: black;
+  }
+
+  .MuiOutlinedInput-root.Mui-focused fieldset {
+    border-color: #c87c3c;
+  }
+
+  .name {
+    margin-top: 40px;
+    margin-bottom: 32px;
+  }
+
+  .email {
+    margin-bottom: 64px;
+  }
+
+  .MuiButtonBase-root {
+    padding: 12px 24px;
+    border-radius: 40px;
+    color: #fff;
+    background: #343932;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.46px;
+    text-transform: uppercase;
+    box-shadow: none;
+
+    &:hover {
+      color: #fff;
+      background: #343932;
+      box-shadow: none;
+    }
+
+    path {
+      fill: white;
+    }
+  }
+
+  .MuiButton-root.Mui-disabled {
+    color: rgba(0, 0, 0, 0.38) !important;
+    path {
+      fill: black;
+      fill-opacity: 0.38;
+    }
+  }
+
+  .forward-arrow {
+    margin-left: 5px;
+  }
+
+  .MuiFormHelperText-root {
+    color: #d32f2f;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .mr-10 {
+    margin-right: 10px;
+  }
+
+  .chip-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 40px;
+    margin-bottom: 64px;
+  }
+
+  .MuiButtonBase-root.MuiChip-root {
+    padding: 12px 3px;
+    border-radius: 100px;
+    border: 1px solid #616161;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: none;
+  }
+
+  .form-dialog-subhead {
+    color: rgba(0, 0, 0, 0.87);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 16px;
+  }
+
+  .img-container {
+    margin-top: 40px;
+    margin-bottom: 64px;
+  }
+
+  .cancel-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 36px;
+  }
+
+  @media screen and (min-width: 485px) {
+    .MuiPaper-root {
+      padding: 24px 0 84px 0;
+    }
+
+    .MuiDialogContentText-root {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .MuiDialogTitle-root {
+      margin: 0 24px;
+    }
+  }
+}

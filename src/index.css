@@ -24,3 +24,11 @@ body {
 .items-center {
   align-items: center;
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.align-center {
+  text-align: center;
+}
