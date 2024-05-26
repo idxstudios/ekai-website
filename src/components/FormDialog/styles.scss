@@ -173,3 +173,19 @@
     }
   }
 }
+
+.snackbar.MuiSnackbar-root {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.snackbar {
+  .MuiSnackbarContent-root {
+    background-color: #fff;
+    color: #d32f2f;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
