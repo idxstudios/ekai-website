@@ -3,9 +3,11 @@ import "./styles.scss";
 import logo from "../../assets/ekai-logo.svg";
 import workplaceImg from "../../assets/workplace-img-one.svg";
 import workplaceGirl from "../../assets/workplace-img-girl.svg";
+import { FormDialog } from "../FormDialog";
 
 export const EkaiIntro = () => {
   const [showFirstImage, setShowFirstImage] = useState(true);
+  const [openDialog, setOpenDialog] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -28,17 +30,23 @@ export const EkaiIntro = () => {
           <p className="left-cont-subheading">
             Let AI work for you while you can focus on what is important
           </p>
-          <button className="left-cont-button">I am interested !</button>
+          <button
+            className="left-cont-button"
+            onClick={() => setOpenDialog(true)}
+          >
+            I am interested !
+          </button>
+          <FormDialog open={openDialog} setOpenDialog={setOpenDialog} />
         </div>
         <div className="right-cont">
-          <div class="large-image-container">
+          <div className="large-image-container">
             <img src={workplaceImg} alt="Work Place Img" />
 
-            <div class="animation-container">
+            <div className="animation-container">
               {showFirstImage ? (
                 <svg
                   id="svg1"
-                  class="image first"
+                  className="image first"
                   xmlns="http://www.w3.org/2000/svg"
                   width="47"
                   height="79"

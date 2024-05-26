@@ -102,3 +102,19 @@ export const securityListData = [
     <br><br> Regular audits are conducted to review and update user permissions, further strengthening data security`,
   },
 ];
+
+export const OgSizeList = [
+  { id: 1, value: "0-50" },
+  { id: 2, value: "50-200" },
+  { id: 3, value: "500-5000" },
+  { id: 4, value: ">5000" },
+  { id: 5, value: "Individual Contributor" },
+];
+
+export const JobFunctionList = [
+  { id: 1, value: "Product" },
+  { id: 2, value: "Technology" },
+  { id: 3, value: "Finance" },
+  { id: 4, value: "Sales and Marketing" },
+  { id: 5, value: "Others" },
+];
