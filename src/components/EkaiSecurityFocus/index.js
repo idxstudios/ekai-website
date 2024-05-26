@@ -7,7 +7,7 @@ const EkaiSecurityFocus = () => {
       <h4>Data security is top priority</h4>
       {securityListData.map((listData) => {
         return (
-          <div className="List-Container">
+          <div className="List-Container" key={listData.title}>
             <div dangerouslySetInnerHTML={{ __html: listData.svg }}></div>
             <div className="title-dis-cont">
               <h5>{listData.title}</h5>
