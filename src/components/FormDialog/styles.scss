@@ -3,8 +3,8 @@
     max-width: 35rem;
     width: 100%;
     margin: 1rem;
-    padding: 10px 16px 50px 16px;
-    border-radius: 32px;
+    padding: 0.625rem 1rem 3.125rem 1rem;
+    border-radius: 2rem;
   }
 
   .MuiDialogContent-root {
@@ -24,7 +24,7 @@
   .form-dialog-head {
     font-family: "Montserrat", sans-serif;
     color: rgba(0, 0, 0, 0.87);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
     line-height: normal;
   }
@@ -36,7 +36,7 @@
   .MuiInputBase-input {
     cursor: pointer;
     font-family: Montserrat;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -48,7 +48,7 @@
 
   .MuiOutlinedInput-root fieldset {
     cursor: pointer;
-    border-radius: 12px;
+    border-radius: 0.75rem;
   }
 
   .MuiOutlinedInput-root.Mui-focused fieldset {
@@ -60,24 +60,24 @@
   }
 
   .name {
-    margin-top: 40px;
-    margin-bottom: 32px;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
   }
 
   .email {
-    margin-bottom: 64px;
+    margin-bottom: 4rem;
   }
 
   .MuiButtonBase-root {
-    padding: 12px 24px;
-    border-radius: 40px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2.5rem;
     color: #fff;
     background: #343932;
     font-family: Montserrat;
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 26px;
+    line-height: 1.625rem;
     letter-spacing: 0.46px;
     text-transform: uppercase;
     box-shadow: none;
@@ -102,7 +102,7 @@
   }
 
   .forward-arrow {
-    margin-left: 5px;
+    margin-left: 0.3125rem;
   }
 
   .MuiFormHelperText-root {
@@ -114,25 +114,25 @@
   }
 
   .mr-10 {
-    margin-right: 10px;
+    margin-right: 0.625rem;
   }
 
   .chip-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-top: 40px;
-    margin-bottom: 64px;
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
   }
 
   .MuiButtonBase-root.MuiChip-root {
-    padding: 12px 3px;
-    border-radius: 100px;
+    padding: 0.75rem 0.1875rem;
+    border-radius: 6.25rem;
     border: 1px solid #616161;
     background-color: transparent;
     color: rgba(0, 0, 0, 0.87);
     font-family: Montserrat;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: normal;
     text-transform: none;
@@ -141,26 +141,26 @@
   .form-dialog-subhead {
     color: rgba(0, 0, 0, 0.87);
     font-family: Montserrat;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: normal;
-    margin-top: 16px;
+    margin-top: 1rem;
   }
 
   .img-container {
-    margin-top: 40px;
-    margin-bottom: 64px;
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
   }
 
   .cancel-button-container {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 36px;
+    margin-bottom: 2.25rem;
   }
 
   @media screen and (min-width: 485px) {
     .MuiPaper-root {
-      padding: 24px 0 84px 0;
+      padding: 1.5rem 0 5.25rem 0;
     }
 
     .MuiDialogContentText-root {
@@ -169,7 +169,7 @@
     }
 
     .MuiDialogTitle-root {
-      margin: 0 24px;
+      margin: 0 1.5rem;
     }
   }
 }
@@ -184,7 +184,7 @@
     background-color: #fff;
     color: #d32f2f;
     font-family: Montserrat;
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 600;
     line-height: normal;
   }
