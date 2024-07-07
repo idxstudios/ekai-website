@@ -1,0 +1,113 @@
+/* src/Footer.scss */
+.footer {
+    position: relative;
+    background-color: #2A2A2A;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+
+    // display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 860px;
+        margin: 0 auto;
+        height: 208px;
+
+        .logo {
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 50px;
+                margin-right: 20px;
+
+            }
+
+            span {
+                font-size: 45px;
+                font-weight: bold;
+                color: #fff;
+                letter-spacing: -3px;
+            }
+        }
+
+        .social-media {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            span {
+                margin-bottom: 10px;
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            .icons {
+                display: flex;
+                gap: 15px;
+
+                a {
+                    font-size: 20px;
+                    color: #fff;
+                    transition: color 0.3s;
+
+                    &:hover {
+                        color: #bf6a2e;
+                    }
+
+                    img {
+                        width: 30px;
+                    }
+                }
+            }
+        }
+
+        .contact {
+            button {
+                background-color: #fff;
+                color: #C87C3C;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 35px;
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                width: 176px;
+                height: 51px;
+            }
+        }
+    }
+
+    .back-to-top {
+        margin-top: 20px;
+        position: absolute;
+        right: 20px;
+        letter-spacing: 1px;
+        top: 5px;
+        // text-decoration: none;
+        a {
+
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 15px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            img {
+                width: 20px;
+            }
+        }
+    }
+}

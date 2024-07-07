@@ -1,0 +1,54 @@
+main {
+    .Elevate {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1150px;
+        margin: auto;
+        gap: 20px;
+        margin-top: 100px;
+
+        &.row {
+            flex-direction: row;
+            // Row direction for Elevate
+        }
+
+        &.row-rev {
+            flex-direction: row-reverse;
+            // Row-reverse direction for Elevate
+        }
+
+        .left {
+            background: #FAF6EF;
+            width: 670px;
+            height: 416px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 16px;
+
+            img {
+                width: 424px;
+                height: 289px;
+            }
+        }
+
+        .right {
+            text-align: left;
+            width: 426px; // Added width
+
+            h1 {
+                font-weight: 700;
+                font-size: 32px;
+            }
+
+            p {
+                line-height: 27px;
+                width: 426px;
+                font-size: 20px;
+                margin-top: 20px;
+                color: #575757;
+            }
+        }
+    }
+}
