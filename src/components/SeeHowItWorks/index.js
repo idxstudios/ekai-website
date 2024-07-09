@@ -23,11 +23,11 @@ const Integration = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           const timers = [
-            setTimeout(() => setStep(1), 5000),
-            setTimeout(() => setStep(2), 10000),
-            setTimeout(() => setStep(3), 15000),
-            setTimeout(() => setStep(4), 20000),
-            setTimeout(() => setStep(5), 25000),
+            setTimeout(() => setStep(1), 500),
+            setTimeout(() => setStep(2), 1000),
+            setTimeout(() => setStep(3), 1500),
+            setTimeout(() => setStep(4), 2000),
+            setTimeout(() => setStep(5), 2500),
           ];
           return () => timers.forEach(timer => clearTimeout(timer));
         }
@@ -58,6 +58,10 @@ const Integration = () => {
         <img className="icon-border" src={row13} alt="Icon 3" />
         <img className="icon-border" src={row14} alt="Icon 4" />
         <img className="icon-border" src={row15} alt="Icon 5" />
+        <span className='hori'></span>
+        <span className='verti1'></span>
+        <span className='verti2'></span>
+        <span className='verti3'></span>
       </div>
       <div className={`main-icon ${step >= 2 ? 'visible' : ''}`}>
         <img className="icon-border" src={logo} alt="Main Icon" />
@@ -67,6 +71,15 @@ const Integration = () => {
         <img className="icon-border" src={row22} alt="Teams" />
         <img className="icon-border" src={row23} alt="Chrome" />
         <img className="icon-border" src={row24} alt="Others" />
+        <span className='hori'></span>
+        <span className='verti1'></span>
+        <span className='verti2'></span>
+        {/* <span className='verti3'></span> */}
+        <span className='hori2'></span>
+        <span className='verti12'></span>
+        <span className='verti22'></span>
+        {/* <span className='verti32'></span> */}
+        <span className='verti42'></span>
       </div>
       <div className={`output ${step >= 4 ? 'visible' : ''}`}>
         <div className="output-icon">

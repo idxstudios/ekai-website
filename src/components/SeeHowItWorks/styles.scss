@@ -6,10 +6,52 @@
 
   .top-icons,
   .main-icon,
-  .bottom-icons,
   .output {
     opacity: 0;
     transition: opacity 0.5s ease-in;
+  }
+
+  .top-icons{
+    position: relative;
+  
+    .hori{
+      border: 3px dashed #C1773A;
+      border-radius: 0px 0px 10px 10px;
+      width: 520px;
+      height: 30px;
+      border-top: none;
+      position: absolute;
+      top: 90px;
+    }
+    .verti1{
+      border: 2px dashed #C1773A;
+      border-radius: 0px 0px 10px 10px;
+      width: 1px;
+      height: 30px;
+      border-top: none;
+      position: absolute;
+      left: 180px;
+      top: 90px;
+    }
+    .verti2{
+      border: 2px dashed #C1773A;
+      border-radius: 0px 0px 10px 10px;
+      width: 1px;
+      height: 90px;
+      border-top: none;
+      position: absolute;
+      top: 90px;
+    }
+    .verti3{
+      border: 2px dashed #C1773A;
+      border-radius: 0px 0px 10px 10px;
+      width: 1px;
+      height: 30px;
+      border-top: none;
+      position: absolute;
+      right: 180px;
+      top: 90px;
+    }
   }
 
   .visible {
@@ -18,14 +60,14 @@
 }
 
 .top-icons,
-.bottom-icons {
+.output {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
 
 .top-icons img,
-.bottom-icons img {
+.output img {
   margin: 0 10px;
   width: 100px;
   height: 100px;
@@ -33,10 +75,9 @@
   transition: border 0.5s ease-in-out;
 }
 
-.bottom-icons img {
-  margin: 0 10px;
-  width: 170px;
-  height: 170px;
+.output img {
+  width: 70px;
+  height: 70px;
 }
 
 .main-icon {
@@ -48,25 +89,6 @@
   height: 160px;
   border: 3px solid transparent;
   transition: border 0.5s ease-in-out;
-}
-
-.output {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-
-  .output-icon {
-    margin: 0 20px;
-    width: 70px;
-    height: 70px;
-  }
-
-  .output-icon img {
-    width: 70px;
-    height: 70px;
-    border: 3px solid transparent;
-    transition: border 0.5s ease-in-out;
-  }
 }
 
 @keyframes fadeIn {
@@ -81,73 +103,89 @@
 }
 
 .integration {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .top-icons,
-  .main-icon,
-  .bottom-icons,
-  .output {
-    opacity: 0;
-    transition: opacity 0.5s ease-in;
-  }
-
   .visible {
     opacity: 1;
     animation: fadeIn 1s ease-out;
   }
-}
 
-.top-icons,
-.bottom-icons {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
 
-.top-icons img,
-.bottom-icons img {
-  margin: 0 10px;
-  width: 100px;
-  height: 100px;
-  border: 3px solid transparent;
-  transition: border 0.5s ease-in-out;
-}
 
-.bottom-icons img {
-  margin: 0 10px;
-  width: 170px;
-  height: 170px;
-}
+  .bottom-icons{
+      position: relative;
+    .hori{
+      border: 3px dashed #C1773A;
+      border-radius: 0px 0px 10px 10px;
+      width: 800px;
+      height: 30px;
+      border-top: none;
+      position: absolute;
+      top: 100px;
+      left: 100px;
+    }
+    .verti1{
+      border: 2px dashed #C1773A;
+      border-radius: 0px 0px 10px 10px;
+      width: 1px;
+      height: 30px;
+      border-top: none;
+      position: absolute;
+      left: 370px;
+      top: 100px;
+    
+    }
+    .verti2{
+      border: 2px dashed #C1773A;
+      border-radius: 0px 0px 10px 10px;
+      width: 1px;
+      height: 30px;
+      border-bottom: none;
+      position: absolute;
+      left: 635px;
+      top: 100px;
+    }
 
-.main-icon {
-  margin: 20px 0;
-}
-
-.main-icon img {
-  width: 160px;
-  height: 160px;
-  border: 3px solid transparent;
-  transition: border 0.5s ease-in-out;
-}
-
-.output {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-
-  .output-icon {
-    margin: 0 20px;
-    width: 70px;
-    height: 70px;
-  }
-
-  .output-icon img {
-    width: 70px;
-    height: 70px;
-    border: 3px solid transparent;
-    transition: border 0.5s ease-in-out;
+    .hori2{
+      border: 3px dashed #C1773A;
+      border-radius: 10px 10px 0px 0px;
+      width: 800px;
+      height: 30px;
+      border-bottom: none;
+      position: absolute;
+      top: 15px;
+      left: 100px;
+    }
+    .verti12{
+      border: 2px dashed #C1773A;
+      border-radius: 0px 0px 10px 10px;
+      width: 1px;
+      height: 30px;
+      border-top: none;
+      position: absolute;
+      left: 370px;
+      top: 15px;
+    
+    }
+    .verti22{
+      border: 2px dashed #C1773A;
+      border-radius: 0px 0px 10px 10px;
+      width: 1px;
+      height: 30px;
+      border-top: none;
+      position: absolute;
+      left: 635px;
+      top: 15px;
+    }
+    .verti42{
+      border: 2px dashed #C1773A;
+      border-radius: 0px 0px 10px 10px;
+      width: 1px;
+      height: 80px;
+      border-top: none;
+      position: absolute;
+      right: 500px;
+      top: -65px;
+    }
+   
   }
 }
 
@@ -155,15 +193,13 @@
 
 /* Tablet */
 @media (max-width: 768px) {
+  .integration{
+    display: none;
+  }
   .top-icons img,
-  .bottom-icons img {
+  .output img {
     width: 80px;
     height: 80px;
-  }
-
-  .bottom-icons img {
-    width: 110px;
-    height: 110px;
   }
 
   .main-icon img {
@@ -171,12 +207,7 @@
     height: 140px;
   }
 
-  .output-icon {
-    width: 60px;
-    height: 60px;
-  }
-
-  .output-icon img {
+  .output img {
     width: 60px;
     height: 60px;
   }
@@ -185,14 +216,9 @@
 /* Phone */
 @media (max-width: 480px) {
   .top-icons img,
-  .bottom-icons img {
+  .output img {
     width: 60px;
     height: 60px;
-  }
-
-  .bottom-icons img {
-    // width: 120px;
-    height: 120px;
   }
 
   .main-icon img {
@@ -200,12 +226,7 @@
     height: 100px;
   }
 
-  .output-icon {
-    width: 50px;
-    height: 50px;
-  }
-
-  .output-icon img {
+  .output img {
     width: 50px;
     height: 50px;
   }
