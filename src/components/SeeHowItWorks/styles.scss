@@ -1,56 +1,212 @@
 .integration {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-    .top-icons,
-    .main-icon,
-    .bottom-icons,
-    .output {
-      opacity: 0;
-      transition: opacity 0.5s ease-in;
-    }
-  
-    .visible {
-      opacity: 1;
-    }
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+
   .top-icons,
-  .bottom-icons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+  .main-icon,
+  .bottom-icons,
+  .output {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
   }
-  
+
+  .visible {
+    opacity: 1;
+  }
+}
+
+.top-icons,
+.bottom-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.top-icons img,
+.bottom-icons img {
+  margin: 0 10px;
+  width: 100px;
+  height: 100px;
+  border: 3px solid transparent;
+  transition: border 0.5s ease-in-out;
+}
+
+.bottom-icons img {
+  margin: 0 10px;
+  width: 170px;
+  height: 170px;
+}
+
+.main-icon {
+  margin: 20px 0;
+}
+
+.main-icon img {
+  width: 160px;
+  height: 160px;
+  border: 3px solid transparent;
+  transition: border 0.5s ease-in-out;
+}
+
+.output {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+
+  .output-icon {
+    margin: 0 20px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .output-icon img {
+    width: 70px;
+    height: 70px;
+    border: 3px solid transparent;
+    transition: border 0.5s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.integration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .top-icons,
+  .main-icon,
+  .bottom-icons,
+  .output {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+  }
+
+  .visible {
+    opacity: 1;
+    animation: fadeIn 1s ease-out;
+  }
+}
+
+.top-icons,
+.bottom-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.top-icons img,
+.bottom-icons img {
+  margin: 0 10px;
+  width: 100px;
+  height: 100px;
+  border: 3px solid transparent;
+  transition: border 0.5s ease-in-out;
+}
+
+.bottom-icons img {
+  margin: 0 10px;
+  width: 170px;
+  height: 170px;
+}
+
+.main-icon {
+  margin: 20px 0;
+}
+
+.main-icon img {
+  width: 160px;
+  height: 160px;
+  border: 3px solid transparent;
+  transition: border 0.5s ease-in-out;
+}
+
+.output {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+
+  .output-icon {
+    margin: 0 20px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .output-icon img {
+    width: 70px;
+    height: 70px;
+    border: 3px solid transparent;
+    transition: border 0.5s ease-in-out;
+  }
+}
+
+/* Media queries for responsiveness */
+
+/* Tablet */
+@media (max-width: 768px) {
   .top-icons img,
   .bottom-icons img {
-    margin: 0 10px;
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
   }
-  
-  .main-icon {
-    margin: 20px 0;
+
+  .bottom-icons img {
+    width: 110px;
+    height: 110px;
   }
-  
+
   .main-icon img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .output-icon {
     width: 60px;
     height: 60px;
   }
-  
-  .output {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-  
-    .output-icon {
-      margin: 0 20px;
-    }
-  
-    .output-icon img {
-      width: 60px;
-      height: 60px;
-    }
+
+  .output-icon img {
+    width: 60px;
+    height: 60px;
   }
-  
+}
+
+/* Phone */
+@media (max-width: 480px) {
+  .top-icons img,
+  .bottom-icons img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .bottom-icons img {
+    // width: 120px;
+    height: 120px;
+  }
+
+  .main-icon img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .output-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .output-icon img {
+    width: 50px;
+    height: 50px;
+  }
+}

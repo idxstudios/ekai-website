@@ -35,4 +35,54 @@
         line-height: 43px;
     }
 
+    
+@media (max-width: 768px) { // Tablet and below
+    .benefits-container {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 0px 40px 0px;
+    }
+
+    .benefit-item {
+        max-width: 100%;
+        margin: 10px 0; // Adjusted margin for better spacing
+    }
+
+    .icon {
+        font-size: 30px;
+        img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    .text h3 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+}
+
+@media (max-width: 480px) { // Phone and below
+    .benefits-container {
+        padding: 20px 0px 20px 0px;
+    }
+
+    .benefit-item {
+        margin: 10px 0; // Adjusted margin for better spacing
+    }
+
+    .icon {
+        font-size: 25px;
+        img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    .text h3 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
 }

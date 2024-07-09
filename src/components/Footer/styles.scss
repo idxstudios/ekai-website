@@ -6,11 +6,8 @@
     padding: 20px;
     text-align: center;
     margin: auto;
-
-    // display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin: 30px 0;
+    margin-top: 220px;
 
     .footer-content {
         display: flex;
@@ -27,7 +24,6 @@
             img {
                 height: 50px;
                 margin-right: 20px;
-
             }
 
             span {
@@ -93,9 +89,8 @@
         right: 20px;
         letter-spacing: 1px;
         top: 5px;
-        // text-decoration: none;
-        a {
 
+        a {
             color: #fff;
             text-decoration: none;
             font-weight: 400;
@@ -107,6 +102,118 @@
 
             img {
                 width: 20px;
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .footer-content {
+            flex-direction: column;
+            height: auto;
+            text-align: center;
+
+            .logo {
+                margin-bottom: 20px;
+
+                span {
+                    font-size: 35px;
+                }
+            }
+
+            .social-media {
+                margin-bottom: 20px;
+
+                span {
+                    font-size: 16px;
+                }
+
+                .icons a {
+                    font-size: 18px;
+
+                    img {
+                        width: 25px;
+                    }
+                }
+            }
+
+            .contact button {
+                width: 150px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+
+        .back-to-top {
+            position: static;
+            margin-top: 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 10px;
+
+        .footer-content {
+            max-width: 100%;
+            padding: 10px;
+
+            .logo {
+                span {
+                    font-size: 28px;
+                }
+            }
+
+            .social-media span {
+                font-size: 14px;
+            }
+
+            .contact button {
+                width: 140px;
+                height: 40px;
+                font-size: 16px;
+            }
+        }
+
+        .back-to-top a {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .footer-content {
+            .logo {
+                img {
+                    height: 40px;
+                }
+
+                span {
+                    font-size: 24px;
+                }
+            }
+
+            .social-media span {
+                font-size: 12px;
+            }
+
+            .contact button {
+                width: 150px;
+                height: 35px;
+                font-size: 14px;
+            }
+
+            .icons a {
+                font-size: 16px;
+
+                img {
+                    width: 20px;
+                }
+            }
+        }
+
+        .back-to-top a {
+            font-size: 12px;
+
+            img {
+                width: 15px;
             }
         }
     }

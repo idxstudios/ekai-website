@@ -1,9 +1,10 @@
 .DataSecure-main {
     background: #FAF6EF;
-    margin: 20px 0px;
+    margin: 20px 0;
     padding-top: 40px;
     padding-bottom: 50px;
-    h1{
+
+    h1 {
         text-align: center;
         font-size: 28px;
     }
@@ -12,41 +13,84 @@
     .DataSecure-container {
         display: flex;
         justify-content: space-around;
-        align-items: start;
-        padding: 80px 0px 80px 0px;
-        // background-color: #f9f9f9;
+        align-items: flex-start;
+        padding: 80px 0;
         max-width: 1250px;
         margin: auto;
         height: 310px;
         margin-top: 10px;
+
+        @media (max-width: 1200px) {
+            padding: 60px 20px;
+            flex-direction: column;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            padding: 40px 10px;
+        }
+
+        @media (max-width: 480px) {
+            padding: 20px 5px;
+        }
     }
 
     .DataSecure-item {
         text-align: center;
         max-width: 320px;
+
+        @media (max-width: 1200px) {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
     }
 
     .icon {
         font-size: 40px;
         margin-bottom: 10px;
-        img{
+
+        img {
             width: 64px;
             height: 64px;
+
+            @media (max-width: 480px) {
+                width: 48px;
+                height: 48px;
+            }
         }
     }
 
     .text h3 {
         font-size: 20px;
-        font-weight: normal;
-        color: #333;
         font-weight: 700;
+        color: #333;
         line-height: 43px;
+
+        @media (max-width: 768px) {
+            font-size: 18px;
+            line-height: 38px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 16px;
+            line-height: 32px;
+        }
     }
-    .text p{
+
+    .text p {
         color: #000000;
         font-size: 16px;
         font-weight: 400;
         line-height: 21.82px;
-    }
 
+        @media (max-width: 768px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
 }
