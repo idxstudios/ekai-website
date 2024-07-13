@@ -1,10 +1,11 @@
 .action-vedio-wrapper {
   display: flex;
   justify-content: center;
-  background-color: #faf6ef;
+  background-color: #FAF6EF;
   flex-direction: column;
   align-items: center;
   padding: 0 1rem;
+  
 }
 
 .action-vedio-wrapper h4 {
@@ -19,18 +20,22 @@
   max-width: 72.25rem;
   margin-bottom: 2.5rem;
   max-height: 40.625rem;
+  background: #FAF6EF;
 }
 
 .video-container video {
   width: 100%;
   height: 100%;
+  background: #FAF6EF;
 }
 
 .action-vedio-container {
   max-width: 72.25rem;
-  width: 100%;
+  cursor: pointer;
+  width: 70%;
   background-color: #ffffff;
   border-radius: 2.5rem;
+  background: #FAF6EF;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,8 +46,8 @@
 
 .vedioPlay-circle {
   position: relative;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .VideoPlay-icon {

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./styles.scss";
-import play from "../../assets/play.svg";
+// import play from "../../assets/play.svg";
 // import workplaceImg from "../../assets/workplace-img-one.svg";
 // import workplaceGirl from "../../assets/workplace-img-girl.svg";
 import { FormDialog } from "../FormDialog";
+import ActionVedio from "../../components/ActionVedio";
 
 export const EkaiIntro = () => {
   const [showFirstImage, setShowFirstImage] = useState(true);
@@ -42,7 +43,8 @@ export const EkaiIntro = () => {
           <div className="large-image-container">
 
             <div className="video-box">
-              <img src={play} className="play-icon" alt="Work Place Img" />
+            <ActionVedio/>
+              {/* <img src={play} className="play-icon" alt="Work Place Img" /> */}
             </div>
 
           </div>

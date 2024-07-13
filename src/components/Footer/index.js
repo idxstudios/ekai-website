@@ -7,6 +7,7 @@ import Insta from "../../assets/insta.png"
 import FB from "../../assets/fb.png"
 import Github from "../../assets/github.png"
 import Top from "../../assets/top.svg"
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -35,8 +36,10 @@ const Footer = () => {
         <a href="#top">Back to top  <img src={Top} alt="ekai logo" /></a>
       </div>
       <div className='bottom-nav'>
-        <a href="#top">Terms of Use</a> &#8226;
-        <a href="#top">Privacy policy</a>
+        {/* <a href="#top"></a>  */}
+        <Link to="/termsOfUse">Terms of Use</Link>&#8226;
+        <Link to="/privacyPolicy">Privacy Policy</Link>
+        {/* <a href="#top">Privacy policy</a> */}
       </div>
     </footer>
   );

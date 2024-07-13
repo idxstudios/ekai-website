@@ -14,6 +14,7 @@ function Home() {
   return (
     <div className="">
       <EkaiIntro />
+    
       <OurMission />
       <ElevateYourWorkflow />
       <Benefits />

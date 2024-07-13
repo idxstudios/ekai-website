@@ -5,6 +5,7 @@ import "./style.scss";
 
 const ActionVedio = () => {
   const [videoUrl, setVideoUrl] = useState("");
+  const [showVideo, setShowVideo] = useState(false);
 
   useEffect(() => {
     const fetchVideoUrl = async () => {
@@ -19,10 +20,14 @@ const ActionVedio = () => {
     fetchVideoUrl();
   }, []);
 
+  const handlePlayVideo = () => {
+    setShowVideo(true);
+  }
+
   return (
     <div className="action-vedio-wrapper">
-      <h4>See Ekai in action</h4>
-      {videoUrl ? (
+      {/* <h4>See Ekai in action</h4> */}
+      {videoUrl && showVideo ? (
         <div className="video-container">
           <video width="600" controls>
             <source src={videoUrl} type="video/mp4" />
@@ -30,7 +35,7 @@ const ActionVedio = () => {
         </div>
       ) : (
         <>
-          <div className="action-vedio-container">
+          <div onClick={handlePlayVideo} className="action-vedio-container">
             <svg
               className="vedioPlay-circle"
               width="120"
