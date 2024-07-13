@@ -1,233 +1,617 @@
 .integration {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 50px 0;
+  text-align: center;
+  // background: #f5f5f5;
+  width: 1420px;
+  height: 600px;
+  position: relative;
+  margin: auto;
+  padding-left: 000px;
 
-  .top-icons,
-  .main-icon,
-  .output {
-    opacity: 0;
-    transition: opacity 0.5s ease-in;
-  }
-
-  .top-icons{
+  .top-icons {
     position: relative;
-  
-    .hori{
-      border: 3px dashed #C1773A;
-      border-radius: 0px 0px 10px 10px;
-      width: 520px;
-      height: 30px;
-      border-top: none;
+    width: 100%;
+    margin-top: 20px;
+    height: 300px; // Adjust this height as needed
+    animation: row1TopToBottom 1s ease-in-out;
+
+
+
+    .icon-border {
       position: absolute;
-      top: 90px;
+      top: 60%;
+      margin-left: 200px;
+
+      left: 500px;
+      width: 65px; // Adjust the size as needed
+      height: 65px;
+      border-radius: 50%; // Make it circular
+
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+
+      &.icon-border1 {
+        animation: moveTop1 4s ease;
+        top: 5%;
+        left: 11%;
+        transform: rotate(15deg);
+      }
+
+      &.icon-border2 {
+        animation: moveTop2 4s ease;
+        top: 5%;
+        left: 20%;
+        transform: rotate(-15deg);
+      }
+
+      &.icon-border3 {
+        animation: moveTop3 4s ease;
+        top: 5%;
+        left: 30%;
+        transform: rotate(15deg);
+      }
+
+      &.icon-border4 {
+        animation: moveTop4 4s ease;
+        top: 5%;
+        left: 40%;
+        transform: rotate(-15deg);
+      }
+
+      &.icon-border5 {
+        animation: moveTop5 4s ease;
+        top: 5%;
+        left: 48.5%;
+        z-index: 10;
+        transform: rotate(15deg);
+      }
+
+      @keyframes moveTop1 {
+        from {
+          top: 40%;
+          ;
+        }
+
+        to {
+          top: 5%;
+        }
+      }
+
+      @keyframes moveTop2 {
+        from {
+          top: 20%;
+          ;
+        }
+
+        to {
+          top: 5%;
+        }
+      }
+
+      @keyframes moveTop3 {
+        from {
+          top: 5%;
+          ;
+        }
+
+        to {
+          top: 5%;
+        }
+      }
+
+      @keyframes moveTop4 {
+        from {
+          top: 20%;
+          ;
+        }
+
+        to {
+          top: 5%;
+        }
+      }
+
+      @keyframes moveTop5 {
+        from {
+          top: 50%;
+          ;
+        }
+
+        to {
+          top: 5%;
+        }
+      }
+
+
     }
-    .verti1{
-      border: 2px dashed #C1773A;
-      border-radius: 0px 0px 10px 10px;
-      width: 1px;
-      height: 30px;
-      border-top: none;
-      position: absolute;
-      left: 180px;
-      top: 90px;
+
+    @keyframes row1TopToBottom {
+      from {
+        top: -50%;
+        ;
+      }
+
+      to {
+        top: 0%;
+      }
     }
-    .verti2{
-      border: 2px dashed #C1773A;
-      border-radius: 0px 0px 10px 10px;
-      width: 1px;
-      height: 90px;
-      border-top: none;
-      position: absolute;
-      top: 90px;
-    }
-    .verti3{
-      border: 2px dashed #C1773A;
-      border-radius: 0px 0px 10px 10px;
-      width: 1px;
-      height: 30px;
-      border-top: none;
-      position: absolute;
-      right: 180px;
-      top: 90px;
+
+
+  }
+
+  .row1-border {
+    position: absolute;
+    left: 27%;
+    top: 13%;
+    animation: showRow1 10s ease;
+
+    img {
+      width: 285px;
+      object-fit: fill;
+      height: 70px;
     }
   }
 
-  .visible {
-    opacity: 1;
-  }
-}
+  .row2-border {
+    position: absolute;
+    left: 35.99%;
+    top: 13.0%;
+    animation: showRow1 10s ease;
 
-.top-icons,
-.output {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.top-icons img,
-.output img {
-  margin: 0 10px;
-  width: 100px;
-  height: 100px;
-  border: 3px solid transparent;
-  transition: border 0.5s ease-in-out;
-}
-
-.output img {
-  width: 70px;
-  height: 70px;
-}
-
-.main-icon {
-  margin: 20px 0;
-}
-
-.main-icon img {
-  width: 160px;
-  height: 160px;
-  border: 3px solid transparent;
-  transition: border 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.integration {
-  .visible {
-    opacity: 1;
-    animation: fadeIn 1s ease-out;
+    img {
+      width: 162px;
+      height: 70px;
+      object-fit: fill;
+    }
   }
 
+  .row3-border {
+    position: absolute;
+    left: 40.4%;
+    top: 13.0%;
+    animation: showRow1 10s ease;
 
+    img {
+      width: 162px;
+      height: 70px;
+      object-fit: fill;
+    }
+  }
 
-  .bottom-icons{
-      position: relative;
-    .hori{
-      border: 3px dashed #C1773A;
-      border-radius: 0px 0px 10px 10px;
-      width: 800px;
-      height: 30px;
-      border-top: none;
-      position: absolute;
-      top: 100px;
-      left: 100px;
-    }
-    .verti1{
-      border: 2px dashed #C1773A;
-      border-radius: 0px 0px 10px 10px;
-      width: 1px;
-      height: 30px;
-      border-top: none;
-      position: absolute;
-      left: 370px;
-      top: 100px;
-    
-    }
-    .verti2{
-      border: 2px dashed #C1773A;
-      border-radius: 0px 0px 10px 10px;
-      width: 1px;
-      height: 30px;
-      border-bottom: none;
-      position: absolute;
-      left: 635px;
-      top: 100px;
-    }
+  .row4-border {
+    position: absolute;
+    left: 44.1%;
+    top: 13.0%;
+    animation: showRow1 10s ease;
 
-    .hori2{
-      border: 3px dashed #C1773A;
-      border-radius: 10px 10px 0px 0px;
-      width: 800px;
-      height: 30px;
-      border-bottom: none;
-      position: absolute;
-      top: 15px;
-      left: 100px;
+    img {
+      width: 182px;
+      height: 70px;
+      object-fit: fill;
     }
-    .verti12{
-      border: 2px dashed #C1773A;
-      border-radius: 0px 0px 10px 10px;
-      width: 1px;
-      height: 30px;
-      border-top: none;
-      position: absolute;
-      left: 370px;
-      top: 15px;
-    
-    }
-    .verti22{
-      border: 2px dashed #C1773A;
-      border-radius: 0px 0px 10px 10px;
-      width: 1px;
-      height: 30px;
-      border-top: none;
-      position: absolute;
-      left: 635px;
-      top: 15px;
-    }
-    .verti42{
-      border: 2px dashed #C1773A;
-      border-radius: 0px 0px 10px 10px;
-      width: 1px;
+  }
+
+  .row5-border {
+    position: absolute;
+    left: 45.35%;
+    top: 11.3%;
+    animation: showRow1 10s ease;
+
+    img {
+      width: 285px;
       height: 80px;
-      border-top: none;
-      position: absolute;
-      right: 500px;
-      top: -65px;
+      object-fit: fill;
+      // z-index: 10;
     }
-   
-  }
-}
-
-/* Media queries for responsiveness */
-
-/* Tablet */
-@media (max-width: 768px) {
-  .integration{
-    display: none;
-  }
-  .top-icons img,
-  .output img {
-    width: 80px;
-    height: 80px;
   }
 
-  .main-icon img {
-    width: 140px;
-    height: 140px;
+  @keyframes showRow1 {
+    0% {
+      opacity: 0%;
+    }
+
+    49% {
+      opacity: 0%;
+    }
+
+    50% {
+      opacity: 100%;
+    }
+
+    100% {
+      opacity: 100%;
+    }
   }
 
-  .output img {
-    width: 60px;
-    height: 60px;
-  }
-}
+  .middle-logo {
+    position: absolute;
+    left: 43.2%;
+    top: 25%;
 
-/* Phone */
-@media (max-width: 480px) {
-  .top-icons img,
-  .output img {
-    width: 60px;
-    height: 60px;
+    img {
+      width: 80px;
+      border: 2px solid #C87A3D;
+      border-radius: 50%;
+      box-shadow: 0px 0px 40px #C87A3D;
+      animation: middleIconShadow 8s ease;
+    }
+
+    @keyframes middleIconShadow {
+      from {
+        display: none;
+        border: 2px solid #c8793d00;
+        box-shadow: 0px 0px 40px #c8793d00;
+      }
+
+      to {
+        display: none;
+        border: 2px solid #C87A3D;
+        box-shadow: 0px 0px 40px #C87A3D;
+      }
+    }
+
+
   }
 
-  .main-icon img {
-    width: 100px;
-    height: 100px;
+  .row-2-line {
+
+    .row21-border {
+      position: absolute;
+      left: 27%;
+      top: 38%;
+      animation: showRow1 20s ease;
+
+      img {
+        width: 285px;
+        object-fit: fill;
+        height: 70px;
+      }
+    }
+
+    .row22-border {
+      position: absolute;
+      left: 36.99%;
+      top: 38.0%;
+      animation: showRow1 20s ease;
+
+      img {
+        width: 162px;
+        height: 70px;
+        object-fit: fill;
+      }
+    }
+
+    .row23-border {
+      position: absolute;
+      left: 43.55%;
+      top: 38.0%;
+      animation: showRow1 20s ease;
+
+      img {
+        width: 172px;
+        height: 70px;
+        object-fit: fill;
+      }
+    }
+
+    .row24-border {
+      position: absolute;
+      left: 45.5%;
+      top: 38.0%;
+      animation: showRow1 20s ease;
+
+      img {
+        width: 280px;
+        height: 70px;
+        object-fit: fill;
+      }
+    }
+
+
+
+    @keyframes showRow1 {
+      0% {
+        opacity: 0%;
+      }
+
+      49% {
+        opacity: 0%;
+      }
+
+      50% {
+        opacity: 100%;
+      }
+
+      100% {
+        opacity: 100%;
+      }
+    }
+
   }
 
-  .output img {
-    width: 50px;
-    height: 50px;
+  .row-2-2 {
+    .row21-border {
+      position: absolute;
+      left: 22%;
+      top: 44%;
+      z-index: 20;
+      animation: showRow2 28s ease;
+
+      img {
+        width: 180px;
+        object-fit: fill;
+
+      }
+    }
+
+    .row22-border {
+      position: absolute;
+      left: 33.5%;
+      top: 44.5%;
+      z-index: 20;
+      animation: showRow2 28s ease;
+
+      img {
+        width: 180px;
+        object-fit: fill;
+
+      }
+    }
+
+    .row23-border {
+      position: absolute;
+      left: 46.5%;
+      top: 45%;
+      z-index: 20;
+      animation: showRow2 28s ease;
+
+      img {
+        width: 180px;
+        object-fit: fill;
+
+      }
+    }
+
+    .row24-border {
+      position: absolute;
+      left: 59%;
+      top: 45%;
+      z-index: 20;
+      animation: showRow2 28s ease;
+
+      img {
+        width: 150px;
+        object-fit: fill;
+
+      }
+    }
+
+    @keyframes showRow2 {
+      0% {
+        opacity: 0%;
+      }
+
+      49% {
+        opacity: 0%;
+      }
+
+      50% {
+        opacity: 100%;
+      }
+
+      100% {
+        opacity: 100%;
+      }
+    }
+
   }
+
+  .icon-row-2-border {
+    background: black;
+
+    .row21-border {
+      position: absolute;
+      left: 27%;
+      top: 56%;
+      animation: showRow1 32s ease;
+
+      img {
+        width: 285px;
+        object-fit: fill;
+        height: 70px;
+      }
+    }
+
+    .row22-border {
+      position: absolute;
+      left: 35.99%;
+      top: 56.0%;
+      animation: showRow1 32s ease;
+
+      img {
+        width: 162px;
+        height: 70px;
+        object-fit: fill;
+      }
+    }
+
+    .row23-border {
+      position: absolute;
+      left: 40.4%;
+      top: 56.0%;
+      animation: showRow1 32s ease;
+      display: none;
+
+      img {
+        width: 162px;
+        height: 70px;
+        object-fit: fill;
+      }
+    }
+
+    .row24-border {
+      position: absolute;
+      left: 44.1%;
+      top: 56.0%;
+      animation: showRow1 32s ease;
+
+      img {
+        width: 182px;
+        height: 70px;
+        object-fit: fill;
+      }
+    }
+
+    .row25-border {
+      position: absolute;
+      left: 45.35%;
+      top: 54.395%;
+      animation: showRow1 32s ease;
+
+      img {
+        width: 285px;
+        height: 80px;
+        object-fit: fill;
+        // z-index: 10;
+      }
+    }
+
+    @keyframes showRow1 {
+      0% {
+        opacity: 0%;
+      }
+
+      49% {
+        opacity: 0%;
+      }
+
+      50% {
+        opacity: 100%;
+      }
+
+      100% {
+        opacity: 100%;
+      }
+    }
+  }
+
+  .last-div {
+    position: absolute;
+    left: 39.4%;
+    top: 68%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 40px #C87A3D;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 180px;
+    height: 70px;
+    animation: showLastBox 14s ease-in;
+    .row31 {
+      position: absolute;
+      left: 5%;
+      top: 15%;
+
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        animation: row31BottomToTop 16s ease-in-out;
+      }
+
+      @keyframes row31BottomToTop {
+        0% {
+          margin-top: 300px;
+
+        }
+
+        97%{ 
+          margin-top: 60px;
+        }
+
+        100% {
+          margin-top: 0px;
+        }
+      }
+    }
+
+    .row32 {
+      position: absolute;
+      left: 38%;
+      top: 15%;
+
+
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        animation: row32BottomToTop 17s ease-in-out;
+      }
+
+      @keyframes row32BottomToTop {
+        0% {
+          margin-top: 300px;
+
+        }
+        97%{ 
+          margin-top: 60px;
+        }
+
+        100% {
+          margin-top: 0px;
+        }
+      }
+    }
+
+    .row33 {
+      position: absolute;
+      left: 70%;
+      top: 15%;
+
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        animation: row33BottomToTop 18s ease-in-out;
+      }
+
+      @keyframes row33BottomToTop {
+        0% {
+          margin-top: 300px;
+
+        }
+        97%{ 
+          margin-top: 60px;
+        }
+
+        100% {
+          margin-top: 0px;
+        }
+      }
+    }
+
+    @keyframes showLastBox {
+      0%{
+        opacity: 0;
+      }
+      99%{
+        opacity: 0;
+      }
+
+      100%{
+        opacity: 100;
+      }
+
+    }
+  }
+
+
+
+
 }

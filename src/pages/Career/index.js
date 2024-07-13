@@ -11,7 +11,8 @@ export default function Career() {
           <p>
             Be a part of the future of workplace technology.
             We're looking for passionate, innovative
-            individuals to join our team and help us revolutionize productivity. Explore our current
+            individuals to join our team and help us
+            revolutionize productivity. Explore our current
             openings and apply today!
           </p>
           <button className="resume-button">SHARE YOUR RESUME</button>

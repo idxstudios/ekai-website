@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        
+
         <div className="logo">
           <img src={logo} alt="ekai logo" />
           <span>ekai</span>
@@ -29,9 +29,14 @@ const Footer = () => {
         <div className="contact">
           <button>CONTACT US</button>
         </div>
+
       </div>
       <div className="back-to-top">
         <a href="#top">Back to top  <img src={Top} alt="ekai logo" /></a>
+      </div>
+      <div className='bottom-nav'>
+        <a href="#top">Terms of Use</a> &#8226;
+        <a href="#top">Privacy policy</a>
       </div>
     </footer>
   );

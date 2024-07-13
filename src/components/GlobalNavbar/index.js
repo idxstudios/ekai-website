@@ -20,6 +20,7 @@ export default function GlobalNavbar() {
           <div className={`${showMenu ? "nav-links": "nav-links-active"}`}>
             <Link onClick={() => setShowMenu(!showMenu)}  to="/">About Us</Link>
             <Link onClick={() => setShowMenu(!showMenu)} to="/career">Career</Link>
+            <Link onClick={() => setShowMenu(!showMenu)} to="/FAQs">FAQs</Link>
             <button>TELL ME MORE</button>
           </div>
           <Link onClick={() => setShowMenu(!showMenu)} className="menu-container ">

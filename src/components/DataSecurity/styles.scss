@@ -6,7 +6,8 @@
 
     h1 {
         text-align: center;
-        font-size: 28px;
+        font-size: 36px;
+        font-weight: 700;
     }
     
     // src/DataSecure.scss
@@ -80,7 +81,8 @@
     .text p {
         color: #000000;
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 500;
+        margin-top: 10px;
         line-height: 21.82px;
 
         @media (max-width: 768px) {
