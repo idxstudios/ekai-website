@@ -8,7 +8,7 @@ import Team from "../../components/TeamMember";
 import PromoBanner from "../../components/PromoBanner";
 import Footer from "../../components/Footer";
 import Integration from "../../components/SeeHowItWorks";
-import FAQs from "../../components/FAQs";
+// import FAQs from "../../components/FAQs";
 
 function Home() {
   return (

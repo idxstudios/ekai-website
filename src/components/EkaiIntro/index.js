@@ -16,6 +16,8 @@ export const EkaiIntro = () => {
     return () => clearInterval(interval);
   }, []);
 
+  console.log(showFirstImage);
+
   return (
     <div className="ekai-intro-main-cont">
       <div className="ekai-intro-cont flex-row items-center">

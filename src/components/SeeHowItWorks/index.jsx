@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import "./styles.scss";
 import row11 from "../../assets/animation/row-1-1.svg";
 import row12 from "../../assets/animation/row-1-2.svg";
