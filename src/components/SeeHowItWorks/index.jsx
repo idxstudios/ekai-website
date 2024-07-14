@@ -38,10 +38,37 @@ const Integration = () => {
     // Cleanup function to clear the timeout if the component unmounts
     return () => clearTimeout(timer);
   }, []);
+
+  const [text, setText] = useState("Create your proxy");
+
+  useEffect(() => {
+    // Change text to "one" after 5 seconds
+    const timer1 = setTimeout(() => {
+      setText("Train through docs, drive, calendar, meeting notes & more");
+    }, 5000);
+
+    // Change text to "two" after 10 seconds
+    const timer2 = setTimeout(() => {
+      setText("Ekai answers on your behalf");
+    }, 18000);
+
+    // Change text to "third" after 30 seconds
+    const timer3 = setTimeout(() => {
+      setText("Automate documentation with Ekai");
+    }, 20000);
+
+    // Cleanup timers on component unmount
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+      clearTimeout(timer3);
+    };
+  }, []);
   return (
     <div className="integration-main">
       {" "}
       <h1>See how it works!</h1>
+      <p className="para">{text}</p>
       {showDiv2 && (
         <div className="integrationZero">
           <div className="ai-boy">

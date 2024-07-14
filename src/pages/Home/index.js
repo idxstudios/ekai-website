@@ -34,7 +34,8 @@ function Home() {
 
     return () => {
       if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        observer.unobserve(sectionRef?.current);
       }
     };
   }, []);
