@@ -25,7 +25,9 @@ import row33 from "../../assets/animation/row-3-3.svg";
 
 const Integration = () => {
   return (
+    <div className="integration-main">     <h1>See how it works!</h1>
     <div className="integration">
+ 
       <div className="top-icons">
         <div className="icon-border icon-border1">
           <img src={row11} alt="Icon 1" />
@@ -123,6 +125,7 @@ const Integration = () => {
           <img src={row33} alt="Icon 1" />
         </div>
       </div>
+    </div>
     </div>
   );
 };

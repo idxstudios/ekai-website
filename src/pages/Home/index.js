@@ -8,16 +8,45 @@ import Team from "../../components/TeamMember";
 import PromoBanner from "../../components/PromoBanner";
 import Footer from "../../components/Footer";
 import Integration from "../../components/SeeHowItWorks";
+import { useState, useRef, useEffect } from "react";
+
+
 // import FAQs from "../../components/FAQs";
 
 function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Stop observing once section is in view
+        }
+      },
+      { threshold: 0.1 } // Adjust the threshold as needed
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
   return (
     <div className="">
       <EkaiIntro />
       <OurMission />
       <ElevateYourWorkflow />
       <Benefits />
-      {/* <Integration /> */}
+      <div ref={sectionRef}>
+        {isVisible && <Integration />}
+      </div>
       <DataSecurity />
       <Team />
       <PromoBanner />

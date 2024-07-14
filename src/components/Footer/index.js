@@ -51,10 +51,8 @@ const Footer = () => {
         <a href="#top">Back to top  <img src={Top} alt="ekai logo" /></a>
       </div>
       <div className='bottom-nav'>
-        {/* <a href="#top"></a>  */}
         <Link to="/termsOfUse">Terms of Use</Link>&#8226;
         <Link to="/privacyPolicy">Privacy Policy</Link>
-        {/* <a href="#top">Privacy policy</a> */}
       </div>
     </footer>
   );

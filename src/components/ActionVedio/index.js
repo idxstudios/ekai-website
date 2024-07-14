@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { ref, getDownloadURL } from "firebase/storage";
 import { storage } from "../../firebase/config";
 import "./style.scss";
+import logo from "../../assets/ekai-logo.svg";
+
 
 const ActionVedio = () => {
   const [videoUrl, setVideoUrl] = useState("");
@@ -51,7 +53,7 @@ const ActionVedio = () => {
           >
             <source src={videoUrl} type="video/mp4" />
           </video>
-          {!videoLoaded && <p>Loading video...</p>}
+          {!videoLoaded &&  <img src={logo} alt="Logo" />}
         </div>
       ) : (
         <div onClick={handlePlayVideo} className="action-vedio-container">
