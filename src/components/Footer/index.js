@@ -10,6 +10,21 @@ import Top from "../../assets/top.svg"
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const handleContactUs = () => {
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // Mobile-specific logic
+      window.location.href = "mailto:kai@idxstudioz.com"
+
+      console.log('Mobile device detected');
+    } else {
+      // Desktop-specific logic
+      console.log('Desktop device detected');
+      window.open("https://mail.google.com/mail/u/0/?view=cm&fs=1&to=kai@idxstudioz.com", '_blank');
+    }
+
+  }
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -28,7 +43,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="contact">
-          <button>CONTACT US</button>
+          <button onClick={handleContactUs}>CONTACT US</button>
         </div>
 
       </div>

@@ -166,6 +166,7 @@
     @media (max-width: 768px) {
         padding: 10px;
 
+        gap: 40px;
         .footer-content {
             max-width: 100%;
             padding: 10px;
@@ -227,6 +228,7 @@
 
         .back-to-top a {
             font-size: 12px;
+            margin-bottom: 10px;
 
             img {
                 width: 15px;

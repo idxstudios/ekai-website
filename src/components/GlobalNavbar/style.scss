@@ -103,13 +103,11 @@
     padding: 20px;
   }
 
-  .main-nav .logo-container {
-    margin-bottom: 10px;
-  }
+
 
   .main-nav .menu-container {
     display: block !important;
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
   }
 
   .main-nav .nav-links {
@@ -125,7 +123,7 @@
     /* Start position */
     background: #fff;
     width: 100vw;
-    height: 30%;
+    height: 30vh;
     padding: 40px 0 0 20px;
     transition: top .5s ease;
     a {

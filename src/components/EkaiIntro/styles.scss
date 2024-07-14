@@ -1,13 +1,31 @@
 .ekai-intro-main-cont {
-  // background: linear-gradient(0deg, #fff 0.9%, #faf6ef 20.04%);
-
   .ekai-intro-cont {
     padding-top: 5rem;
     padding-bottom: 5.75rem;
     gap: 2.07%;
     max-width: 1150px;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 700px) {
+    .ekai-intro-cont {
+      width: 90%;
+      flex-direction: column;
+    }
+
+    .right-cont {
+      width: 94%;
+      height: 265px;
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    .ekai-intro-cont {
+      width: auto;
+    }
   }
 
   .app-name {
@@ -30,7 +48,6 @@
     margin-bottom: 2rem;
   }
 
-
   .left-cont-subheading {
     color: #575757;
     font-size: 1.05rem;
@@ -47,27 +64,19 @@
     padding: 0.75rem 1.5rem;
     font-size: 0.9375rem;
     line-height: 1.625rem;
-    /* 173.333% */
     letter-spacing: 0.46px;
     text-transform: uppercase;
     cursor: pointer;
   }
 
-  .right-cont {
-    display: none;
-  }
-}
 
-@media screen and (min-width: 426px) {
-  .ekai-intro-main-cont {
-    .left-cont-heading {
-      font-size: 3.0625rem;
+  @media screen and (min-width: 880px) {
+    .right-cont {
+      display: flex;
+      width: 54%;
+      flex-direction: column;
     }
-  }
-}
 
-@media screen and (min-width: 880px) {
-  .ekai-intro-main-cont {
     .left-cont {
       width: 43.77%;
     }
@@ -76,14 +85,8 @@
       font-size: 2.8025rem;
     }
 
-
     .left-cont-subheading {
       max-width: 25.5rem;
-    }
-
-    .right-cont {
-      display: block;
-      width: 54.15%;
     }
 
     .right-cont img {
@@ -92,29 +95,41 @@
     }
   }
 
-  /* styles.css */
-  .large-image-container {
-    position: relative;
+  @media screen and (max-width: 880px) {
+    .left-cont-heading {
+      font-size: 3.1025rem;
+      margin-top: 0px;
+    }
+  }
 
-
-    .video-box {
+  @media screen and (min-width: 1240px) {
+    .ekai-intro-cont {
       margin: auto;
-      overflow: hidden;
-      margin-top: 50px;
-      width: 90%;
-      height: 320px;
-      background: #FAF6EF;
-      border-radius: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: row;
+    }
+  }
+}
 
-      .play-icon {
-        width: 76px;
-        height: 76px;
-        cursor: pointer;
-      }
+/* Large Image Container */
+.large-image-container {
+  position: relative;
 
+  .video-box {
+    margin: auto;
+    overflow: hidden;
+    margin-top: 50px;
+    width: 90%;
+    height: 320px;
+    background: #FAF6EF;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .play-icon {
+      width: 76px;
+      height: 76px;
+      cursor: pointer;
     }
   }
 
@@ -127,11 +142,8 @@
     position: absolute;
     top: 6px;
     left: 72.5%;
-    /* transform: translateX(-50%); */
     width: 25%;
-    /* Adjust size as needed */
     height: 38%;
-    /* Adjust size as needed */
     background-color: white;
     border-radius: 50%;
     display: flex;
@@ -198,14 +210,6 @@
     100% {
       transform: translateY(200%);
       opacity: 0;
-    }
-  }
-}
-
-@media screen and (min-width: 1240px) {
-  .ekai-intro-main-cont {
-    .ekai-intro-cont {
-      margin: auto;
     }
   }
 }

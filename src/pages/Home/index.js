@@ -14,11 +14,10 @@ function Home() {
   return (
     <div className="">
       <EkaiIntro />
-    
       <OurMission />
       <ElevateYourWorkflow />
       <Benefits />
-      <Integration />
+      {/* <Integration /> */}
       <DataSecurity />
       <Team />
       <PromoBanner />
