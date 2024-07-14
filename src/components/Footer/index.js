@@ -15,13 +15,13 @@ const Footer = () => {
 
     if (isMobile) {
       // Mobile-specific logic
-      window.location.href = "mailto:kai@idxstudioz.com"
+      window.location.href = "mailto:ekai@idxstudioz.com"
 
       console.log('Mobile device detected');
     } else {
       // Desktop-specific logic
       console.log('Desktop device detected');
-      window.open("https://mail.google.com/mail/u/0/?view=cm&fs=1&to=kai@idxstudioz.com", '_blank');
+      window.open("https://mail.google.com/mail/u/0/?view=cm&fs=1&to=ekai@idxstudioz.com", '_blank');
     }
 
   }
