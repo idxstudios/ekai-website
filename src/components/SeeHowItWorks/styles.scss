@@ -5,6 +5,10 @@
   max-width: 1220px;
   margin: auto;
 
+  @media screen and (max-width: 700px) {
+    max-width: 370px;
+  }
+
 
 
   .para {
@@ -15,6 +19,7 @@
       width: 350px;
       text-align: center;
       height: 50px;
+      
     }
   }
 
@@ -98,7 +103,7 @@
       width: 300px;
       margin-left: 0px;
       overflow: visible;
-      height: 800px;
+      height: 600px;
       margin: auto;
       margin-left: -30px;
     }
@@ -139,6 +144,16 @@
         }
 
 
+        @media screen and (max-width: 700px) {
+
+          img {
+            width: 60%;
+            height: 60%;
+            border-radius: 50%;
+            z-index: 100 !important;
+          }
+        }
+
 
 
         &.icon-border1 {
@@ -166,7 +181,7 @@
 
           @media screen and (max-width: 700px) {
 
-            margin-left: 55px;
+            margin-left: 52px;
 
           }
         }
@@ -180,7 +195,7 @@
 
           @media screen and (max-width: 700px) {
 
-            margin-left: 98px;
+            margin-left: 74px;
 
           }
         }
@@ -194,7 +209,7 @@
 
           @media screen and (max-width: 700px) {
 
-            margin-left: 145px;
+            margin-left: 125px;
 
           }
         }
@@ -208,7 +223,7 @@
 
           @media screen and (max-width: 700px) {
 
-            margin-left: 180px;
+            margin-left: 135px;
 
           }
         }
@@ -301,6 +316,9 @@
       }
 
       @media screen and (max-width: 700px) {
+        top: 1.942%;
+        left: 27%;
+
         img {
           width: 144px;
           height: 68px;
@@ -321,7 +339,7 @@
       }
 
       @media screen and (max-width: 700px) {
-        top: 12.842%;
+        top: 1.842%;
         left: 50%;
 
         img {
@@ -347,7 +365,7 @@
 
       @media screen and (max-width: 700px) {
         left: 65.3%;
-        top: 15.1%;
+        top: 1.1%;
 
         img {
           width: 50px;
@@ -370,7 +388,7 @@
       }
 
       @media screen and (max-width: 700px) {
-        top: 12.842%;
+        top: 1.842%;
         left: 72.3%;
 
         img {
@@ -394,7 +412,7 @@
       }
 
       @media screen and (max-width: 700px) {
-        top: 12.614%;
+        top: 1.614%;
         left: 72.2%;
 
         img {
@@ -441,7 +459,7 @@
       }
 
       @media screen and (max-width: 700px) {
-        top: 22%;
+        top: 11%;
         left: 67%;
 
         img {
@@ -479,7 +497,8 @@
         }
 
         @media screen and (max-width: 700px) {
-          top: 26%;
+          top: 6.9%;
+          left: 27%;
 
           img {
             // display: none;
@@ -504,7 +523,7 @@
 
         @media screen and (max-width: 700px) {
           left: 57%;
-          top: 26%;
+          top: 10.25%;
 
           img {
             width: 50px;
@@ -528,7 +547,7 @@
 
         @media screen and (max-width: 700px) {
           left: 73%;
-          top: 26%;
+          top: 8.6%;
 
           img {
             width: 55px;
@@ -553,7 +572,7 @@
 
         @media screen and (max-width: 700px) {
           left: 73%;
-          top: 26%;
+          top: 7%;
 
           img {
             width: 140px;
@@ -594,7 +613,7 @@
         }
 
         @media screen and (max-width: 700px) {
-          top: 31.5%;
+          top: 21.5%;
           left: 8.9%;
 
           img {
@@ -616,7 +635,7 @@
         }
 
         @media screen and (max-width: 700px) {
-          top: 32%;
+          top: 22%;
           left: 38%;
 
           img {
@@ -638,7 +657,7 @@
         }
 
         @media screen and (max-width: 700px) {
-          top: 32.5%;
+          top: 22.5%;
           left: 70%;
 
           img {
@@ -660,8 +679,8 @@
         }
 
         @media screen and (max-width: 700px) {
-          top: 32.5%;
-          left: 100.9%;
+          top: 22.5%;
+          left: 102%;
 
           img {
             width: 100px;
@@ -704,7 +723,8 @@
         }
 
         @media screen and (max-width: 700px) {
-          top: 37%;
+          top: 20%;
+          left: 26.5%;
 
           img {
             // display: none;
@@ -726,8 +746,8 @@
         }
 
         @media screen and (max-width: 700px) {
-          top: 37%;
-          left: 50.4%;
+          top: 19.5%;
+          left: 49.8%;
 
           img {
             // display: none;
@@ -774,8 +794,8 @@
         }
 
         @media screen and (max-width: 700px) {
-          top: 37%;
-          left: 72.4%;
+          top: 19.5%;
+          left: 72.1%;
 
           img {
             // display: none;
@@ -797,8 +817,8 @@
         }
 
         @media screen and (max-width: 700px) {
-          top: 35.7%;
-          left: 72.4%;
+          top: 18.6%;
+          left: 72%;
 
           img {
             // display: none;
@@ -844,10 +864,11 @@
       animation: showLastBox 18s ease-in;
 
       @media screen and (max-width: 700px) {
-        top: 47%;
+        top: 38%;
         left: 48%;
         width: 150px;
         height: 60px;
+        // display: none;
       }
 
       .row31 {
