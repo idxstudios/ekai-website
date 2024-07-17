@@ -53,7 +53,7 @@ const ActionVedio = () => {
           >
             <source src={videoUrl} type="video/mp4" />
           </video>
-          {!videoLoaded &&  <img src={videothumb} alt="Logo" />}
+          {!videoLoaded && <img src={videothumb} alt="Logo" />}
         </div>
       ) : (
         <div onClick={handlePlayVideo} className="action-vedio-container">

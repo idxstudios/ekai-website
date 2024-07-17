@@ -4,6 +4,8 @@ import "./styles.scss";
 // import workplaceImg from "../../assets/workplace-img-one.svg";
 // import workplaceGirl from "../../assets/workplace-img-girl.svg";
 import { FormDialog } from "../FormDialog";
+import videothumb from "../../assets/videothumb.jpg";
+
 import ActionVedio from "../../components/ActionVedio";
 
 export const EkaiIntro = () => {
@@ -43,6 +45,7 @@ export const EkaiIntro = () => {
           <div className="large-image-container">
 
             <div className="video-box">
+              <img src={videothumb} alt="ekai" className="thumbnail" />
             <ActionVedio/>
               {/* <img src={play} className="play-icon" alt="Work Place Img" /> */}
             </div>

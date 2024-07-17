@@ -118,9 +118,9 @@
     margin: auto;
     overflow: hidden;
     margin-top: 50px;
-    width: 90%;
+    width: 95%;
     height: 320px;
-    background: #FAF6EF;
+    // background: #FAF6EF;
     border-radius: 32px;
     display: flex;
     align-items: center;
@@ -131,6 +131,36 @@
       height: 76px;
       cursor: pointer;
     }
+
+    cursor: pointer;
+
+    .thumbnail {
+      overflow: hidden;
+      position: absolute;
+      border-radius: 32px !important;
+      height: 320px;
+      width: 95%;
+      object-fit: cover;
+      z-index: -10;
+    }
+
+    @media screen and (max-width: 1200px) {
+      .thumbnail{
+        display: none;
+        height: 320px;
+        width: 95%;
+        img{
+          display: none;
+          height: 320px;
+          width: 95%;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+        background: #FAF6EF;
+    }
+
   }
 
   .large-image {
