@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./styles.scss";
-import logo from "../../assets/ekai-logo.svg";
+// import logo from "../../assets/ekai-logo.svg";
 import workplaceImg from "../../assets/workplace-img-one.svg";
 import workplaceGirl from "../../assets/workplace-img-girl.svg";
 import { FormDialog } from "../FormDialog";
@@ -20,10 +20,10 @@ export const EkaiIntro = () => {
     <div className="ekai-intro-main-cont">
       <div className="ekai-intro-cont flex-row items-center">
         <div className="left-cont">
-          <div className="logo-container flex-row items-center">
+          {/* <div className="logo-container flex-row items-center">
             <img src={logo} alt="Logo" />
             <span className="app-name">ekai</span>
-          </div>
+          </div> */}
           <div className="left-cont-heading">
             Revolutionise Workplace Productivity
           </div>

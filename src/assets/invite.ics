@@ -1,0 +1,44 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Asia/Kolkata
+X-LIC-LOCATION:Asia/Kolkata
+BEGIN:STANDARD
+TZOFFSETFROM:+0530
+TZOFFSETTO:+0530
+TZNAME:GMT+5:30
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Kolkata:20240704T210000
+DTEND;TZID=Asia/Kolkata:20240704T213000
+DTSTAMP:20240704T093449Z
+ORGANIZER;CN=Gaurav Agrawal:mailto:gaurav@idxstudioz.com
+UID:36v3sqat9v17reucl8v7g3ku3p@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=dubeysuraj864@gmail.com;X-NUM-GUESTS=0:mailto:dubeysuraj864@gmail.c
+ om
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=Gaurav Agrawal;X-NUM-GUESTS=0:mailto:gaurav@idxstudioz.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/nhb-ydgw-qyp
+X-MICROSOFT-CDO-OWNERAPPTID:909909114
+CREATED:20240704T093446Z
+DESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-\nJoin with Google Meet: https://meet.google.com/nh
+ b-ydgw-qyp\nOr dial: (US) +1 404-492-5092 PIN: 613290494#\nMore phone numbe
+ rs: https://tel.meet/nhb-ydgw-qyp?pin=6904111193075&hs=7\n\nLearn more abou
+ t Meet at: https://support.google.com/a/users/answer/9282720\n\nPlease do n
+ ot edit this section.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20240704T093446Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Suraj / Gaurav
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
