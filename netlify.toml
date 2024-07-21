@@ -1,0 +1,21 @@
+[build]
+  publish = "build"
+  functions = "netlify-functions"
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "https://ekai.netlify.app/privacyPolicy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/faqs"
+  to = "https://ekai.netlify.app/FAQs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/terms-of-use"
+  to = "https://ekai.netlify.app/termsOfUse"
+  status = 301
+  force = true
