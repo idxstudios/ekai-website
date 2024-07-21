@@ -4,18 +4,18 @@
 
 [[redirects]]
   from = "/privacy-policy"
-  to = "https://ekai.netlify.app/privacyPolicy"
+  to = "https://www.ekai.ca/privacyPolicy"
   status = 301
   force = true
 
 [[redirects]]
   from = "/faqs"
-  to = "https://ekai.netlify.app/FAQs"
+  to = "https://www.ekai.ca/FAQs"
   status = 301
   force = true
 
 [[redirects]]
   from = "/terms-of-use"
-  to = "https://ekai.netlify.app/termsOfUse"
+  to = "https://www.ekai.ca/termsOfUse"
   status = 301
   force = true
