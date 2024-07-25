@@ -4,7 +4,7 @@ import "./styles.scss"
 export default function OurMission() {
     return (
         <div className='outmission'>
-            <h1>OurMission</h1>
+            <h1>Our Mission</h1>
             <p>
                 <div>In today's fast-paced work environment, managing multiple tools and communication channels can be overwhelming. </div>
                <div> This often leads to inefficiencies, missed messages, and time-consuming manual tasks.</div>

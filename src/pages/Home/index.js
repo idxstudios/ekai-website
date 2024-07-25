@@ -7,7 +7,9 @@ import DataSecurity from "../../components/DataSecurity";
 import Team from "../../components/TeamMember";
 import PromoBanner from "../../components/PromoBanner";
 import Footer from "../../components/Footer";
-import Integration from "../../components/SeeHowItWorks";
+import TransitionDesign from "../../components/AnimationImage/"
+// import Integration from "../../components/SeeHowItWorks";
+
 import { useState, useRef, useEffect } from "react";
 
 
@@ -17,6 +19,7 @@ function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
+  console.log(isVisible)
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -45,9 +48,10 @@ function Home() {
       <OurMission />
       <ElevateYourWorkflow />
       <Benefits />
-      <div ref={sectionRef}>
+      {/* <div ref={sectionRef}>
         {isVisible && <Integration />}
-      </div>
+      </div> */}
+      <TransitionDesign/>
       <DataSecurity />
       <Team />
       <PromoBanner />

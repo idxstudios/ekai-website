@@ -8,14 +8,32 @@
     margin-right: auto;
     display: flex;
     flex-direction: column;
+    .left-cont{
+      .left-cont-heading {
+        color: #000;
+        font-size: 38px;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 3.5rem;
+        margin-bottom: 2rem;
+      }
+      p{
+        font-size: 18px;
+        letter-spacing: -.1px;
+      }
+    }
+
   }
+
 
   @media screen and (max-width: 700px) {
     .ekai-intro-cont {
       width: 90%;
       flex-direction: column;
     }
-
+  .left-cont-heading{
+    margin-top: 0rem !important;
+  }
     .right-cont {
       width: 94%;
       height: 265px;
@@ -99,6 +117,7 @@
     .left-cont-heading {
       font-size: 3.1025rem;
       margin-top: 0px;
+
     }
   }
 
@@ -154,6 +173,7 @@
           height: 320px;
           width: 95%;
         }
+
       }
     }
 

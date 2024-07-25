@@ -1,19 +1,18 @@
-import React from 'react'
-import './styles.scss'
-import CardImage from "../../assets/elevateCard.png"
+import React from 'react';
+import './styles.scss';
 
-export default function ElevateCard({ reverse, title, para }) {
+export default function ElevateCard({ reverse, gifSrc, title, para }) {
+    console.log("GIF Source:", gifSrc);
+
     return (
         <main>
             <div className={`Elevate ${reverse ? "row-rev" : "row"}`}>
                 <div className='left'>
-                    <img src={CardImage} alt='card' />
+                    <img alt='card' src={gifSrc} />
                 </div>
                 <div className='right'>
                     <h1>{title}</h1>
-                    <p>
-                        {para}
-                    </p>
+                    <p>{para}</p>
                 </div>
             </div>
         </main>

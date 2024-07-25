@@ -32,7 +32,7 @@ export default function GlobalNavbar() {
           <div className={`${showMenu ? "nav-links": "nav-links-active"}`}>
             <Link onClick={() => setShowMenu(!showMenu)}  to="/">About Us</Link>
             <Link onClick={() => setShowMenu(!showMenu)} to="/career">Career</Link>
-            <Link onClick={() => setShowMenu(!showMenu)} to="/FAQs">FAQs</Link>
+            {/* <Link onClick={() => setShowMenu(!showMenu)} to="/FAQs">FAQs</Link> */}
             <button
             className="left-cont-button"
             onClick={() => setOpenDialog(true)}

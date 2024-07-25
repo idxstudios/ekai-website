@@ -1,15 +1,14 @@
-// src/Footer.js
-import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import './styles.scss';
 import logo from "../../assets/ekai-logo.svg";
-import Linkedin from "../../assets/linkedin.png";
-import Insta from "../../assets/insta.png"
-import FB from "../../assets/fb.png"
-import Github from "../../assets/github.png"
+import Linkedin from "../../assets/linkedin.svg";
+import Gmail from "../../assets/gmail.svg"
 import Top from "../../assets/top.svg"
-import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const location = useLocation();
+
   const handleContactUs = () => {
     const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
@@ -25,6 +24,16 @@ const Footer = () => {
     }
 
   }
+
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -33,27 +42,30 @@ const Footer = () => {
           <img src={logo} alt="ekai logo" />
           <span>ekai</span>
         </div>
+
+        <div className='bottom-nav'>
+          <Link to="/FAQs#top">FAQs</Link>
+          <Link to="/termsOfUse#top">Terms of Use</Link>
+          <Link to="/privacyPolicy#top">Privacy Policy</Link>
+        </div>
         <div className="social-media">
           <span>Follow Us</span>
           <div className="icons">
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">   <img src={Linkedin} alt="ekai logo" /></a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">   <img src={Insta} alt="ekai logo" /></a>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">   <img src={FB} alt="ekai logo" /></a>
-            <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">   <img src={Github} alt="ekai logo" /></a>
+            <a href="https://www.linkedin.com/company/ekai-0-1/?viewAsMember=true" target="_blank" rel="noopener noreferrer">   <img src={Linkedin} alt="ekai logo" /></a>
+            {/* <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">   <img src={Insta} alt="ekai logo" /></a> */}
+            {/* <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">   <img src={FB} alt="ekai logo" /></a> */}
+            <span onClick={handleContactUs} target="_blank" rel="noopener noreferrer">   <img src={Gmail} alt="ekai logo" /></span>
           </div>
         </div>
-        <div className="contact">
+        {/* <div className="contact">
           <button onClick={handleContactUs}>CONTACT US</button>
-        </div>
+        </div> */}
 
       </div>
       <div className="back-to-top">
         <a href="#top">Back to top  <img src={Top} alt="ekai logo" /></a>
       </div>
-      <div className='bottom-nav'>
-        <Link to="/termsOfUse">Terms of Use</Link>&#8226;
-        <Link to="/privacyPolicy">Privacy Policy</Link>
-      </div>
+
     </footer>
   );
 };

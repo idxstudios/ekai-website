@@ -43,18 +43,20 @@ export default function Career() {
         <h2>Openings</h2>
         <div className='opening-div'>
           <div className="opening">
-            <h3>Digital Marketing Manager</h3>
-            <p>Required Experience</p>
+            <h3>UI/UX designer 
+            </h3>
+            <p>2 years of experience</p>
             <button onClick={handleShareResume} className="join-button">JOIN NOW</button>
           </div>
           <div className="opening">
-            <h3>Digital Marketing Manager</h3>
-            <p>Required Experience</p>
+            <h3>Backend developer</h3>
+            <p>1 years of experience
+            </p>
             <button onClick={handleShareResume} className="join-button">JOIN NOW</button>
           </div>
           <div className="opening">
-            <h3>Digital Marketing Manager</h3>
-            <p>Required Experience</p>
+            <h3>Full stack developer</h3>
+            <p>1 years of experience</p>
             <button onClick={handleShareResume} className="join-button">JOIN NOW</button>
           </div>
         </div>

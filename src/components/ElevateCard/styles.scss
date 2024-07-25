@@ -1,3 +1,7 @@
+$color1: #E6A235;
+$color2: #EC9B62;
+$color3: #C87C3C;
+
 main {
     .Elevate {
         display: flex;
@@ -7,13 +11,13 @@ main {
         margin: auto;
         gap: 100px;
         margin-top: 100px;
-        
+
 
         &.row {
             flex-direction: row;
             justify-content: center;
             flex-wrap: wrap;
-       
+
 
         }
 
@@ -25,17 +29,20 @@ main {
 
         .left {
             background: #FAF6EF;
+            background: linear-gradient(to right, $color1, $color2, $color3);
+
             width: 50%;
             height: 416px;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 16px;
-            
+
 
             img {
                 width: 80%;
                 height: 289px;
+                border-radius: 10px;
             }
         }
 
@@ -63,7 +70,8 @@ main {
             margin-top: 50px;
             width: 90%;
 
-            .left, .right {
+            .left,
+            .right {
                 width: 100%;
                 text-align: center;
 
@@ -88,7 +96,8 @@ main {
         @media (max-width: 480px) {
             margin-top: 20px;
 
-            .left, .right {
+            .left,
+            .right {
                 width: 100%;
                 text-align: center;
 

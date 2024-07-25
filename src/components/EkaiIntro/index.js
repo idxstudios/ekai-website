@@ -27,11 +27,10 @@ export const EkaiIntro = () => {
         <div className="left-cont">
 
           <div className="left-cont-heading">
-            Clone yourself, <br />
-            skip the mundane
+            AI{"{YOU}"} for the <br /> conversations that don't <br /> need real YOU.
           </div>
           <p className="left-cont-subheading">
-            Enhance communication and collaboration <br /> across your organization.
+            Spend more time doing what matters.
           </p>
           <button
             className="left-cont-button"
@@ -46,7 +45,7 @@ export const EkaiIntro = () => {
 
             <div className="video-box">
               <img src={videothumb} alt="ekai" className="thumbnail" />
-            <ActionVedio/>
+              <ActionVedio />
               {/* <img src={play} className="play-icon" alt="Work Place Img" /> */}
             </div>
 
