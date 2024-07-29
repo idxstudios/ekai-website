@@ -8,7 +8,8 @@
     margin-right: auto;
     display: flex;
     flex-direction: column;
-    .left-cont{
+
+    .left-cont {
       .left-cont-heading {
         color: #000;
         font-size: 38px;
@@ -17,10 +18,16 @@
         margin-top: 3.5rem;
         margin-bottom: 2rem;
       }
-      p{
+
+      p {
         font-size: 18px;
         letter-spacing: -.1px;
       }
+    }
+
+    @media (max-width:500px) {
+      align-items: center !important;
+      text-align:center !important;
     }
 
   }
@@ -30,10 +37,14 @@
     .ekai-intro-cont {
       width: 90%;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-  .left-cont-heading{
-    margin-top: 0rem !important;
-  }
+
+    .left-cont-heading {
+      margin-top: 0rem !important;
+    }
+
     .right-cont {
       width: 94%;
       height: 265px;
@@ -85,6 +96,11 @@
     letter-spacing: 0.46px;
     text-transform: uppercase;
     cursor: pointer;
+
+    @media (max-width: 700px) {
+      box-shadow: 1px 0px 20px #ffe1a4;
+
+    }
   }
 
 
@@ -164,11 +180,12 @@
     }
 
     @media screen and (max-width: 1200px) {
-      .thumbnail{
+      .thumbnail {
         display: none;
         height: 320px;
         width: 95%;
-        img{
+
+        img {
           display: none;
           height: 320px;
           width: 95%;
@@ -178,7 +195,7 @@
     }
 
     @media screen and (max-width: 1200px) {
-        background: #FAF6EF;
+      background: #FAF6EF;
     }
 
   }
