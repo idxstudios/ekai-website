@@ -22,13 +22,15 @@ const teamMembers = [
   {
     name: 'Amit Kumar',
     title: 'Chief Technology Officer',
-    point1: 'IIT-K Alumnus',
+    point1: 'CNH Industrial - Technical Lead',
+    point2:"IIT-K Alumnus",
     image: Amit,
   },
   {
     name: 'Rahul Meena',
     title: 'Chief AI Officer',
-    point1: 'IIT-K Alumnus',
+    point1: 'TSM Taiwan - ML Team',
+    point2:'IIT-K Alumnus',
     image: Rahul,
   },  // You can add more team members here if needed
 ];
