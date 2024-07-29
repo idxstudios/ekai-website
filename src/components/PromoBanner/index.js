@@ -17,7 +17,7 @@ const PromoBanner = () => {
   return (
     <div className="promo-banner">
       <p>
-        Experience the future of productivity and creativity with Gen AI. Your personal AI helper is here to make your life easier and more productive.
+      Transform workplace communication with Ekai, your secure AI twin for unmatched productivity and seamless collaboration.
       </p>
       <button
         className="left-cont-button tell-me-more-btn"

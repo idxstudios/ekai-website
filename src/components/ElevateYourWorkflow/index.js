@@ -49,8 +49,8 @@ const card = [
     {
         isRev: false,
         gifSrc: GIF3,
-        title: "1 click Document Generation",
-        para: "Ekai generates comprehensive reports and documents from your existing knowledge base with ease.",
+        title: "Worksafe GPT",
+        para: "Ekai harnesses the power of LLMs and your specialized knowledge, all while ensuring it remains Private & Secure.",
         id: 3
     },
 ]
