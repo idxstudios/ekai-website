@@ -181,21 +181,23 @@
 
     @media screen and (max-width: 1200px) {
       .thumbnail {
-        display: none;
-        height: 320px;
-        width: 95%;
-
+        // display: none;
+        height: 300px;
+        width: 86%;
+        object-fit: contain;
+        background: #FAF6EF;
         img {
-          display: none;
-          height: 320px;
-          width: 95%;
+          // display: none;
+          height: 300px;
+          width: 90%;
+          object-fit: contain;
         }
 
       }
     }
 
     @media screen and (max-width: 1200px) {
-      background: #FAF6EF;
+      // background: #FAF6EF;
     }
 
   }
