@@ -106,15 +106,33 @@
 }
 
 .Technology-main {
-    height: 350px;
+    height: 290px;
     background: #fafafa;
-    
+
     h1 {
         font-weight: 600;
     }
 
     @media (max-width:600px) {
-        height: 240px;
+        height: 200px;
     }
-
+    .DataSecure-container {
+        padding: 0;
+        .icon {
+            padding: 0;
+            font-size: 40px;
+            img {
+                width: 64px;
+                height: 64px;
+                padding: 0;
+                margin-bottom: 100px;
+    
+                @media (max-width: 480px) {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+        }
+    }
+   
 }
