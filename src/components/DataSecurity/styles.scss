@@ -16,7 +16,7 @@
     }
 
 
-    
+
     // src/DataSecure.scss
     .DataSecure-container {
         display: flex;
@@ -103,4 +103,18 @@
             line-height: 18px;
         }
     }
+}
+
+.Technology-main {
+    height: 350px;
+    background: #fafafa;
+
+    h1 {
+        font-weight: 600;
+    }
+
+@media (max-width:600px) {
+    height: 240px;
+}
+
 }

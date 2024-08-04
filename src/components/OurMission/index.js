@@ -6,12 +6,10 @@ export default function OurMission() {
         <div className='outmission'>
             <h1>Our Mission</h1>
             <p>
-                <div>In today's fast-paced work environment, managing multiple tools and communication channels can be overwhelming. </div>
-               <div> This often leads to inefficiencies, missed messages, and time-consuming manual tasks.</div>
-               <div>   We aim to revolutionize the workplace by providing an AI that seamlessly integrates with your existing tools,</div>
-             <div> enhancing communication, automating tasks, and boosting overall productivity.</div>
+                <div>We believe in transforming workplace communication. By empowering every employee with their own AI twin,</div>
+                <div>we alleviate the pain of over-communication and ensure timely, clear written interactions—regardless</div>
+                <div>of language or background—freeing them to focus on what truly matters.</div>
             </p>
-
         </div>
     )
 }

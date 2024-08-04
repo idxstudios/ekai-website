@@ -11,6 +11,7 @@ import TransitionDesign from "../../components/AnimationImage/"
 // import Integration from "../../components/SeeHowItWorks";
 
 import { useState, useRef, useEffect } from "react";
+import TechnologyPartner from "../../components/TechnologyPartner";
 
 
 // import FAQs from "../../components/FAQs";
@@ -53,6 +54,7 @@ function Home() {
       </div> */}
       <TransitionDesign/>
       <DataSecurity />
+      <TechnologyPartner/>
       <Team />
       <PromoBanner />
       {/* <FAQs/> */}
