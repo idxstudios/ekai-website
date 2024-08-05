@@ -114,19 +114,22 @@
     }
 
     @media (max-width:600px) {
-        height: 220px;
+        height: 260px;
     }
+
     .DataSecure-container {
         padding: 0;
+
         .icon {
             padding: 0;
             font-size: 40px;
+
             img {
                 width: 64px;
                 height: 64px;
                 padding: 0;
                 margin-bottom: 100px;
-    
+
                 @media (max-width: 480px) {
                     width: 48px;
                     height: 48px;
@@ -134,5 +137,5 @@
             }
         }
     }
-   
+
 }
