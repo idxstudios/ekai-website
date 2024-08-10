@@ -1,0 +1,122 @@
+// .add-to-slack-section {
+//   display: flex;
+//   justify-content: center;
+//   padding: 20px;
+//   background-color: #f9f9f9;
+
+//   .content-wrapper {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     max-width: 800px;
+//     text-align: center;
+    
+//     .illustration {
+//       max-width: 50%;
+//       height: auto;
+//       margin-bottom: 20px;
+//     }
+
+//     .text-content {
+//       .section-title {
+//         font-size: 2rem;
+//         margin-bottom: 10px;
+//       }
+
+//       .description {
+//         font-size: 1rem;
+//         margin-bottom: 20px;
+//       }
+
+//       .add-to-slack-button {
+//         margin-top: 10px;
+//         display: inline-block;
+//       }
+//     }
+//   }
+
+//   @media (min-width: 768px) {
+//     .content-wrapper {
+//       flex-direction: row;
+//       align-items: flex-mid;
+//       text-align: left;
+
+//       .illustration {
+//         margin-bottom: 0;
+//         margin-right: 20px;
+//         flex: 1;
+//       }
+
+//       .text-content {
+//         flex: 2;
+
+//         .section-title {
+//           font-size: 1.75rem;
+//         }
+
+//         .description {
+//           font-size: 0.9rem;
+//         }
+//       }
+//     }
+//   }
+// }
+
+.add-to-slack-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .illustration {
+      max-width: 50%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .text-content {
+      .description {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+
+      .add-to-slack-button {
+        margin-top: 10px;
+        display: inline-block;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .content-wrapper {
+      flex-direction: row;
+      align-items: flex-mid;
+      text-align: left;
+
+      .illustration {
+        margin-right: 20px;
+        margin-bottom: 0;
+        flex: 1;
+      }
+
+      .text-content {
+        flex: 2;
+
+        .description {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -12,6 +12,7 @@ import TransitionDesign from "../../components/AnimationImage/"
 
 import { useState, useRef, useEffect } from "react";
 import TechnologyPartner from "../../components/TechnologyPartner";
+import AddToSlack from "../../components/AddToSlack";
 
 
 // import FAQs from "../../components/FAQs";
@@ -47,6 +48,7 @@ function Home() {
     <div className="">
       <EkaiIntro />
       <OurMission />
+      <AddToSlack />
       <ElevateYourWorkflow />
       <Benefits />
       {/* <div ref={sectionRef}>
