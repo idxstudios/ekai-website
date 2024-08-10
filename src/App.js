@@ -18,7 +18,6 @@ function App() {
           <Route path="/termsOfUse" element={<TermsOfUse/>} />
           <Route path="/privacyPolicy" element={<PrivacyPolicy/>} />
           </Route>
-
         </Routes>
       </BrowserRouter>
     </div>
