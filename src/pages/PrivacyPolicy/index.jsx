@@ -116,6 +116,35 @@ export default function PrivacyPolicy() {
         visit our Service or when You access the Service by or through a mobile
         device.
       </p>
+
+      <h2>Use of Google Workspace Data</h2>
+          <p>Our application respects the privacy and confidentiality of your data. We have updated our privacy policy to reflect our commitment to transparency and compliance with Google's guidelines. Below are the key points regarding our use of Google Workspace data:</p>
+
+          <h3>Data Usage for AI/ML Models</h3>
+          <ul>
+              <li>Our app <strong>does not use Google Workspace data to develop, improve, or train generalized/non-personalized AI and/or ML models</strong>.</li>
+              <li>If our app uses Google Workspace data, it is solely for the purpose of training personalized AI/ML models to enhance user-specific experiences.</li>
+          </ul>
+
+          <h3>Data Transfer to Third-Party AI Tools</h3>
+          <ul>
+              <li>Our app <strong>does not transfer Google Workspace data to third-party AI tools for the purpose of developing, improving, or training generalized/non-personalized AI/ML models</strong>.</li>
+              <li>Any transfer of Google Workspace data to third-party AI tools is strictly for personalized AI/ML model training, aimed at improving individual user experiences.</li>
+          </ul>
+
+          <h3>Transparency and User Consent</h3>
+          <ul>
+              <li>We are committed to being transparent about the data we collect and how it is used. Our updated privacy policy clearly describes the types of Google user data our app uses for developing, improving, or training AI and/or ML models.</li>
+              <li>Users are informed and must provide consent before any Google Workspace data is used for personalized AI/ML model training.</li>
+          </ul>
+
+          <h3>Data Security and Privacy</h3>
+          <ul>
+              <li>We implement robust security measures to protect your data from unauthorized access, disclosure, alteration, or destruction.</li>
+              <li>Our privacy policy outlines our data security practices and the steps we take to ensure the confidentiality and integrity of your data.</li>
+          </ul>
+     
+
       <h1>Use of Your Personal Data</h1>
       <p>The Company may use Personal Data for the following purposes:</p>
       <ul>
