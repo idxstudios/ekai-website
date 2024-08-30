@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./SlackNotionModal.scss";
 import logo from "../../assets/ekai-logo.svg";
+import { Link } from "react-router-dom";
 
 export const SlackNotionModal = ({ onClose }) => {
   const [isConnected, setIsConnected] = useState(false);
@@ -18,7 +19,7 @@ export const SlackNotionModal = ({ onClose }) => {
   ];
 
   const stuckedPoints = [
-    "Slack should open automatically on a new tab. If it doesn't, <a href='#'>click here to retry</a>.",
+    `Slack should open automatically on a new tab. If it doesn't, <a href='https://app.ekai.ca/slack/install' target={"_blank"}>click here to retry</a>.`,
     "If you are a Slack workspace administrator: Follow Slack’s instructions to connect.",
     "If you are not authorized to install external apps: Follow the instructions to request access to the connection.",
   ];
@@ -84,8 +85,15 @@ const ConnectedState = ({ stuckedPoints }) => (
         ))}
       </ul>
     </div>
+
     <div className="contact-info">
-      Contact us: <a href="#">ekai@idxstudioz.com</a>
+      Contact us: Contact us:{" "}
+      <Link
+        to="https://mail.google.com/mail/u/0/?fs=1&to=ekai@idxstudioz.com&tf=cm"
+        target={"_blank"}
+      >
+        ekai@idxstudioz.com
+      </Link>
     </div>
   </div>
 );
