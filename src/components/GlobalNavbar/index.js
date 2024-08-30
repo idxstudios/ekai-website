@@ -4,11 +4,13 @@ import menu from "../../assets/menu-bar.svg";
 import "./style.scss";
 import { Link, Outlet } from "react-router-dom";
 import { FormDialog } from "../FormDialog";
+import { SlackNotionModal } from "../Modal/SlackNotionModal";
 
 export default function GlobalNavbar() {
   const [showMenu, setShowMenu] = useState();
   const [showFirstImage, setShowFirstImage] = useState(true);
   const [openDialog, setOpenDialog] = useState(false);
+  const [showSlackModal, setShowSlackModal] = useState(false); // New state for Slack modal
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -16,6 +18,14 @@ export default function GlobalNavbar() {
     }, 6000); // Change every 6 seconds
     return () => clearInterval(interval);
   }, []);
+
+  const handleAddSlackClick = () => {
+    setShowSlackModal(true); // Show the Slack modal
+  };
+
+  const handleCloseModal = () => {
+    setShowSlackModal(false); // Hide the Slack modal
+  };
 
   console.log(showFirstImage);
   return (
@@ -27,11 +37,14 @@ export default function GlobalNavbar() {
               <img src={logo} alt="Logo" />
               <span className="app-name">ekai</span>
             </Link>
-
           </div>
-          <div className={`${showMenu ? "nav-links": "nav-links-active"}`}>
-            <Link onClick={() => setShowMenu(!showMenu)}  to="/">About Us</Link>
-            <Link onClick={() => setShowMenu(!showMenu)} to="/career">Career</Link>
+          <div className={`${showMenu ? "nav-links" : "nav-links-active"}`}>
+            <Link onClick={() => setShowMenu(!showMenu)} to="/">
+              About Us
+            </Link>
+            <Link onClick={() => setShowMenu(!showMenu)} to="/career">
+              Career
+            </Link>
             {/* <Link onClick={() => setShowMenu(!showMenu)} to="/FAQs">FAQs</Link> */}
             {/* <button
             className="left-cont-button"
@@ -39,10 +52,9 @@ export default function GlobalNavbar() {
           >
             TELL ME MORE
           </button> */}
-          <FormDialog open={openDialog} setOpenDialog={setOpenDialog} />
-            <a
-              //href="https://slack.com/oauth/v2/authorize?scope=app_mentions%3Aread%2Cchannels%3Ahistory%2Cchannels%3Aread%2Cchat%3Awrite%2Cgroups%3Aread%2Cgroups%3Ahistory%2Ccommands%2Cfiles%3Aread%2Cim%3Ahistory%2Cim%3Aread%2Cim%3Awrite%2Clinks%3Aread%2Cteam%3Aread%2Cusers.profile%3Aread%2Cusers%3Aread%2Cusers%3Aread.email%2Cusers%3Awrite&amp;user_scope=channels%3Aread%2Cchat%3Awrite%2Cgroups%3Aread%2Cim%3Ahistory%2Cim%3Aread%2Cim%3Awrite%2Csearch%3Aread%2Cteam%3Aread%2Cusers%3Aread%2Cusers%3Aread.email&amp;redirect_uri=https%3A%2F%2Fapp.ekai.ca%2Fslack%2Foauth_redirect&amp;client_id=7053055605876.7036441336423&amp;state=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbnN0YWxsT3B0aW9ucyI6eyJzY29wZXMiOlsiYXBwX21lbnRpb25zOnJlYWQiLCJjaGFubmVsczpoaXN0b3J5IiwiY2hhbm5lbHM6cmVhZCIsImNoYXQ6d3JpdGUiLCJjb21tYW5kcyIsImZpbGVzOnJlYWQiLCJncm91cHM6aGlzdG9yeSIsImdyb3VwczpyZWFkIiwiaW06aGlzdG9yeSIsImltOnJlYWQiLCJpbTp3cml0ZSIsImxpbmtzOnJlYWQiLCJ0ZWFtOnJlYWQiLCJ1c2Vycy5wcm9maWxlOnJlYWQiLCJ1c2VyczpyZWFkIiwidXNlcnM6cmVhZC5lbWFpbCIsInVzZXJzOndyaXRlIl0sInVzZXJTY29wZXMiOlsiY2hhbm5lbHM6cmVhZCIsImNoYXQ6d3JpdGUiLCJncm91cHM6cmVhZCIsImltOmhpc3RvcnkiLCJpbTpyZWFkIiwiaW06d3JpdGUiLCJzZWFyY2g6cmVhZCIsInRlYW06cmVhZCIsInVzZXJzOnJlYWQiLCJ1c2VyczpyZWFkLmVtYWlsIl0sIm1ldGFkYXRhIjoiZWthaSIsInJlZGlyZWN0VXJpIjoiaHR0cHM6Ly9hcHAuZWthaS5jYS9zbGFjay9vYXV0aF9yZWRpcmVjdCJ9LCJub3ciOiIyMDI0LTA4LTEyVDIwOjI3OjA4LjczOVoiLCJyYW5kb20iOjgxODI1MSwiaWF0IjoxNzIzNDk0NDI4fQ.dOhSPsB9QPZNRRoZKFq6qUk_cc-UGh8BO8kRFLmYf54&amp;"
-              href="https://app.ekai.ca/slack/install"
+            <FormDialog open={openDialog} setOpenDialog={setOpenDialog} />
+            <button
+              onClick={handleAddSlackClick}
               className="add-to-slack-button"
               style={{
                 alignItems: "center",
@@ -83,14 +95,17 @@ export default function GlobalNavbar() {
                 ></path>
               </svg>
               Add to Slack
-            </a>
+            </button>
           </div>
-          <Link onClick={() => setShowMenu(!showMenu)} className="menu-container ">
+          <Link
+            onClick={() => setShowMenu(!showMenu)}
+            className="menu-container "
+          >
             <img src={menu} alt="Logo" style={{ width: "50px" }} />
           </Link>
         </nav>
-
       </div>
+      {showSlackModal && <SlackNotionModal onClose={handleCloseModal} />}
       <Outlet />
     </>
   );
