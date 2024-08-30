@@ -87,7 +87,7 @@ const ConnectedState = ({ stuckedPoints }) => (
     </div>
 
     <div className="contact-info">
-      Contact us: Contact us:{" "}
+      Contact us:{" "}
       <Link
         to="https://mail.google.com/mail/u/0/?fs=1&to=ekai@idxstudioz.com&tf=cm"
         target={"_blank"}
