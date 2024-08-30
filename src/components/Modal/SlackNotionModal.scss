@@ -1,0 +1,351 @@
+// /* Container for the modal overlay */
+// .modal-overlay {
+//   position: fixed;
+//   inset: 0;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: rgba(0, 0, 0, 0.5);
+//   z-index: 50;
+// }
+
+// /* Close button */
+// .close-button {
+//   position: absolute;
+//   top: 1rem;
+//   right: 1rem;
+//   background: none;
+//   border: none;
+//   color: #6b7280;
+//   cursor: pointer;
+//   font-size: 2rem;
+//   transition: color 0.2s;
+
+//   &:hover {
+//     color: #4b5563;
+//   }
+// }
+
+// /* Flex container for logos and text */
+// .logo-container {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 1rem; /* Use gap to space items */
+
+//   img {
+//     width: 2.5rem; /* Adjust size as needed */
+//     height: 2.5rem;
+//   }
+
+//   span {
+//     font-size: 1.5rem; /* Adjust size as needed */
+//   }
+// }
+
+// /* Checkbox and list */
+// .checkbox-list {
+//   text-align: left;
+//   font-size: 0.875rem;
+//   color: #374151;
+//   margin-bottom: 1.5rem;
+
+//   .checkbox-container {
+//     display: flex;
+//     align-items: center;
+//     margin-bottom: 0.5rem;
+
+//     input {
+//       margin-right: 0.5rem;
+//     }
+//   }
+
+//   ul {
+//     padding-left: 1.5rem;
+//     list-style-type: disc;
+//   }
+// }
+
+// /* Buttons */
+// .connect-button,
+// .cancel-button {
+//   display: block;
+//   width: 100%;
+//   padding: 0.5rem;
+//   border-radius: 0.375rem;
+//   font-size: 0.875rem;
+//   font-weight: 600;
+//   cursor: pointer;
+// }
+
+// .connect-button {
+//   background-color: #2563eb;
+//   color: #ffffff;
+//   transition: background-color 0.2s;
+
+//   &:hover {
+//     background-color: #1d4ed8;
+//   }
+// }
+
+// /* Container for the modal content */
+// .modal-content {
+//   background-color: #ffffff;
+//   width: 90%;
+//   max-width: 500px; /* Set a max-width suitable for responsiveness */
+//   border-radius: 0.75rem;
+//   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+//   padding: 2rem;
+//   position: relative;
+//   overflow: hidden;
+
+//   @media (max-width: 768px) {
+//     width: 90%;
+//     padding: 1.5rem;
+//   }
+
+//   @media (max-width: 480px) {
+//     width: 95%;
+//     padding: 1rem;
+//   }
+// }
+
+// /* Content section of the modal */
+// .modal-content-inner {
+//   text-align: center;
+//   margin-bottom: 1.5rem;
+// }
+
+// /* Modal title */
+// .modal-title {
+//   font-size: 1.5rem;
+//   font-weight: 600;
+//   color: #374151;
+//   margin-bottom: 1rem;
+// }
+
+// /* Message box styling */
+// .message-box {
+//   margin: 1.5rem 0;
+//   padding: 0.75rem;
+//   background-color: #f3f4f6;
+//   color: #374151;
+//   border-radius: 0.375rem;
+//   font-size: 1rem;
+//   text-align: center;
+// }
+
+// /* Contact information styling */
+// .contact-info {
+//   margin-top: 2rem;
+//   font-size: 0.875rem;
+//   color: #6b7280;
+//   text-align: center;
+
+//   a {
+//     color: #2563eb;
+//     font-weight: 600;
+//     text-decoration: none;
+//     transition: color 0.2s;
+
+//     &:hover {
+//       color: #1d4ed8;
+//     }
+//   }
+// }
+
+// /* Responsive adjustments for very small screens */
+// @media (max-width: 320px) {
+//   .modal-content {
+//     padding: 0.5rem; /* Further reduce padding for very small screens */
+//   }
+
+//   .modal-title {
+//     font-size: 1.25rem; /* Adjust font size */
+//   }
+// }
+
+
+
+
+
+
+
+
+/* Container for the modal overlay */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+  }
+  
+  /* Close button */
+  .close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: color 0.2s;
+  
+    &:hover {
+      color: #4b5563;
+    }
+  }
+  
+  /* Flex container for logos and text */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+    
+    span {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Checkbox and list */
+  .checkbox-list {
+    text-align: left;
+    font-size: 0.875rem;
+    color: #374151;
+    margin-bottom: 1.5rem;
+  
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      
+      input {
+        margin-right: 0.5rem;
+      }
+    }
+  
+    ul {
+      padding-left: 1.5rem;
+      list-style-type: disc;
+    }
+    
+    /* Make the points scrollable on small screens */
+    @media (max-width: 768px) {
+      .scrollable-list {
+        max-height: 200px; /* Adjust based on your design */
+        overflow-y: auto; /* Add vertical scrollbar if needed */
+      }
+    }
+  }
+  
+  /* Buttons */
+  .connect-button,
+  .cancel-button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .connect-button {
+    background-color: #2563eb;
+    color: #ffffff;
+    transition: background-color 0.2s;
+    
+    &:hover {
+      background-color: #1d4ed8;
+    }
+  }
+  
+  /* Container for the modal content */
+  .modal-content {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  
+    @media (max-width: 768px) {
+      width: 90%;
+      padding: 1.5rem;
+    }
+  
+    @media (max-width: 480px) {
+      width: 95%;
+      padding: 1rem;
+    }
+  }
+  
+  /* Content section of the modal */
+  .modal-content-inner {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Modal title */
+  .modal-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 1rem;
+  }
+  
+  /* Message box styling */
+  .message-box {
+    margin: 1.5rem 0;
+    padding: 0.75rem;
+    background-color: #f3f4f6;
+    color: #374151;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  /* Contact information styling */
+  .contact-info {
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+    text-align: center;
+  
+    a {
+      color: #2563eb;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s;
+  
+      &:hover {
+        color: #1d4ed8;
+      }
+    }
+  }
+  
+  /* Responsive adjustments for very small screens */
+  @media (max-width: 320px) {
+    .modal-content {
+      padding: 0.5rem;
+    }
+  
+    .modal-title {
+      font-size: 1.25rem;
+    }
+  }
+  
+
+
