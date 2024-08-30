@@ -59,6 +59,7 @@ function Home() {
       <PromoBanner />
       {/* <FAQs/> */}
       <Footer />
+
     </div>
   );
 }

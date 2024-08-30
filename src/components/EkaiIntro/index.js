@@ -25,7 +25,6 @@ export const EkaiIntro = () => {
     <div className="ekai-intro-main-cont">
       <div className="ekai-intro-cont flex-row items-center">
         <div className="left-cont">
-
           <div className="left-cont-heading">
             AI{"{YOU}"} for the <br /> conversations that don't <br /> need real YOU.
           </div>

@@ -3,12 +3,14 @@ import "./SlackNotionModal.scss";
 import { GoArrowSwitch } from "react-icons/go";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 
+
 export const SlackNotionModal = ({ onClose }) => {
   const [isConnected, setIsConnected] = useState(false);
 
   const handleConnectClick = () => {
     setIsConnected(true);
     window.open("https://app.ekai.ca/slack/install", "_blank");
+
   };
 
   const safetyPoints = [
@@ -122,6 +124,7 @@ const ConnectedState = ({ stuckedPoints }) => (
     <h2 className="title">Follow instructions from Slack in your browser</h2>
     <div className="checkbox-list">
       <ul className="data-safety-list">
+
         {stuckedPoints.map((point, i) => (
           <li key={i} dangerouslySetInnerHTML={{ __html: point }}></li>
         ))}
@@ -149,6 +152,7 @@ const NotConnectedState = ({ safetyPoints, handleConnectClick }) => (
       </div>
 
       <ul className="data-safety-list">
+
         {safetyPoints.map((point, i) => (
           <li key={i}>{point}</li>
         ))}
@@ -165,5 +169,6 @@ const LogoContainer = () => (
     <EkaiLogo width={40} height={40} />
     <GoArrowSwitch size={35} color="gray" />
     <SlackIcon width={40} height={40} />
+
   </div>
 );

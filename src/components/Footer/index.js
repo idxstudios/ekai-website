@@ -8,7 +8,6 @@ import Top from "../../assets/top.svg"
 
 const Footer = () => {
   const location = useLocation();
-
   const handleContactUs = () => {
     const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
@@ -24,7 +23,6 @@ const Footer = () => {
     }
 
   }
-
 
   useEffect(() => {
     if (location.hash) {
