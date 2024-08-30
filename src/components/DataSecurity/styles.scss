@@ -1,0 +1,141 @@
+.DataSecure-main {
+    background: #FAF6EF;
+    margin: 20px 0;
+    padding-top: 40px;
+    padding-bottom: 50px;
+
+    h1 {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        margin: auto;
+
+        @media screen and (max-width: 700px) {
+            width: 90%;
+        }
+    }
+
+
+
+    // src/DataSecure.scss
+    .DataSecure-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 80px 0;
+        max-width: 1250px;
+        margin: auto;
+        height: 310px;
+        margin-top: 10px;
+
+        @media (max-width: 1200px) {
+            padding: 60px 20px;
+            flex-direction: column;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            padding: 40px 10px;
+        }
+
+        @media (max-width: 480px) {
+            padding: 20px 5px;
+        }
+    }
+
+    .DataSecure-item {
+        text-align: center;
+        max-width: 320px;
+        margin: auto;
+
+        @media (max-width: 1200px) {
+            max-width: 90%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .icon {
+        font-size: 40px;
+        margin-bottom: 10px;
+
+        img {
+            width: 64px;
+            height: 64px;
+
+            @media (max-width: 480px) {
+                width: 48px;
+                height: 48px;
+            }
+        }
+    }
+
+    .text h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #333;
+        line-height: 43px;
+
+        @media (max-width: 768px) {
+            font-size: 18px;
+            line-height: 38px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 16px;
+            line-height: 32px;
+        }
+    }
+
+    .text p {
+        color: #000000;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 10px;
+        line-height: 21.82px;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}
+
+.Technology-main {
+    height: 290px;
+    background: #fafafa;
+
+    h1 {
+        font-weight: 600;
+    }
+
+    @media (max-width:600px) {
+        height: 260px;
+    }
+
+    .DataSecure-container {
+        padding: 0;
+
+        .icon {
+            padding: 0;
+            font-size: 40px;
+
+            img {
+                width: 64px;
+                height: 64px;
+                padding: 0;
+                margin-bottom: 100px;
+
+                @media (max-width: 480px) {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+        }
+    }
+
+}

@@ -1,16 +1,13 @@
-// src/Footer.js
-import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import './styles.scss';
 import logo from "../../assets/ekai-logo.svg";
 import Linkedin from "../../assets/linkedin.svg";
-// import Insta from "../../assets/insta.png"
-// import FB from "../../assets/fb.png"
-// import Github from "../../assets/github.png"
 import Gmail from "../../assets/gmail.svg"
 import Top from "../../assets/top.svg"
-import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const location = useLocation();
   const handleContactUs = () => {
     const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
@@ -26,6 +23,15 @@ const Footer = () => {
     }
 
   }
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -36,9 +42,9 @@ const Footer = () => {
         </div>
 
         <div className='bottom-nav'>
-          <Link to="/FAQs">FAQs</Link>
-          <Link to="/termsOfUse">Terms of Use</Link>
-          <Link to="/privacyPolicy">Privacy Policy</Link>
+          <Link to="/FAQs#top">FAQs</Link>
+          <Link to="/termsOfUse#top">Terms of Use</Link>
+          <Link to="/privacyPolicy#top">Privacy Policy</Link>
         </div>
         <div className="social-media">
           <span>Follow Us</span>

@@ -1,0 +1,46 @@
+/* PromoBanner.scss */
+
+.promo-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px;
+    background-color: #FAF6EF;
+    /* Background color */
+    color: #333;
+    /* Text color */
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+
+
+    p {
+        max-width: 864px;
+        font-size: 24px;
+        line-height: 32.74px;
+        margin-bottom: 20px;
+        color: #000000;
+        font-weight: 400 !important;
+    }
+
+
+    .tell-me-more-btn {
+        background-color: #7B4A23;
+        margin-top: 50px;
+        /* Button color */
+        color: white;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        &:hover {
+            background-color: #7a5232;
+            /* Darker button color on hover */
+        }
+    }
+}

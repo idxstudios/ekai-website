@@ -1,0 +1,88 @@
+.benefits-main {
+    background: #FAF6EF;
+    
+    // src/Benefits.scss
+    .benefits-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 80px 0px 80px 0px;
+        // background-color: #f9f9f9;
+        max-width: 1250px;
+        margin: auto;
+        height: 310px;
+    }
+
+    .benefit-item {
+        text-align: center;
+        max-width: 320px;
+    }
+
+    .icon {
+        font-size: 40px;
+        margin-bottom: 10px;
+        img{
+            width: 96px;
+            height: 96px;
+        }
+    }
+
+    .text h3 {
+        font-size: 30px;
+        font-weight: normal;
+        color: #333;
+        font-weight: 500;
+        line-height: 43px;
+    }
+
+    
+@media (max-width: 768px) { // Tablet and below
+    .benefits-container {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 0px 40px 0px;
+    }
+
+    .benefit-item {
+        max-width: 90%;
+        margin: 10px 0; // Adjusted margin for better spacing
+    }
+
+    .icon {
+        font-size: 30px;
+        img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    .text h3 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+}
+
+@media (max-width: 480px) { // Phone and below
+    .benefits-container {
+        padding: 20px 0px 20px 0px;
+    }
+
+    .benefit-item {
+        margin: 10px 0; // Adjusted margin for better spacing
+    }
+
+    .icon {
+        font-size: 25px;
+        img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    .text h3 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+}
