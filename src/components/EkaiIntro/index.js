@@ -27,7 +27,7 @@ export const EkaiIntro = () => {
         <div className="left-cont">
 
           <div className="left-cont-heading">
-            AI {"{YOU}"} for the <br /> atters that don’t <br /> need real YOU.
+            AI {"{YOU}"} for <br /> matters that don’t <br /> need real YOU.
           </div>
           <p className="left-cont-subheading">
             Spend more time doing what matters.
