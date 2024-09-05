@@ -1,5 +1,5 @@
 .main-nav {
-  background: #FAF6EF;
+  background: #fff;
   user-select: none;
 
   nav {
@@ -7,9 +7,15 @@
     max-width: 1230px;
     display: flex;
     justify-content: space-between;
+    gap: 50px;
     align-items: center;
     height: 95px;
     padding: 20px;
+    div{
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
 
     .nav-links-close {
       display: none;
@@ -18,7 +24,7 @@
     .logo-container {
       font-size: 28.83px;
       font-weight: 800;
-      color: #141613;
+      color: #343932;
       word-spacing: -10px;
       letter-spacing: -1px;
       display: flex;
@@ -27,6 +33,7 @@
 
       a {
         text-decoration: none;
+        
       }
     }
 
@@ -37,7 +44,8 @@
 
       a {
         text-decoration: none;
-        color: #141613;
+        color: #475467;
+        font-weight: 900 !important;
       }
 
       button {
@@ -58,7 +66,9 @@
 
       a {
         text-decoration: none;
-        color: #141613;
+        color: #475467;
+        font-weight: 600 !important;
+        font-size: 16px;
       }
 
       button {

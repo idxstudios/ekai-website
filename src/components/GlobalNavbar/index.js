@@ -22,6 +22,7 @@ export default function GlobalNavbar() {
     <>
       <div className="main-nav">
         <nav>
+          <div>
           <div className="logo-container flex-row items-center">
             <Link className="logo-container " to="/">
               <img src={logo} alt="Logo" />
@@ -40,7 +41,11 @@ export default function GlobalNavbar() {
             TELL ME MORE
           </button> */}
           <FormDialog open={openDialog} setOpenDialog={setOpenDialog} />
-            <a
+         
+          </div>
+          </div>
+         <div>
+         <a
               //href="https://slack.com/oauth/v2/authorize?scope=app_mentions%3Aread%2Cchannels%3Ahistory%2Cchannels%3Aread%2Cchat%3Awrite%2Cgroups%3Aread%2Cgroups%3Ahistory%2Ccommands%2Cfiles%3Aread%2Cim%3Ahistory%2Cim%3Aread%2Cim%3Awrite%2Clinks%3Aread%2Cteam%3Aread%2Cusers.profile%3Aread%2Cusers%3Aread%2Cusers%3Aread.email%2Cusers%3Awrite&amp;user_scope=channels%3Aread%2Cchat%3Awrite%2Cgroups%3Aread%2Cim%3Ahistory%2Cim%3Aread%2Cim%3Awrite%2Csearch%3Aread%2Cteam%3Aread%2Cusers%3Aread%2Cusers%3Aread.email&amp;redirect_uri=https%3A%2F%2Fapp.ekai.ca%2Fslack%2Foauth_redirect&amp;client_id=7053055605876.7036441336423&amp;state=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbnN0YWxsT3B0aW9ucyI6eyJzY29wZXMiOlsiYXBwX21lbnRpb25zOnJlYWQiLCJjaGFubmVsczpoaXN0b3J5IiwiY2hhbm5lbHM6cmVhZCIsImNoYXQ6d3JpdGUiLCJjb21tYW5kcyIsImZpbGVzOnJlYWQiLCJncm91cHM6aGlzdG9yeSIsImdyb3VwczpyZWFkIiwiaW06aGlzdG9yeSIsImltOnJlYWQiLCJpbTp3cml0ZSIsImxpbmtzOnJlYWQiLCJ0ZWFtOnJlYWQiLCJ1c2Vycy5wcm9maWxlOnJlYWQiLCJ1c2VyczpyZWFkIiwidXNlcnM6cmVhZC5lbWFpbCIsInVzZXJzOndyaXRlIl0sInVzZXJTY29wZXMiOlsiY2hhbm5lbHM6cmVhZCIsImNoYXQ6d3JpdGUiLCJncm91cHM6cmVhZCIsImltOmhpc3RvcnkiLCJpbTpyZWFkIiwiaW06d3JpdGUiLCJzZWFyY2g6cmVhZCIsInRlYW06cmVhZCIsInVzZXJzOnJlYWQiLCJ1c2VyczpyZWFkLmVtYWlsIl0sIm1ldGFkYXRhIjoiZWthaSIsInJlZGlyZWN0VXJpIjoiaHR0cHM6Ly9hcHAuZWthaS5jYS9zbGFjay9vYXV0aF9yZWRpcmVjdCJ9LCJub3ciOiIyMDI0LTA4LTEyVDIwOjI3OjA4LjczOVoiLCJyYW5kb20iOjgxODI1MSwiaWF0IjoxNzIzNDk0NDI4fQ.dOhSPsB9QPZNRRoZKFq6qUk_cc-UGh8BO8kRFLmYf54&amp;"
               href="https://app.ekai.ca/slack/install"
               className="add-to-slack-button"
@@ -84,7 +89,7 @@ export default function GlobalNavbar() {
               </svg>
               Add to Slack
             </a>
-          </div>
+         </div>
           <Link onClick={() => setShowMenu(!showMenu)} className="menu-container ">
             <img src={menu} alt="Logo" style={{ width: "50px" }} />
           </Link>

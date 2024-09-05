@@ -1,4 +1,6 @@
 .ekai-intro-main-cont {
+  position: relative;
+
   .ekai-intro-cont {
     padding-top: 5rem;
     padding-bottom: 5.75rem;
@@ -7,27 +9,97 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
 
     .left-cont {
+      
+      width: 80vw;
       .left-cont-heading {
-        color: #000;
-        font-size: 38px;
-        font-weight: 700;
-        line-height: normal;
-        margin-top: 3.5rem;
-        margin-bottom: 2rem;
+        color: #343932;
+        font-size: 70px;
+        font-weight: 500;
+        // line-height: 109.28px;
+        margin-top: 1rem;
+        width: 100%;
+
+
+        .left-cont-span-out {
+          display: flex;
+          justify-content: start;
+          gap: 20px;
+          align-items: center;
+          // width: 80vw;
+
+          .word-animation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .animated-word {
+            font-size: 70px;
+            font-weight: bold;
+            animation: fadeInOut 2s ease-in-out infinite;
+            color: #333;
+            /* Text color */
+            background: linear-gradient(90.24deg, #cadbc981 -113.26%, #d29f517d -44.99%, #d3cf9985 -1.12%, #dbc26979 42.31%, #c8793977 101.9%);
+            font-weight: 800;
+            padding: 10px;
+            border-radius: 10px;
+            white-space: nowrap;
+            /* Prevent text wrapping */
+            display: inline-block;
+            /* Ensures the width adapts correctly */
+          }
+
+          @keyframes fadeInOut {
+
+            0%,
+            100% {
+              opacity: 0;
+              /* Fade out effect */
+              // transform: scaleX(0); /* Scale down to zero horizontally */
+            }
+
+            50% {
+              opacity: 1;
+              /* Full opacity when expanding */
+              // transform: scaleX(1); /* Scale up to fit the content */
+            }
+          }
+
+
+
+        }
+
+
+
+        .rep-text {
+          background: linear-gradient(90.24deg, #CADBC9 -113.26%, #D29E51 -44.99%, #D3CF99 -1.12%, #DBC269 42.31%, #C87A39 101.9%);
+          font-weight: 500;
+          border-radius: 30px;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
       }
 
       p {
         font-size: 18px;
-        letter-spacing: -.1px;
+        letter-spacing: -.3px;
+        color: rgba(87, 87, 87, 1);
+        ;
+
       }
+    }
+
+    .right-cont {
+      width: 100%;
     }
 
     @media (max-width:500px) {
       align-items: center !important;
-      text-align:center !important;
+      text-align: center !important;
     }
 
   }
@@ -46,8 +118,8 @@
     }
 
     .right-cont {
-      width: 94%;
-      height: 265px;
+      // width: 94%;
+      // height: 265px;
     }
   }
 
@@ -73,12 +145,27 @@
     font-size: 2.0025rem;
     font-weight: 700;
     line-height: normal;
-    margin-top: 3.5rem;
-    margin-bottom: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+
+    .left-cont-span-out {
+
+      .rep {
+        margin-bottom: -5rem !important;
+      }
+
+    }
+
+
+    .rep-text {
+      margin-bottom: 1rem;
+    }
+
   }
 
   .left-cont-subheading {
     color: #575757;
+    margin-top: 2rem;
     font-size: 1.05rem;
     line-height: normal;
     letter-spacing: 1px;
@@ -87,7 +174,7 @@
 
   .left-cont-button {
     border: none;
-    background: #C87C3C;
+    background: rgba(32, 19, 53, 1);
     border-radius: 2.5rem;
     color: #ffffff;
     padding: 0.75rem 1.5rem;
@@ -107,7 +194,7 @@
   @media screen and (min-width: 880px) {
     .right-cont {
       display: flex;
-      width: 54%;
+      // width: 54%;
       flex-direction: column;
     }
 
@@ -154,12 +241,13 @@
     overflow: hidden;
     margin-top: 50px;
     width: 95%;
-    height: 320px;
+    height: 620px;
     // background: #FAF6EF;
     border-radius: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
+
 
     .play-icon {
       width: 76px;
@@ -173,7 +261,8 @@
       overflow: hidden;
       position: absolute;
       border-radius: 32px !important;
-      height: 320px;
+      // height: 320px;
+      height: 620px;
       width: 95%;
       object-fit: cover;
       z-index: -10;
@@ -186,6 +275,7 @@
         width: 86%;
         object-fit: contain;
         background: #FAF6EF;
+
         img {
           // display: none;
           height: 300px;
@@ -281,4 +371,20 @@
       opacity: 0;
     }
   }
+}
+
+.blurR{
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  z-index: -10;
+  filter: blur(50px);
+}
+
+.blurL{
+  position: absolute;
+  left: -240px;
+  top: 350px;
+  z-index: -10;
+  filter: blur(50px);
 }
