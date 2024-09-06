@@ -1,0 +1,33 @@
+.EnhancingProductivity {
+ 
+  background: rgba(249, 249, 249, 1);
+
+
+  .Enhcontainer {
+    margin: 150px 0;
+    margin: auto;
+    max-width: 1150px !important;
+    padding: 50px 0;
+  }
+
+  h1 {
+    font-size: 80px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.858);
+    letter-spacing: -2.2%;
+  }
+  h4{
+    font-size: 20px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.858);
+  }
+  .three-container{
+    display: flex;
+    justify-content: space-around;
+    .box1, .box2, .box3{
+        p{
+            text-align: center;
+        }
+    }
+  }
+}

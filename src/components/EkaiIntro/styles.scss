@@ -13,7 +13,7 @@
 
     .left-cont {
       
-      width: 80vw;
+      width: fit-content;
       .left-cont-heading {
         color: #343932;
         font-size: 70px;
@@ -243,7 +243,7 @@
     width: 95%;
     height: 620px;
     // background: #FAF6EF;
-    border-radius: 32px;
+    // border-radius: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -260,12 +260,13 @@
     .thumbnail {
       overflow: hidden;
       position: absolute;
-      border-radius: 32px !important;
+      // border-radius: 32px !important;
       // height: 320px;
-      height: 620px;
-      width: 95%;
+      height: 610px;
+      width: 94%;
       object-fit: cover;
       z-index: -10;
+      
     }
 
     @media screen and (max-width: 1200px) {

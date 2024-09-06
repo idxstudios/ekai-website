@@ -5,12 +5,16 @@
     // background: #FAF6EF;
     padding: 50px 0px;
     margin: 40px 0px;
+    font-size: 70px;
+    text-align: center;
+    font-weight: 600;
+    color:  rgb(55, 55, 55);
 
     h1 {
         text-align: center;
         margin-bottom: 20px;
-        font-size: 36px;
-        font-weight: 700;
+        font-size: 20px;
+        font-weight: y00;
     }
 
     p {
@@ -18,5 +22,18 @@
         line-height: 27.28px;
         color: #575757;
     }
+    .animated-word {
+        font-size: 70px;
+        font-weight: 900;
+        color: #333; 
+        background: linear-gradient(90.24deg, #cadbc9b5 -113.26%, #d29f51b3 -44.99%, #d3cf99b9 -1.12%, #dbc269b9 42.31%, #c87939b3 101.9%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding: 5px;
+        border-radius: 10px;
+        white-space: nowrap;
+        display: inline-block;
+    }
+    
 
 }

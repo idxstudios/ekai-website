@@ -1,8 +1,8 @@
 import "../../App.css";
 import { EkaiIntro } from "../../components/EkaiIntro";
 import OurMission from "../../components/OurMission";
-import ElevateYourWorkflow from "../../components/ElevateYourWorkflow";
-import Benefits from "../../components/Benefits";
+// import ElevateYourWorkflow from "../../components/ElevateYourWorkflow";
+// import Benefits from "../../components/Benefits";
 import DataSecurity from "../../components/DataSecurity";
 import Team from "../../components/TeamMember";
 import PromoBanner from "../../components/PromoBanner";
@@ -12,6 +12,7 @@ import TransitionDesign from "../../components/AnimationImage/"
 
 import { useState, useRef, useEffect } from "react";
 import TechnologyPartner from "../../components/TechnologyPartner";
+import EnhancingProductivity from "../../components/EnhancingProductivity";
 
 
 // import FAQs from "../../components/FAQs";
@@ -47,8 +48,9 @@ function Home() {
     <div className="">
       <EkaiIntro />
       <OurMission />
-      <ElevateYourWorkflow />
-      <Benefits />
+      <EnhancingProductivity/>
+      {/* <ElevateYourWorkflow /> */}
+      {/* <Benefits /> */}
       {/* <div ref={sectionRef}>
         {isVisible && <Integration />}
       </div> */}
