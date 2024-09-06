@@ -7,7 +7,7 @@ import DataSecurity from "../../components/DataSecurity";
 import Team from "../../components/TeamMember";
 import PromoBanner from "../../components/PromoBanner";
 import Footer from "../../components/Footer";
-import TransitionDesign from "../../components/AnimationImage/"
+// import TransitionDesign from "../../components/AnimationImage/"
 // import Integration from "../../components/SeeHowItWorks";
 
 import { useState, useRef, useEffect } from "react";
@@ -60,7 +60,7 @@ function Home() {
       {/* <TransitionDesign/> */}
       <DataSecurity />
       <Pricing/>
-      {/* <TechnologyPartner/> */}
+      <TechnologyPartner/>
       <Team />
       <PromoBanner />
       {/* <FAQs/> */}
