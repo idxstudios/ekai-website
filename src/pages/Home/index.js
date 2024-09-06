@@ -13,6 +13,7 @@ import TransitionDesign from "../../components/AnimationImage/"
 import { useState, useRef, useEffect } from "react";
 import TechnologyPartner from "../../components/TechnologyPartner";
 import EnhancingProductivity from "../../components/EnhancingProductivity";
+import Pricing from "../../components/Pricing";
 
 
 // import FAQs from "../../components/FAQs";
@@ -49,14 +50,17 @@ function Home() {
       <EkaiIntro />
       <OurMission />
       <EnhancingProductivity/>
+
+
       {/* <ElevateYourWorkflow /> */}
       {/* <Benefits /> */}
       {/* <div ref={sectionRef}>
         {isVisible && <Integration />}
       </div> */}
-      <TransitionDesign/>
+      {/* <TransitionDesign/> */}
       <DataSecurity />
-      <TechnologyPartner/>
+      <Pricing/>
+      {/* <TechnologyPartner/> */}
       <Team />
       <PromoBanner />
       {/* <FAQs/> */}
