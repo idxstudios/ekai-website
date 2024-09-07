@@ -20,6 +20,7 @@
       align-items: center;
       margin: auto;
       
+      
       width: fit-content;
       .left-cont-heading {
         color: #343932;
@@ -29,6 +30,9 @@
         margin-top: 1rem;
         width: 100%;
 
+        width: max-content;
+        transition: all .5s ease;
+
 
         .left-cont-span-out {
           display: flex;
@@ -36,6 +40,8 @@
           gap: 20px;
           align-items: center;
           // width: 80vw;
+        
+          
 
           .word-animation {
             display: flex;
