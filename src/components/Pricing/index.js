@@ -27,9 +27,10 @@ const Card = ({ title, subtitle, description, originalPrice, discountedPrice, pr
         <p className="pricing-info">
           <span className="original-price">{originalPrice}</span>
           <span className="discounted-price">{discountedPrice}</span>
-          <span>{pricingInfo}</span>
+          
         </p>
       )}
+      <span className='pricingInfo'>{pricingInfo}</span>
       {trialInfo && <p className="trial-info">{trialInfo}</p>}
       <button className="contact-btn">{buttonText}</button>
     </div>
