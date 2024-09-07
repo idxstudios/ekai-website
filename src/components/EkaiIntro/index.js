@@ -7,6 +7,7 @@ import "./styles.scss";
 // import workplaceGirl from "../../assets/workplace-img-girl.svg";
 
 import BlurR from "../../assets/blurR.svg";
+import Arrow from "../../assets/arrow.svg";
 import BlurL from "../../assets/blurR.svg";
 import { FormDialog } from "../FormDialog";
 const words = ['repetitive', 'interruptions', 'busywork', 'chaos'];
@@ -52,16 +53,15 @@ export const EkaiIntro = () => {
             </div></div>
           </div>
           <div className="left-cont-heading">
-            <span className="rep-text">More time for IRL {"{YOU}"}</span>
+            <span className="rep-text" >More time for what matters</span>
           </div>
           <p className="left-cont-subheading">
-            Spend more time doing what matters.
           </p>
           <button
             className="left-cont-button"
             onClick={() => setOpenDialog(true)}
           >
-            TELL ME MORE
+            Get Started <img src={Arrow} alt="" />
           </button>
           <FormDialog open={openDialog} setOpenDialog={setOpenDialog} />
         </div>
@@ -72,7 +72,6 @@ export const EkaiIntro = () => {
               <img src={videothumb} alt="ekai" className="thumbnail" />
               <ActionVedio />
             </div>
-
           </div>
         </div>
       </div>

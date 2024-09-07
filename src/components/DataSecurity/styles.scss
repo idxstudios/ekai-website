@@ -22,18 +22,20 @@
     .three-cards {
         margin: 60px 0;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 30px;
     }
 
 }
 
 .card-secure {
     border: 1px solid #cccccca8;
-    width: 330px;
+    width: 320px;
     height: 370px;
     padding: 20px;
     border-radius: 20px;
     display: flex;
+    justify-content: start;
     flex-direction: column;
 
     img {

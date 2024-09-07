@@ -1,49 +1,88 @@
 import React from 'react';
-import './styles.scss'; 
+import './styles.scss';
+import Square from '../../assets/CardSquare.svg';
+import Check from "../../assets/CheckCircle.svg";
+
+// Refactored Card component to accept props
+const Card = ({ title, subtitle, description, originalPrice, discountedPrice, pricingInfo, trialInfo, buttonText, benefits }) => {
+  return (
+    <div className="card enterprise">
+      <div className="card-header">
+        <img src={Square} alt="Icon" className="card-icon" />
+        <div>
+          <h5>{subtitle}</h5>
+          <h4>{title}</h4>
+        </div>
+      </div>
+      {/* <h3>{title}</h3> */}
+      <p>{description}</p>
+      {benefits && (
+        <ul>
+          {benefits.map((benefit, index) => (
+            <li key={index}><img src={Check} alt=""/>{benefit}</li>
+          ))}
+        </ul>
+      )}
+      {originalPrice && (
+        <p className="pricing-info">
+          <span className="original-price">{originalPrice}</span>
+          <span className="discounted-price">{discountedPrice}</span>
+          <span>{pricingInfo}</span>
+        </p>
+      )}
+      {trialInfo && <p className="trial-info">{trialInfo}</p>}
+      <button className="contact-btn">{buttonText}</button>
+    </div>
+  );
+};
 
 const Pricing = () => {
   return (
     <div className="pricing-section">
       <h2>Pricing</h2>
       <div className="pricing-cards">
-        <div className="card pilot">
-          <h4>For individuals</h4>
-          <h3>Pilot</h3>
-          <p>Ekai hosted plan ensures data protection and security on our cloud, not shared with other organizations.</p>
-          <div className="price">
-            <span className="original-price">$25</span>
-            <span className="discount-price">$15</span>
-            <span className="price-info">/user per month</span>
-          </div>
-          <p className="trial-info">30 days free trial</p>
-          <button className="get-started-btn">Get started →</button>
-        </div>
-
-        <div className="card pro">
-          <h4>For individuals</h4>
-          <h3>Pro</h3>
-          <p>Self-hosted plan with one-click installation, freedom to choose cloud provider, and preferred LLM.</p>
-          <div className="price">
-            <span className="original-price">$250</span>
-            <span className="discount-price">$100</span>
-            <span className="price-info">/user per month</span>
-          </div>
-          <button className="get-started-btn">Get started →</button>
-        </div>
-
-        <div className="card enterprise">
-          <h4>For big companies</h4>
-          <h3>Enterprise</h3>
-          <p>Includes all features from Pilot and Pro, with additional benefits:</p>
-          <ul>
-            <li>Ability to upload company-level documents from webpages, Wiki, or PDFs to train Ekai with basic knowledge.</li>
-            <li>Employee directory mapping</li>
-          </ul>
-          <button className="contact-btn">Contact us →</button>
-        </div>
+        {pricingCards.map((card, index) => (
+          <Card key={index} {...card} />
+        ))}
       </div>
     </div>
   );
 };
 
 export default Pricing;
+
+const pricingCards = [
+  {
+    title: 'Pilot',
+    subtitle: 'For individuals',
+    description:
+      'Ekai hosted plan ensures data protection and security on our cloud, not shared with other organizations.',
+    originalPrice: '$25',
+    discountedPrice: '$15',
+    pricingInfo: '/user per month',
+    trialInfo: '30 days free trial',
+    buttonText: 'Get started',
+  },
+  {
+    title: 'Pro',
+    subtitle: 'For individuals',
+    description:
+      'Self-hosted plan with one-click installation, freedom to choose cloud provider, and preferred LLM.',
+    originalPrice: '$250',
+    discountedPrice: '$100',
+    pricingInfo: '/user annually',
+    trialInfo: ' ',
+    buttonText: 'Get started',
+  },
+  {
+    title: 'Enterprise',
+    subtitle: 'For big companies',
+    description: 'Includes all features from Pilot and Pro, with additional benefits:',
+    benefits: [
+      'Ability to upload company-level documents from webpages, Wiki, or PDFs to train Ekai with basic knowledge.',
+      'Employee directory mapping.',
+    ],
+    trialInfo: ' ',
+    buttonText: 'Contact us',
+  },
+];

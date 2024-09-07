@@ -4,7 +4,7 @@ import OurMission from "../../components/OurMission";
 // import ElevateYourWorkflow from "../../components/ElevateYourWorkflow";
 // import Benefits from "../../components/Benefits";
 import DataSecurity from "../../components/DataSecurity";
-import Team from "../../components/TeamMember";
+// import Team from "../../components/TeamMember";
 import PromoBanner from "../../components/PromoBanner";
 import Footer from "../../components/Footer";
 // import TransitionDesign from "../../components/AnimationImage/"
@@ -61,7 +61,7 @@ function Home() {
       <DataSecurity />
       <Pricing/>
       <TechnologyPartner/>
-      <Team />
+      {/* <Team /> */}
       <PromoBanner />
       {/* <FAQs/> */}
       <Footer />
