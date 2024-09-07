@@ -21,7 +21,7 @@ const Card = ({ title, subtitle, description, originalPrice, discountedPrice, pr
       {benefits && (
         <ul>
           {benefits.map((benefit, index) => (
-            <li key={index}><img src={Check} alt=""/>{benefit}</li>
+            <li key={index}><img src={Check} alt="ekai"/>{benefit}</li>
           ))}
         </ul>
       )}
@@ -34,7 +34,7 @@ const Card = ({ title, subtitle, description, originalPrice, discountedPrice, pr
       )}
       <span className='pricingInfo'>{pricingInfo}</span>
       {trialInfo && <p className="trial-info">{trialInfo}</p>}
-      <button className="contact-btn">{buttonText} <img src={Arrow}/></button>
+      <button className="contact-btn">{buttonText} <img src={Arrow} alt='ekai'/></button>
     </div>
   );
 };
