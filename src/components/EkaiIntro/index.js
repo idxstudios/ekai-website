@@ -7,7 +7,7 @@ import "./styles.scss";
 // import workplaceGirl from "../../assets/workplace-img-girl.svg";
 
 import BlurR from "../../assets/blurR.svg";
-import Arrow from "../../assets/arrow.svg";
+import Arrow from "../../assets/ArrowRight.svg";
 import BlurL from "../../assets/blurR.svg";
 import { FormDialog } from "../FormDialog";
 const words = ['repetitive', 'interruptions', 'busywork', 'chaos'];

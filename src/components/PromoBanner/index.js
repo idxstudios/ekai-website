@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './styles.scss';
 import { FormDialog } from '../FormDialog';
+import Arrow from "../../assets/ArrowRight.svg";
+
 
 const PromoBanner = () => {
   const [showFirstImage, setShowFirstImage] = useState(true);
@@ -23,7 +25,7 @@ const PromoBanner = () => {
         className="left-cont-button tell-me-more-btn"
         onClick={() => setOpenDialog(true)}
       >
-        Get Started
+        Get Started <img src={Arrow} alt="ekai" />
       </button>
       <FormDialog open={openDialog} setOpenDialog={setOpenDialog} />
     </div>

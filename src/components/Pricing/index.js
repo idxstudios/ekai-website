@@ -2,6 +2,8 @@ import React from 'react';
 import './styles.scss';
 import Square from '../../assets/CardSquare.svg';
 import Check from "../../assets/CheckCircle.svg";
+import Arrow from "../../assets/ArrowRight.svg";
+
 
 // Refactored Card component to accept props
 const Card = ({ title, subtitle, description, originalPrice, discountedPrice, pricingInfo, trialInfo, buttonText, benefits }) => {
@@ -32,7 +34,7 @@ const Card = ({ title, subtitle, description, originalPrice, discountedPrice, pr
       )}
       <span className='pricingInfo'>{pricingInfo}</span>
       {trialInfo && <p className="trial-info">{trialInfo}</p>}
-      <button className="contact-btn">{buttonText}</button>
+      <button className="contact-btn">{buttonText} <img src={Arrow}/></button>
     </div>
   );
 };
