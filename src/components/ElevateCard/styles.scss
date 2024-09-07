@@ -1,34 +1,36 @@
-$color1: #E6A235;
-$color2: #EC9B62;
-$color3: #C87C3C;
+$color1: #fff;
+$color2: #fff;
+$color3: #fff;
 
 main {
+    max-width: 1350px;
+    margin: auto;
     .Elevate {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 1200px;
-        margin: auto;
-        gap: 100px;
+        max-width: 1350px;
+    
+        // gap: 50px;
         margin-top: 100px;
-
+        margin: auto;
 
         &.row {
             flex-direction: row;
             justify-content: center;
             flex-wrap: wrap;
-
-
+            margin-left: 0px;
         }
 
         &.row-rev {
             flex-direction: row-reverse;
             flex-wrap: wrap;
             justify-content: center;
+            margin-right: 0px;
         }
 
         .left {
-            background: #FAF6EF;
+            background: #faf6ef;
             background: linear-gradient(to right, $color1, $color2, $color3);
             width: 50%;
             height: 386px;
@@ -37,20 +39,20 @@ main {
             align-items: center;
             border-radius: 16px;
 
-
             img {
                 width: 80%;
                 height: 289px;
                 border-radius: 10px;
             }
-          @media (max-width:600px) {
-            height: 280px;
-          }
-          @media (max-width:400px) {
-            height: 240px;
-          }
+
+            @media (max-width: 600px) {
+                height: 280px;
+            }
+
+            @media (max-width: 400px) {
+                height: 240px;
+            }
         }
-        
 
         .right {
             text-align: left;
@@ -76,10 +78,7 @@ main {
             margin-top: 50px !important;
             width: 90%;
 
-
-            
             .left,
-            
             .right {
                 width: 100%;
                 text-align: center;
@@ -104,7 +103,6 @@ main {
 
         @media (max-width: 480px) {
             margin-top: 20px;
-    
 
             .left,
             .right {

@@ -1,9 +1,12 @@
 import React from 'react';
 import './styles.scss';
 import ElevateCard from '../ElevateCard';
-import GIF1 from "../../assets/cardsGif/GIF1.gif";
-import GIF2 from "../../assets/cardsGif/GIF2.gif";
-import GIF3 from "../../assets/cardsGif/GIF3.gif"; // Fixed the filename for GIF3
+// import GIF1 from "../../assets/cardsGif/GIF1.gif";
+// import GIF2 from "../../assets/cardsGif/GIF2.gif";
+// import GIF3 from "../../assets/cardsGif/GIF3.gif";
+import GIF1 from "../../assets/cardsGif/img1.png";
+import GIF2 from "../../assets/cardsGif/img2.png";
+import GIF3 from "../../assets/cardsGif/img3.png";
 
 export default function ElevateYourWorkflow() {
     // Debugging: Check if card data is loaded
@@ -35,22 +38,22 @@ const card = [
     {
         isRev: false,
         gifSrc: GIF1,
-        title: "Always ON, Always YOU",
-        para: "Smart companion that manages routine queries, provides updates, and engages in discussions, all while keeping your tone and context.",
+        title: "/ekai anything, anywhere",
+        para: "ekaiGPT harnesses the power of LLMs and your specialized knowledge, all while ensuring it remains Private & Secure.",
         id: 1
     },
     {
         isRev: true,
         gifSrc: GIF2,
-        title: "External Communication",
-        para: "Expose your AI twin outside of slack to expose what your external customers and stakeholders expect from you",
+        title: "Cross platform",
+        para: "Integrations with top platforms like Atlassian/Jira, Notion, Google, Slack, Salesforce, GitHub, etc. You now have the flexibility to work in your preferred workspace.",
         id: 2
     },
     {
         isRev: false,
         gifSrc: GIF3,
-        title: "Worksafe GPT",
-        para: "Ekai harnesses the power of LLMs and your specialized knowledge, all while ensuring it remains Private & Secure.",
+        title: "Compliant & Contextual LLM",
+        para: "Unlock the potential of Generative AI while safeguarding your data privacy. One click to host it on your chosen VPC. Ekai securely learns by combining insights from different sources, providing your team with a personalized language model tailored to their context..",
         id: 3
     },
 ]
