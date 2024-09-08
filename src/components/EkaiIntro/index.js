@@ -10,7 +10,7 @@ import BlurR from "../../assets/blurR.svg";
 import Arrow from "../../assets/ArrowRight.svg";
 import BlurL from "../../assets/blurR.svg";
 import { FormDialog } from "../FormDialog";
-const words = ["repetitive", "interruptions", "busywork", "chaos"];
+// const words = ["repetitive", "interruptions", "busywork", "chaos"];
 
 export const EkaiIntro = () => {
   const [showFirstImage, setShowFirstImage] = useState(true);
@@ -24,18 +24,6 @@ export const EkaiIntro = () => {
   }, []);
 
   console.log(showFirstImage);
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-
-  useEffect(() => {
-    // Change words at intervals
-    const interval = setInterval(() => {
-      setCurrentWordIndex((prevIndex) =>
-        prevIndex === words.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 500); // Change word every 2 seconds
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="ekai-intro-main-cont">
