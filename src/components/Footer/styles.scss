@@ -32,6 +32,11 @@
                 text-decoration: underline;
             }
         }
+
+        @media (max-width: 700px) {
+            align-items: center;
+            text-align: center !important;
+            }
     }
 
     .footer-content {
@@ -64,6 +69,10 @@
             display: flex;
             flex-direction: column;
             align-items: start;
+            @media (max-width: 700px) {
+                align-items: center;
+                text-align: center !important;
+                }
 
             h4{
                 font-size: 16px;
@@ -84,6 +93,10 @@
                 gap: 8px;
                 flex-direction: column;
                 align-items: start;
+                @media (max-width: 700px) {
+                    align-items: center;
+                    text-align: center !important;
+                    }
               
 
                 a {
@@ -92,8 +105,11 @@
                     color: #fff;
                     transition: color 0.3s;
                     text-decoration: none;
+            
                 }
+                
                 span{
+                    font-size: 15px !important;
                     cursor: pointer;
                 }
             }
@@ -115,6 +131,11 @@
                 height: 51px;
             }
         }
+
+        @media (max-width: 700px) {
+            align-items: center;
+            text-align: center !important;
+            }
     }
 
     .back-to-top {

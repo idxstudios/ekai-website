@@ -119,6 +119,7 @@
   .main-nav .menu-container {
     display: block !important;
     // margin-bottom: 15px;
+    z-index: 999;
   }
 
   .main-nav .nav-links {
@@ -137,6 +138,7 @@
     height: 40vh;
     padding: 40px 0 0 20px;
     transition: top .5s ease;
+    z-index: 999;
     a {
       text-decoration: none;
       color: #141613;

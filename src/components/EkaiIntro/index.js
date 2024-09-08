@@ -33,7 +33,7 @@ export const EkaiIntro = () => {
         <div className="left-cont">
           <div className="left-cont-heading">
             <div className="left-cont-span-out">
-              AI{"{YOU}"} for the{" "}
+              AI {"{YOU}"} for the{" "}
               <div className="word-animation">
                 <span className="animated-word ">
                   <div>repetitive</div>

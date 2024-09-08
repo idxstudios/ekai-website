@@ -14,7 +14,7 @@ export default function ElevateYourWorkflow() {
 
     return (
         <div className='ElevateYourWorkflow'>
-            <h1>Reimagine your workday with Ekai</h1>
+            {/* <h1>Reimagine your workday with Ekai</h1> */}
 
             {
                 card?.map((item) => {
