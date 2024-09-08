@@ -10,9 +10,7 @@ import BlurR from "../../assets/blurR.svg";
 import Arrow from "../../assets/ArrowRight.svg";
 import BlurL from "../../assets/blurR.svg";
 import { FormDialog } from "../FormDialog";
-const words = ['repetitive', 'interruptions', 'busywork', 'chaos'];
-
-
+const words = ["repetitive", "interruptions", "busywork", "chaos"];
 
 export const EkaiIntro = () => {
   const [showFirstImage, setShowFirstImage] = useState(true);
@@ -34,11 +32,10 @@ export const EkaiIntro = () => {
       setCurrentWordIndex((prevIndex) =>
         prevIndex === words.length - 1 ? 0 : prevIndex + 1
       );
-    }, 2000); // Change word every 2 seconds
+    }, 500); // Change word every 2 seconds
 
     return () => clearInterval(interval);
   }, []);
-
 
   return (
     <div className="ekai-intro-main-cont">
@@ -46,17 +43,23 @@ export const EkaiIntro = () => {
       <img src={BlurL} alt="ekai" className="blurL" />
       <div className="ekai-intro-cont">
         <div className="left-cont">
-
           <div className="left-cont-heading">
-            <div className="left-cont-span-out">AI{"{YOU}"} for the   <div className="word-animation">
-              <span className="animated-word">{words[currentWordIndex]}</span>
-            </div></div>
+            <div className="left-cont-span-out">
+              AI{"{YOU}"} for the{" "}
+              <div className="word-animation">
+                <span className="animated-word ">
+                  <div>repetitive</div>
+                  <div>interruptions</div>
+                  <div>busywork</div>
+                  <div>chaos</div>
+                </span>
+              </div>
+            </div>
           </div>
           <div className="left-cont-heading">
-            <span className="rep-text" >More time for what matters</span>
+            <span className="rep-text">More time for what matters</span>
           </div>
-          <p className="left-cont-subheading">
-          </p>
+          <p className="left-cont-subheading"></p>
           <button
             className="left-cont-button"
             onClick={() => setOpenDialog(true)}
@@ -67,7 +70,6 @@ export const EkaiIntro = () => {
         </div>
         <div className="right-cont">
           <div className="large-image-container">
-
             <div className="video-box">
               <img src={videothumb} alt="ekai" className="thumbnail" />
               <ActionVedio />
