@@ -1,12 +1,9 @@
 .EnhancingProductivity {
- 
   background: rgba(249, 249, 249, 1);
   margin: 60px 0;
 
-
   .Enhcontainer {
-    margin: 150px 0;
-    margin: auto;
+    margin: 150px auto;
     max-width: 1150px !important;
     padding: 50px 0;
   }
@@ -16,19 +13,94 @@
     font-weight: 600;
     color: rgba(0, 0, 0, 0.858);
     letter-spacing: -2.2%;
+    text-align: center;
   }
-  h4{
+
+  h4 {
     font-size: 20px;
     font-weight: 800;
     color: rgba(0, 0, 0, 0.858);
+    text-align: center;
   }
-  .three-container{
+
+  .three-container {
     display: flex;
     justify-content: space-around;
-    .box1, .box2, .box3{
-        p{
-            text-align: center;
-        }
+    flex-wrap: wrap; /* Allows boxes to wrap on smaller screens */
+
+    .box1,
+    .box2,
+    .box3 {
+      flex: 1 1 30%; /* Ensures each box takes equal space */
+      margin: 10px;
+      
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    h1 {
+      font-size: 60px;
+    }
+
+    .Enhcontainer {
+      padding: 30px 0;
+    }
+
+    .three-container {
+      .box1,
+      .box2,
+      .box3 {
+        flex: 1 1 45%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 50px;
+    }
+
+    h4 {
+      font-size: 18px;
+    }
+
+    .three-container {
+      flex-direction: column; /* Stack boxes vertically */
+      align-items: center;
+
+      .box1,
+      .box2,
+      .box3 {
+        flex: 1 1 100%;
+        max-width: 90%; /* Ensures boxes don't stretch too wide */
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 40px;
+    }
+
+    h4 {
+      font-size: 16px;
+    }
+
+    .Enhcontainer {
+      margin: 80px auto;
+      padding: 20px 0;
+    }
+
+    .three-container {
+      .box1,
+      .box2,
+      .box3 {
+        max-width: 95%;
+      }
     }
   }
 }
