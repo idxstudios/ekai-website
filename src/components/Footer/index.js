@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import "./styles.scss";
-import logo from "../../assets/ekai-logo.svg";
+import logo from "../../assets/ekai-logo-footer.svg";
 // import Linkedin from "../../assets/linkedin.svg";
 // import Gmail from "../../assets/gmail.svg";
 // import Top from "../../assets/top.svg";
@@ -40,7 +40,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="logo">
           <img src={logo} alt="ekai logo" />
-          <span>ekai</span>
+          {/* <span>ekai</span> */}
         </div>
 
         <div className="bottom-nav">
