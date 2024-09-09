@@ -40,9 +40,10 @@ export default function GlobalNavbar() {
               </Link>
             </div>
             <div className={`${showMenu ? "nav-links" : "nav-links-active"}`}>
-              {/* <Link onClick={() => setShowMenu(!showMenu)}  to="/">About Us</Link> */}
-              {/* <Link onClick={() => setShowMenu(!showMenu)} to="/career">Career</Link> */}
-              {/* <Link onClick={() => setShowMenu(!showMenu)} to="/FAQs">FAQs</Link> */}
+            <Link onClick={() => setShowMenu(!showMenu)} to="#why-ekai">Why Ekai</Link>
+<Link onClick={() => setShowMenu(!showMenu)} to="#features">Features</Link>
+<Link onClick={() => setShowMenu(!showMenu)} to="#pricing">Pricing</Link>
+
               {/* <button
             className="left-cont-button"
             onClick={() => setOpenDialog(true)}

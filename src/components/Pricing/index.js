@@ -41,7 +41,7 @@ const Card = ({ title, subtitle, description, originalPrice, discountedPrice, pr
 
 const Pricing = () => {
   return (
-    <div className="pricing-section">
+    <div id="pricing" className="pricing-section">
       <h2>Pricing</h2>
       <div className="pricing-cards">
         {pricingCards.map((card, index) => (

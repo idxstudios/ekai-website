@@ -49,11 +49,14 @@
   display: flex;
   justify-content: start;
   flex-direction: column;
-  text-align: center;
 
   @media (max-width: 700px) {
     width: 340px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     }
+
 
   img {
     width: 50px;
@@ -73,7 +76,7 @@
     letter-spacing: 0.6px;
     line-height: 25px;
     font-size: 15px;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -88,6 +91,7 @@
     p {
       font-size: 50px;
     }
+  }
 
     img {
       width: 150px;
@@ -96,7 +100,6 @@
 
   .three-cards {
     gap: 20px;
-
     .card-secure {
       width: 280px;
     }
