@@ -1,5 +1,5 @@
 import GlobalNavbar from "./components/GlobalNavbar";
-import Career from "./pages/Career";
+// import Career from "./pages/Career";
 import FAQ from "./pages/fAQs";
 import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
