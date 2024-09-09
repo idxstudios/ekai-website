@@ -59,13 +59,13 @@ const ActionVedio = () => {
           >
             <source src={videoUrl} type="video/mp4" />
           </video>
-          {!videoLoaded && 
+          {/* {!videoLoaded && 
             <img src={videothumb} alt="Thumbnail" />
-          }
+          } */}
         </div>
       ) : (
         <div onClick={handlePlayVideo} className="action-vedio-container">
-          <img src={play} alt="Play" />
+          <img src={play} alt="Play" className="play" />
         </div>
       )}
     </div>
