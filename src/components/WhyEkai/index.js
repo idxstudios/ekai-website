@@ -4,7 +4,7 @@ import "./styles.scss";
 
 export const WhyEkai = () => {
   return (
-    <div className="whyekai">
+    <div  id="why-ekai" className="whyekai">
       <h1>WHY EKAI</h1>
       <p>What Sets Us Apart</p>
       {/* <div>What Sets Us Apart</div> */}

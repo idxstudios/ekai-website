@@ -3,7 +3,7 @@ import "./styles.scss"
 
 export default function OurMission() {
     return (
-        <div className='outmission'>
+        <div id="features" className='outmission'>
             <h1>FEATURES</h1>
             
             <div>Reimagine Your Workday</div>
