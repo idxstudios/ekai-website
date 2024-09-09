@@ -1,5 +1,5 @@
 import GlobalNavbar from "./components/GlobalNavbar";
-import Career from "./pages/Career";
+// import Career from "./pages/Career";
 import FAQ from "./pages/fAQs";
 import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<GlobalNavbar />} >       
           <Route index element={<Home />} />
-          <Route path="/career" element={<Career />} />
+          {/* <Route path="/career" element={<Career />} /> */}
           <Route path="/FAQs" element={<FAQ />} />
           <Route path="/termsOfUse" element={<TermsOfUse/>} />
           <Route path="/privacyPolicy" element={<PrivacyPolicy/>} />

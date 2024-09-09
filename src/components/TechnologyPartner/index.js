@@ -1,15 +1,16 @@
 // src/DataSecure.js
 import React from 'react';
-import '../DataSecurity/styles.scss';
+import './styles.scss';
 import Invidia from "../../assets/nvidia-inception-logo.jpg";
 
 const TechnologyPartner = () => {
     return (
         <main className='DataSecure-main Technology-main'>
-            <h1>Technology Partner</h1>
+    
             <div className="DataSecure-container">
 
                 <div className="DataSecure-item">
+                <h1>Technology Partner</h1>
                     <div className="icon">
                         <img src={Invidia} style={{ objectFit: "contain", width: "300px", height:"80px" }} alt='' />
                     </div>

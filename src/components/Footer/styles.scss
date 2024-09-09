@@ -1,35 +1,52 @@
 /* src/Footer.scss */
 .footer {
     position: relative;
-    background-color: #2A2A2A;
+    background-color:  rgba(32, 19, 53, 1);
+    
     color: #fff;
     padding: 20px;
     text-align: center;
     margin: auto;
     margin: 30px 0;
-    margin-top: 220px;
+    // margin-top: 220px;
+    margin: auto;
+    padding: 80px 0;
 
     .bottom-nav{
+        h4{
+            font-weight: 400;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
         display: flex;
         flex-direction: column;
+        align-items: start;
         gap: 10px;
         justify-content: center;
         a{
             text-decoration: none;
             color: #fff;
+            font-weight: 500;
+            font-size: 15px;    
             &:hover{
                 text-decoration: underline;
             }
         }
+
+        @media (max-width: 700px) {
+            align-items: center;
+            text-align: center !important;
+            }
     }
 
     .footer-content {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: start;
         max-width: 860px;
         margin: 0 auto;
-        height: 208px;
+        // height: 208px;
+        margin: auto;
 
         .logo {
             display: flex;
@@ -51,34 +68,48 @@
         .social-media {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: start;
+            @media (max-width: 700px) {
+                align-items: center;
+                text-align: center !important;
+                }
 
+            h4{
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 14px;
+            }
 
             span {
-                margin-bottom: 10px;
-                font-size: 18px;
-                font-weight: 700;
+ 
+                font-weight: 400;
+                font-size: 16px;
+                font-weight: 500;
+               
             }
 
             .icons {
                 display: flex;
-                gap: 15px;
+                gap: 8px;
+                flex-direction: column;
+                align-items: start;
+                @media (max-width: 700px) {
+                    align-items: center;
+                    text-align: center !important;
+                    }
               
 
                 a {
                     font-size: 20px;
+                    font-weight: 500;
                     color: #fff;
                     transition: color 0.3s;
-
-                    &:hover {
-                        color: #bf6a2e;
-                    }
-
-                    img {
-                        width: 30px;
-                    }
+                    text-decoration: none;
+            
                 }
+                
                 span{
+                    font-size: 15px !important;
                     cursor: pointer;
                 }
             }
@@ -100,6 +131,11 @@
                 height: 51px;
             }
         }
+
+        @media (max-width: 700px) {
+            align-items: center;
+            text-align: center !important;
+            }
     }
 
     .back-to-top {

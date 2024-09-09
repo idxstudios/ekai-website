@@ -2,17 +2,20 @@ import "../../App.css";
 import { EkaiIntro } from "../../components/EkaiIntro";
 import OurMission from "../../components/OurMission";
 import ElevateYourWorkflow from "../../components/ElevateYourWorkflow";
-import Benefits from "../../components/Benefits";
+// import Benefits from "../../components/Benefits";
 import DataSecurity from "../../components/DataSecurity";
-import Team from "../../components/TeamMember";
+// import Team from "../../components/TeamMember";
 import PromoBanner from "../../components/PromoBanner";
 import Footer from "../../components/Footer";
-import TransitionDesign from "../../components/AnimationImage/"
+// import TransitionDesign from "../../components/AnimationImage/"
 // import Integration from "../../components/SeeHowItWorks";
 
 import { useState, useRef, useEffect } from "react";
 import TechnologyPartner from "../../components/TechnologyPartner";
-
+import EnhancingProductivity from "../../components/EnhancingProductivity";
+import Pricing from "../../components/Pricing";
+// import { WhyEkai } from "../../components/WhyEkai";
+import WhyEkaiFlow from "../../components/whyEkaiFlow";
 
 // import FAQs from "../../components/FAQs";
 
@@ -20,7 +23,7 @@ function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
-  console.log(isVisible)
+  console.log(isVisible);
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -48,14 +51,19 @@ function Home() {
       <EkaiIntro />
       <OurMission />
       <ElevateYourWorkflow />
-      <Benefits />
+      {/* <WhyEkai /> */}
+      <WhyEkaiFlow />
+      <EnhancingProductivity />
+
+      {/* <Benefits /> */}
       {/* <div ref={sectionRef}>
         {isVisible && <Integration />}
       </div> */}
-      <TransitionDesign/>
+      {/* <TransitionDesign/> */}
       <DataSecurity />
-      <TechnologyPartner/>
-      <Team />
+      <Pricing />
+      <TechnologyPartner />
+      {/* <Team /> */}
       <PromoBanner />
       {/* <FAQs/> */}
       <Footer />

@@ -1,15 +1,22 @@
 .main-nav {
-  background: #FAF6EF;
+  background: #fff;
   user-select: none;
 
   nav {
     margin: auto;
-    max-width: 1230px;
+    max-width: 1250px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 95px;
     padding: 20px;
+    gap: 50px;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
 
     .nav-links-close {
       display: none;
@@ -18,26 +25,29 @@
     .logo-container {
       font-size: 28.83px;
       font-weight: 800;
-      color: #141613;
+      color: #343932;
       word-spacing: -10px;
       letter-spacing: -1px;
       display: flex;
       align-items: center;
       gap: 5px;
+      padding-bottom: 0;
 
       a {
         text-decoration: none;
       }
     }
 
-    .nav-links {
+    .nav-links,
+    .nav-links-active {
       display: flex;
       align-items: center;
       gap: 30px;
 
       a {
         text-decoration: none;
-        color: #141613;
+        color: #475467;
+        font-weight: 900;
       }
 
       button {
@@ -52,23 +62,9 @@
     }
 
     .nav-links-active {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-
       a {
-        text-decoration: none;
-        color: #141613;
-      }
-
-      button {
-        background: #C87C3C;
-        border: none;
-        outline: none;
-        padding: 15px 28px;
-        color: #fff;
-        border-radius: 50px;
-        cursor: pointer;
+        font-weight: 600;
+        font-size: 16px;
       }
     }
 
@@ -101,49 +97,15 @@
   .main-nav nav {
     height: auto;
     padding: 20px;
+    gap: 0;
   }
-
-
 
   .main-nav .menu-container {
     display: block !important;
-    // margin-bottom: 15px;
+    z-index: 999;
   }
 
-  .main-nav .nav-links {
-    top: 20px;
-    /* End position */
-    flex-direction: column;
-    justify-content: start;
-    align-items: flex-start !important;
-    gap: 15px;
-    position: absolute;
-    left: 0;
-    top: 90px;
-    /* Start position */
-    background: #fff;
-    width: 100vw;
-    height: 40vh;
-    padding: 40px 0 0 20px;
-    transition: top .5s ease;
-    a {
-      text-decoration: none;
-      color: #141613;
-    }
-
-    button {
-      background: #C87C3C;
-      border: none;
-      outline: none;
-      padding: 15px 28px;
-      color: #fff;
-      border-radius: 50px;
-      cursor: pointer;
-    }
-    // box-shadow: 2px 0px 0px #000;
-  }
-
-  /* Add a class to trigger the change */
+  .main-nav .nav-links,
   .main-nav .nav-links-active {
     flex-direction: column;
     justify-content: start;
@@ -151,30 +113,30 @@
     gap: 15px;
     position: absolute;
     left: 0;
-    top: -300px;
-    /* Start position */
+    top: 90px;
     background: #fff;
     width: 100vw;
-    opacity: 20%;
-    z-index: -10;
-    height: 25%;
-    padding: 40px 0 0 20px;
-    transition: top 0.8s ease;
+    height: 40vh;
+    padding: 40px 20px 0;
+    transition: top 0.5s ease;
+    z-index: 999;
+
     a {
       text-decoration: none;
       color: #141613;
     }
 
     button {
-      background: #C87C3C;
-      border: none;
-      outline: none;
       padding: 15px 28px;
-      color: #fff;
-      border-radius: 50px;
-      cursor: pointer;
     }
-    /* Transition effect */
+  }
+
+  .main-nav .nav-links-active {
+    top: -300px;
+    opacity: 20%;
+    z-index: -10;
+    height: 25%;
+    transition: top 0.8s ease;
   }
 }
 
@@ -189,5 +151,11 @@
     button {
       padding: 10px 20px;
     }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .add-to-slack-button-nav {
+    display: none !important;
   }
 }

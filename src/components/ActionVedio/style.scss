@@ -25,7 +25,6 @@
   
   @media screen and (max-width: 1200px) {
     img{
-      // display: none;
       object-fit: contain;
       width: 100%;
       height:100px;
@@ -51,7 +50,16 @@
   align-items: center;
   position: relative;
   margin-bottom: 2.5rem;
-  height: 280px;
+  height: 380px;
+  width: 100%;
+
+  @media screen and (max-width: 700px) {
+    margin-bottom:0rem;
+    img{
+      width: 250px;
+      height: 250px;
+    }
+  }
 
 }
 
@@ -117,4 +125,27 @@
   .action-vedio-wrapper {
     padding: 0;
   }
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.spinner {
+  font-size: 2rem;
+  color: #000;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
