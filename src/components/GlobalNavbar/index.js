@@ -100,7 +100,7 @@ export default function GlobalNavbar() {
 
             <button
               onClick={handleAddSlackClick}
-              className="add-to-slack-button"
+              className="add-to-slack-button-nav"
               style={{
                 alignItems: "center",
                 color: "#fff",

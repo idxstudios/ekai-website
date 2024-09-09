@@ -37,6 +37,8 @@
       }
     }
 
+ 
+
     .nav-links {
       display: flex;
       align-items: center;
@@ -202,5 +204,11 @@
     button {
       padding: 10px 20px;
     }
+  }
+}
+
+@media screen and (max-width : 700px) {
+  .add-to-slack-button-nav{
+    display: none !important;
   }
 }

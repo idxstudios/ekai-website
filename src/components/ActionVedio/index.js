@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { ref, getDownloadURL } from "firebase/storage";
 import { storage } from "../../firebase/config";
+import { FaSpinner } from "react-icons/fa";
 import "./style.scss";
 import videothumb from "../../assets/videothumb.jpg";
-import play from "../../assets/play.svg"
-
+import play from "../../assets/play.svg";
 
 const ActionVedio = () => {
   const [videoUrl, setVideoUrl] = useState("");
@@ -44,6 +44,11 @@ const ActionVedio = () => {
     <div className="action-vedio-wrapper">
       {videoUrl && showVideo ? (
         <div className="video-container">
+          {!videoLoaded && (
+            <div className="spinner-container">
+              <FaSpinner className="spinner" />
+            </div>
+          )}
           <video
             width="800"
             controls
@@ -54,11 +59,13 @@ const ActionVedio = () => {
           >
             <source src={videoUrl} type="video/mp4" />
           </video>
-          {!videoLoaded && <img src={videothumb} alt="Logo" />}
+          {!videoLoaded && 
+            <img src={videothumb} alt="Thumbnail" />
+          }
         </div>
       ) : (
         <div onClick={handlePlayVideo} className="action-vedio-container">
-          <img src={play} alt="" />
+          <img src={play} alt="Play" />
         </div>
       )}
     </div>
