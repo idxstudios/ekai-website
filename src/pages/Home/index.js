@@ -14,7 +14,8 @@ import { useState, useRef, useEffect } from "react";
 import TechnologyPartner from "../../components/TechnologyPartner";
 import EnhancingProductivity from "../../components/EnhancingProductivity";
 import Pricing from "../../components/Pricing";
-
+// import { WhyEkai } from "../../components/WhyEkai";
+import WhyEkaiFlow from "../../components/whyEkaiFlow";
 
 // import FAQs from "../../components/FAQs";
 
@@ -22,7 +23,7 @@ function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
-  console.log(isVisible)
+  console.log(isVisible);
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -50,18 +51,18 @@ function Home() {
       <EkaiIntro />
       <OurMission />
       <ElevateYourWorkflow />
-      <EnhancingProductivity/>
+      {/* <WhyEkai /> */}
+      <WhyEkaiFlow />
+      <EnhancingProductivity />
 
-
-     
       {/* <Benefits /> */}
       {/* <div ref={sectionRef}>
         {isVisible && <Integration />}
       </div> */}
       {/* <TransitionDesign/> */}
       <DataSecurity />
-      <Pricing/>
-      <TechnologyPartner/>
+      <Pricing />
+      <TechnologyPartner />
       {/* <Team /> */}
       <PromoBanner />
       {/* <FAQs/> */}
