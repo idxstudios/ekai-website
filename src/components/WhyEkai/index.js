@@ -1,10 +1,16 @@
 import React from "react";
 import "./styles.scss";
-import whyekai from "../../assets/wkyekai.svg";
+// import whyekai from "../../assets/wkyekai.svg";
 
 export const WhyEkai = () => {
   return (
-    <div className="why-ekai-cont">
+    <div className="whyekai">
+      <h1>WHY EKAI</h1>
+      <p>What Sets Us Apart</p>
+      {/* <div>What Sets Us Apart</div> */}
+
+      {/*
+      <div className="why-ekai-cont">
       <div className="absolute">
         <img src={whyekai} alt="Why Ekai Img" />
       </div>
@@ -20,7 +26,9 @@ export const WhyEkai = () => {
           leveraging its ability to learn from structured and unstructured data
           to empower personalised agents that work on your behalf.
         </p>
+      </div> 
       </div>
+      */}
     </div>
   );
 };
