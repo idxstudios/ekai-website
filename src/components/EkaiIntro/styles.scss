@@ -17,6 +17,7 @@
       margin: auto;
       width: 1075px;
       text-align: center;
+      margin-top: 100px;
 
       @media screen and (max-width: 700px) {
         font-size: 30px;
@@ -24,21 +25,24 @@
         flex-direction: column;
         align-self: start;
         justify-content: start;
+        
       }
 
       .left-cont-heading {
-        color: #343932;
-        font-size: 70px;
+        color: rgba(52, 57, 50, 1);
+        font-size: 75px;
         font-weight: 500;
         margin-top: 1rem;
         width: 100%;
         transition: all 0.5s ease;
-        text-align: left;
+        text-align: center;
+  
 
         @media screen and (max-width: 700px) {
           text-align: left;
           width: 100%;
           font-size: 20px;
+          
         }
 
         .left-cont-span-out {
@@ -51,6 +55,7 @@
             flex-direction: column !important;
             justify-content: start;
             align-items: start;
+      
           }
 
           .word-animation {
@@ -65,6 +70,8 @@
               #dbc26979 42.31%,
               #c8793977 101.9%
             );
+            background: rgba(255, 203, 126, 1);
+
             font-weight: 800;
             padding: 10px;
             border-radius: 10px;
@@ -81,7 +88,7 @@
           }
 
           .animated-word {
-            font-size: 70px;
+            font-size: 75px;
             font-weight: bold;
             color: #333;
             overflow: hidden;
@@ -97,7 +104,7 @@
 
             @media screen and (max-width: 700px) {
               font-size: 40px !important;
-              text-align: center;
+              text-align: center;              
             }
           }
         }
@@ -112,14 +119,14 @@
             #c87a39 101.9%
           );
           font-weight: 500;
+          font-size: 80px;
           border-radius: 30px;
-          text-align: left;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          @media screen and (max-width: 700px) {
-            font-size: 32px !important;
-            text-align: left;
-          }
+                     @media screen and (max-width: 700px) {
+              font-size: 32px !important;
+              text-align: left;              
+            }
         }
       }
 
@@ -143,8 +150,9 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 0.75rem 1.5rem;
-    font-size: 0.9375rem;
+    padding: 20px 45px;
+    font-size: 18px;
+    font-weight: 600;
     line-height: 1.625rem;
     letter-spacing: 0.46px;
     margin-top: 100px;
@@ -257,6 +265,8 @@
   .large-image-container {
     position: relative;
 
+
+
     .video-box {
       margin: auto;
       overflow: hidden;
@@ -266,6 +276,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      
 
       .thumbnail {
         position: absolute;
@@ -280,14 +291,16 @@
           object-fit: contain;
           background: #faf6ef;
         }
+
       }
 
       @media screen and (max-width: 700px) {
         height: 300px;
         width: 90%;
 
-        .thumbnail {
+        .thumbnail{
           background: #fff;
+
         }
       }
     }

@@ -36,7 +36,7 @@ export default function GlobalNavbar() {
             <div className="logo-container flex-row items-center">
               <Link className="logo-container " to="/">
                 <img src={logo} alt="Logo" />
-                <span className="app-name">ekai</span>
+                {/* <span className="app-name">ekai</span> */}
               </Link>
             </div>
             <div className={`${showMenu ? "nav-links" : "nav-links-active"}`}>
@@ -109,9 +109,9 @@ export default function GlobalNavbar() {
                 borderRadius: "44px",
                 display: "inline-flex",
                 fontFamily: "Lato, sans-serif",
-                fontSize: "14px",
+                fontSize: "18px",
                 fontWeight: 600,
-                height: "44px",
+                height: "48px",
                 justifyContent: "center",
                 textDecoration: "none",
                 width: "204px",
@@ -119,7 +119,7 @@ export default function GlobalNavbar() {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                style={{ height: "16px", width: "16px", marginRight: "12px" }}
+                style={{ height: "25px", width: "25px", marginRight: "12px" }}
                 viewBox="0 0 122.8 122.8"
               >
                 <path
