@@ -3,7 +3,7 @@ import { ref, getDownloadURL } from "firebase/storage";
 import { storage } from "../../firebase/config";
 import { FaSpinner } from "react-icons/fa";
 import "./style.scss";
-import videothumb from "../../assets/videothumb.jpg";
+// import videothumb from "../../assets/videothumb.jpg";
 import play from "../../assets/play.svg";
 
 const ActionVedio = () => {

@@ -32,6 +32,7 @@
         flex-direction: column;
         align-self: start;
         justify-content: start;
+        margin-top: 0;
       }
 
       .left-cont-heading {
@@ -58,25 +59,24 @@
           align-items: center;
 
           @media screen and (max-width: 700px) {
-            font-size: 40px;
+            font-size: 35px;
             flex-direction: column !important;
             justify-content: start;
             align-items: start;
             margin-left: 0px;
+            line-height: -30px;
           }
 
           .word-animation {
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(
-              90.24deg,
-              #cadbc981 -113.26%,
-              #d29f517d -44.99%,
-              #d3cf9985 -1.12%,
-              #dbc26979 42.31%,
-              #c8793977 101.9%
-            );
+            background: linear-gradient(90.24deg,
+                #cadbc981 -113.26%,
+                #d29f517d -44.99%,
+                #d3cf9985 -1.12%,
+                #dbc26979 42.31%,
+                #c8793977 101.9%);
             background: rgba(255, 203, 126, 1);
 
             padding: 10px;
@@ -87,11 +87,14 @@
             position: relative;
             width: 100px;
 
+
             @media screen and (max-width: 700px) {
               font-size: 30px;
               height: 50px;
+              margin-top: -15px;
             }
           }
+
 
           .animated-word {
             font-size: 75px;
@@ -103,7 +106,8 @@
             text-align: left;
             animation: fadeInOut 10s ease-in-out infinite;
 
-            > div {
+
+            >div {
               height: 100px;
               text-align: left;
             }
@@ -116,15 +120,12 @@
         }
 
         .rep-text {
-          background: linear-gradient(
-            90deg,
-            #cadbc9 -1.56%,
-            #d29e51 16.71%,
-            #d3cf99 49.38%,
-            #dbc269 68.82%,
-            #c87a39 102.13%
-          );
-
+          background: linear-gradient(90deg,
+              #cadbc9 -1.56%,
+              #d29e51 16.71%,
+              #d3cf99 49.38%,
+              #dbc269 68.82%,
+              #c87a39 102.13%);
           font-weight: 500;
           font-size: 80px;
           border-radius: 30px;
@@ -134,8 +135,11 @@
           @media screen and (max-width: 700px) {
             font-size: 32px !important;
             text-align: left;
+            line-height: 40px;
           }
+          
         }
+        
       }
 
       p {
@@ -347,14 +351,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(
-      90.24deg,
-      #cadbc981 -113.26%,
-      #d29f517d -44.99%,
-      #d3cf9985 -1.12%,
-      #dbc26979 42.31%,
-      #c8793977 101.9%
-    );
+    background: linear-gradient(90.24deg,
+        #cadbc981 -113.26%,
+        #d29f517d -44.99%,
+        #d3cf9985 -1.12%,
+        #dbc26979 42.31%,
+        #c8793977 101.9%);
     font-weight: 800;
     padding: 10px;
     border-radius: 10px;
@@ -378,7 +380,7 @@
     text-align: left;
     animation: fadeInOut 10s ease-in-out infinite;
 
-    > div {
+    >div {
       height: 100px;
       text-align: left;
     }
@@ -445,6 +447,7 @@
 
   // Responsive Keyframe Animation for Width
   @keyframes wid {
+
     0%,
     15% {
       width: var(--width-medium); // Initial width
@@ -483,18 +486,19 @@
     @media screen and (max-width: 768px) {
       // Adjust sizes for tablets
       --width-small: 200px;
-      --width-medium: 300px;
+      --width-medium: 280px;
       --width-large: 420px;
     }
 
     @media screen and (max-width: 480px) {
       // Adjust sizes for mobile
-      --width-small: 150px;
-      --width-medium: 250px;
-      --width-large: 340px;
+      --width-small: 140px;
+      --width-medium: 210px;
+      --width-large: 280px;
     }
   }
 }
+
 @media screen and (min-width: 700px) {
   .add-to-slack-button {
     display: none !important;
