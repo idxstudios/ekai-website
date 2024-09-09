@@ -4,7 +4,7 @@
   .ekai-intro-cont {
     padding: 5rem 0;
     gap: 2.07%;
-    max-width: 1150px;
+    max-width: 1300px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@
       align-items: center;
       justify-content: center;
       margin: auto;
-      width: 1075px;
+      width: 1250px;
       text-align: center;
       margin-top: 100px;
 
@@ -31,7 +31,7 @@
       .left-cont-heading {
         color: rgba(52, 57, 50, 1);
         font-size: 75px;
-        font-weight: 500;
+        font-weight: 700;
         margin-top: 1rem;
         width: 100%;
         transition: all 0.5s ease;
@@ -48,6 +48,7 @@
         .left-cont-span-out {
           display: flex;
           gap: 20px;
+          justify-content: center;
           align-items: center;
 
           @media screen and (max-width: 700px) {
@@ -110,14 +111,9 @@
         }
 
         .rep-text {
-          background: linear-gradient(
-            90.24deg,
-            #cadbc9 -113.26%,
-            #d29e51 -44.99%,
-            #d3cf99 -1.12%,
-            #dbc269 42.31%,
-            #c87a39 101.9%
-          );
+    
+          background: linear-gradient(90deg, #CADBC9 -1.56%, #D29E51 16.71%, #D3CF99 49.38%, #DBC269 68.82%, #C87A39 102.13%);
+
           font-weight: 500;
           font-size: 80px;
           border-radius: 30px;
