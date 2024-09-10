@@ -6,6 +6,7 @@ export default function OurMission() {
         <div id="features" className='outmission'>
 
             <h1>FEATURES</h1> 
+
             <div>Reimagine Your Workday</div>
             <div>with <span className='animated-word'>ekai</span></div>
         </div>
