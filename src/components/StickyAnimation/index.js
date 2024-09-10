@@ -52,7 +52,7 @@ const getCategoryColor = (category) => {
         case 'Create':
             return 'rgba(200, 181, 64, 1)';
         default:
-            return '#000'; // Default color if no match
+            return '#000'; 
     }
 };
 
