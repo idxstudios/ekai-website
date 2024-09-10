@@ -36,6 +36,12 @@
   width: 100% !important;
   height: 100%;
   background: #FAF6EF;
+  @media (max-width: 600px) {
+    width: 80% !important;
+
+
+}
+
 }
 
 .action-vedio-container {
