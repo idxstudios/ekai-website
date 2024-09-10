@@ -63,11 +63,11 @@ const StickyAnimation = () => {
         const sectionElements = document.querySelectorAll('.section');
         sectionElements.forEach((section, index) => {
             const rect = section.getBoundingClientRect();
-            if (rect.top <= window.innerHeight / 3 && rect.bottom >= window.innerHeight / 3) {
+            if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
                 setActiveSection(card[index]);
             }
         });
-    }, 100);
+    }, 200); // Increase the throttle delay to 200ms
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -77,7 +77,8 @@ const StickyAnimation = () => {
     return (
         <div className="sticky-animation-container">
             <div className="sticky-section">
-                <img src={activeSection?.gifSrc} alt={activeSection?.title} />
+                {/* Use the `key` prop to force React to re-render the image */}
+                <img key={activeSection.id} src={activeSection?.gifSrc} alt={activeSection?.title} />
             </div>
             <div className="scrollable-content">
                 {card.map((section) => (

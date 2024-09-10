@@ -5,7 +5,6 @@
     padding: 50px 0;
     margin: 40px 0;
     font-size: 2rem;
-    /* Adjust font size for better scalability */
     text-align: center;
     font-weight: 600;
     color: rgba(52, 57, 50, 1);
@@ -22,27 +21,24 @@
     }
 }
 
-/* Responsive styles for h1 */
+
 .outmission h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 28px;
-    /* Adjust font size */
+
     font-weight: 700;
-    /* Corrected weight value */
+
 }
 
-/* Responsive styles for p */
 .outmission p {
     text-align: center;
     line-height: 1.6;
-    /* Adjusted line-height for better readability */
     color: #575757;
 }
 
-/* Responsive styles for .animated-word */
 .outmission .animated-word {
-    /* Adjust font size */
+
     font-weight: bolder !important;
     font-size: 80px !important;
     color: #333;
