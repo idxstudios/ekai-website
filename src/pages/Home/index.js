@@ -1,7 +1,7 @@
 import "../../App.css";
 import { EkaiIntro } from "../../components/EkaiIntro";
 import OurMission from "../../components/OurMission";
-// import ElevateYourWorkflow from "../../components/ElevateYourWorkflow";
+import ElevateYourWorkflow from "../../components/ElevateYourWorkflow";
 // import Benefits from "../../components/Benefits";
 import DataSecurity from "../../components/DataSecurity";
 // import Team from "../../components/TeamMember";
@@ -51,8 +51,12 @@ function Home() {
     <div className="">
       <EkaiIntro />
       <OurMission />
-      <StickyAnimation/>
+     
+      <div className="StickyAnimationHome">  <StickyAnimation/></div>
       {/* <ElevateYourWorkflow /> */}
+      <div  className="ElevateYourWorkflowHome">
+          <ElevateYourWorkflow />
+      </div>
       {/* <WhyEkai /> */}
       <WhyEkaiFlow />
       
