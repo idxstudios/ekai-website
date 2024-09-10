@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './styles.scss'; 
-
 import GIF1 from "../../assets/cardsGif/ekaiGPT.gif";
 import GIF2 from "../../assets/cardsGif/autoreply.gif";
 import GIF3 from "../../assets/cardsGif/learn.png";
 import GIF4 from "../../assets/cardsGif/create.png";
+import { throttle } from 'lodash'; // Import lodash throttle for scroll optimization
 
 const card = [
     {
@@ -59,20 +59,20 @@ const getCategoryColor = (category) => {
 const StickyAnimation = () => {
     const [activeSection, setActiveSection] = useState(card[0]);
 
-    const handleScroll = () => {
+    const handleScroll = throttle(() => {
         const sectionElements = document.querySelectorAll('.section');
         sectionElements.forEach((section, index) => {
             const rect = section.getBoundingClientRect();
-            if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            if (rect.top <= window.innerHeight / 3 && rect.bottom >= window.innerHeight / 3) {
                 setActiveSection(card[index]);
             }
         });
-    };
+    }, 100);
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [handleScroll]);
 
     return (
         <div className="sticky-animation-container">
