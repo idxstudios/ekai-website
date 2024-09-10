@@ -7,39 +7,79 @@
     justify-content: center;
     text-align: center;
     padding: 60px;
-    // background-color: #FAF6EF;
-    /* Background color */
     color: #333;
-    /* Text color */
     font-family: Arial, sans-serif;
     font-size: 18px;
 
-
     p {
-        max-width: 864px;
-        font-size: 24px;
-        line-height: 32.74px;
+        // max-width: 864px;
+        font-size: 38px;
+        // line-height: 32.74px;
         margin-bottom: 20px;
         font-weight: 550 !important;
         color: rgba(0, 0, 0, 1);
-
     }
-
 
     .tell-me-more-btn {
         background-color: rgba(32, 19, 53, 1);
-        
         margin-top: 50px;
-        /* Button color */
         color: white;
         border: none;
         padding: 15px 20px;
         border-radius: 25px;
         cursor: pointer;
         font-size: 16px;
-        // text-transform: uppercase;
         letter-spacing: 1px;
-        display: flex;align-items: center;
+        display: flex;
+        align-items: center;
         gap: 8px;
+    }
+
+    // Responsive adjustments
+    @media (max-width: 1024px) {
+        padding: 40px;
+        
+        p {
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        .tell-me-more-btn {
+            padding: 12px 18px;
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 30px;
+
+        p {
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        .tell-me-more-btn {
+            padding: 10px 16px;
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding: 20px;
+
+        p {
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        .tell-me-more-btn {
+            padding: 15px 20px !important;
+            font-size: 13px;
+            font-weight: 700;
+            
+            img{
+                width: 20px;
+            }
+        }
     }
 }

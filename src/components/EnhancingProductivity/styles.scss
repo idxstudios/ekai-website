@@ -7,8 +7,9 @@
     max-width: 1150px !important;
     padding: 50px 0;
 
+
     h1 {
-      font-size: 80px;
+      font-size: 64px;
       font-weight: 600;
       color: rgba(0, 0, 0, 0.858);
       letter-spacing: -2.2%;
@@ -18,8 +19,14 @@
         text-align: center;
         font-size: 30px;
         font-weight: bold;
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        white-space: wrap;
+        margin: auto;
       }
     }
+
 
     h4 {
       font-size: 20px;
@@ -45,11 +52,34 @@
     .box1,
     .box2,
     .box3 {
+    
       flex: 1 1 30%;
       /* Ensures each box takes equal space */
       margin: 10px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
       p {
         text-align: center;
+      }
+      img {
+        width: 320px;
+       
+      }
+
+      @media screen and (max-width: 700px) {
+        margin: 10px;
+        img {
+          width: 320px;
+        }
+
+        p {
+          margin-top: -20px;
+          font-size: 18px;
+        }
+
       }
     }
   }
@@ -65,6 +95,7 @@
     }
 
     .three-container {
+
       .box1,
       .box2,
       .box3 {
@@ -115,6 +146,7 @@
     }
 
     .three-container {
+
       .box1,
       .box2,
       .box3 {

@@ -16,6 +16,7 @@ import EnhancingProductivity from "../../components/EnhancingProductivity";
 import Pricing from "../../components/Pricing";
 // import { WhyEkai } from "../../components/WhyEkai";
 import WhyEkaiFlow from "../../components/whyEkaiFlow";
+import StickyAnimation from "../../components/StickyAnimation";
 
 // import FAQs from "../../components/FAQs";
 
@@ -50,9 +51,15 @@ function Home() {
     <div className="">
       <EkaiIntro />
       <OurMission />
-      <ElevateYourWorkflow />
+     
+      <div className="StickyAnimationHome">  <StickyAnimation/></div>
+      {/* <ElevateYourWorkflow /> */}
+      <div  className="ElevateYourWorkflowHome">
+          <ElevateYourWorkflow />
+      </div>
       {/* <WhyEkai /> */}
       <WhyEkaiFlow />
+      
       <EnhancingProductivity />
 
       {/* <Benefits /> */}

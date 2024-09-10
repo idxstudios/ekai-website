@@ -134,7 +134,7 @@ const NotConnectedState = ({ safetyPoints, handleConnectClick }) => (
     <div className="modal-content-inner">
       <LogoContainer />
       <h2 className="title">
-        Structurally retrieve information from unstructured information
+      Use slack conversation to create documents
       </h2>
     </div>
     {/* <div className="message-box">
