@@ -18,7 +18,7 @@ export default function ElevateYourWorkflow() {
       {/* <h1>Reimagine your workday with Ekai</h1> */}
 
       {card?.map((item) => {
-        return (
+        return (  
           <ElevateCard
             id={item.id}
             gifSrc={item.gifSrc}
