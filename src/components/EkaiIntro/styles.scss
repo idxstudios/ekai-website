@@ -28,7 +28,7 @@
 
       @media screen and (max-width: 700px) {
         font-size: 30px;
-        width: 90% !important;
+        width: 100% !important;
         flex-direction: column;
         align-self: start;
         justify-content: start;
@@ -59,12 +59,14 @@
           align-items: center;
 
           @media screen and (max-width: 700px) {
-            font-size: 35px;
+            font-size: 40px;
             flex-direction: column !important;
             justify-content: start;
             align-items: start;
+            font-weight: 600;
             margin-left: 0px;
             line-height: -30px;
+            gap: 20px;
           }
 
           .word-animation {
@@ -113,7 +115,7 @@
             }
 
             @media screen and (max-width: 700px) {
-              font-size: 40px !important;
+              font-size: 45px !important;
               text-align: center;
             }
           }
@@ -181,7 +183,7 @@
     @media (max-width: 700px) {
       // box-shadow: 1px 0px 20px #ffe1a4;
       width: 220px;
-      height: 50px;
+      height: 48px;
       display: flex;
       justify-content: center;
       flex-direction: row;
@@ -504,9 +506,9 @@
 
     @media screen and (max-width: 480px) {
       // Adjust sizes for mobile
-      --width-small: 140px;
-      --width-medium: 210px;
-      --width-large: 280px;
+      --width-small: 160px;
+      --width-medium: 240px;
+      --width-large: 310px;
     }
   }
 }
