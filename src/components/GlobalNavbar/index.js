@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../assets/ekai-logo.svg";
-import menu from "../../assets/menu-bar.svg";
+// import menu from "../../assets/menu-bar.svg";
 import "./style.scss";
 import { Link, Outlet } from "react-router-dom";
 import { FormDialog } from "../FormDialog";
@@ -40,9 +40,9 @@ export default function GlobalNavbar() {
               </Link>
             </div>
             <div className={`${showMenu ? "nav-links" : "nav-links-active"}`}>
-            <Link onClick={() => setShowMenu(!showMenu)} to="#why-ekai">Why Ekai</Link>
-<Link onClick={() => setShowMenu(!showMenu)} to="#features">Features</Link>
-<Link onClick={() => setShowMenu(!showMenu)} to="#pricing">Pricing</Link>
+              <Link onClick={() => setShowMenu(!showMenu)} to="#why-ekai">Why Ekai</Link>
+              <Link onClick={() => setShowMenu(!showMenu)} to="#features">Features</Link>
+              <Link onClick={() => setShowMenu(!showMenu)} to="#pricing">Pricing</Link>
 
               {/* <button
             className="left-cont-button"
@@ -143,12 +143,20 @@ export default function GlobalNavbar() {
               Add to Slack
             </button>
           </div>
-          <Link
+          {/* <Link
             onClick={() => setShowMenu(!showMenu)}
             className="menu-container "
           >
             <img src={menu} alt="Logo" style={{ width: "50px" }} />
-          </Link>
+          </Link> */}
+          <div className="hamburger-menu"
+            // onClick={toggleMenu} 
+            onClick={() => setShowMenu(!showMenu)}>
+            <div className={`line line1 ${showMenu ? "open" : ""}`}></div>
+            <div className={`line line2 ${showMenu ? "open" : ""}`}></div>
+            <div className={`line line3 ${showMenu ? "open" : ""}`}></div>
+          </div>
+
         </nav>
       </div>
       {showSlackModal && <SlackNotionModal onClose={handleCloseModal} />}
