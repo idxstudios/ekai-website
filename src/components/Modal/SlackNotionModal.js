@@ -21,10 +21,10 @@ export const SlackNotionModal = ({ onClose }) => {
   ];
 
   const stuckedPoints = [
-    <>Slack should open automatically on a new tab. If it doesn't, <a href='https://app.ekai.ca/slack/install' target="_blank" onClick={() => trackEvent('slack_retry')}>click here to retry</a>.</>,
+    <>Slack should open automatically on a new tab. If it doesn't, <a href='https://app.ekai.ca/slack/install' target="_blank" rel="noreferrer" onClick={() => trackEvent('slack_retry')}>click here to retry</a>.</>,
     "If you are a Slack workspace administrator: Follow Slack’s instructions to connect.",
     "If you are not authorized to install external apps: Follow the instructions to request access to the connection.",
-    <>Contact us: <a href="https://mail.google.com/mail/u/0/?fs=1&to=ekai@idxstudioz.com&tf=cm" target="_blank" onClick={() => trackEvent('contact_us_mail',{'avenue': 'Stack_popup'})}>ekai@idxstudioz.com</a></>,
+    <>Contact us: <a href="https://mail.google.com/mail/u/0/?fs=1&to=ekai@idxstudioz.com&tf=cm" target="_blank" rel="noreferrer" onClick={() => trackEvent('contact_us_mail',{'avenue': 'Stack_popup'})}>ekai@idxstudioz.com</a></>,
   ];
 
   return (
