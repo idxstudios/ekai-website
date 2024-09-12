@@ -53,12 +53,15 @@ export const EkaiIntro = () => {
             <div className="left-cont-span-out">
               AI {"{YOU}"} for the{" "}
               <div className="word-animation">
-                <span className="animated-word ">
+                <div className="animated-word">
                   <div>repetitive</div>
                   <div>interruptions</div>
                   <div>busywork</div>
                   <div>chaos</div>
-                </span>
+                  <div>red tape</div>
+                  <div>context switching</div>
+                  <div>documentation</div>
+                </div>
               </div>
             </div>
           </div>
