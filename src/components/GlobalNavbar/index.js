@@ -40,8 +40,9 @@ export default function GlobalNavbar() {
               </Link>
             </div>
             <div className={`${showMenu ? "nav-links" : "nav-links-active"}`}>
+            <Link onClick={() => setShowMenu(!showMenu)} to="#features">Features</Link>
               <Link onClick={() => setShowMenu(!showMenu)} to="#why-ekai">Why Ekai</Link>
-              <Link onClick={() => setShowMenu(!showMenu)} to="#features">Features</Link>
+    
               <Link onClick={() => setShowMenu(!showMenu)} to="#pricing">Pricing</Link>
 
               {/* <button
@@ -101,22 +102,7 @@ export default function GlobalNavbar() {
 
             <button
               onClick={handleAddSlackClick}
-              className="add-to-slack-button-nav"
-              style={{
-                alignItems: "center",
-                color: "#fff",
-                backgroundColor: "#4A154B",
-                border: 0,
-                borderRadius: "44px",
-                display: "inline-flex",
-                fontFamily: "Lato, sans-serif",
-                fontSize: "18px",
-                fontWeight: 600,
-                height: "48px",
-                justifyContent: "center",
-                textDecoration: "none",
-                width: "204px",
-              }}
+             className="add-to-slack-button-nav"  
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

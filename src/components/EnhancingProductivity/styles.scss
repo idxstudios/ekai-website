@@ -14,6 +14,7 @@
       color: rgba(0, 0, 0, 0.858);
       letter-spacing: -2.2%;
       text-align: left;
+      margin-left: 20px;
 
       @media screen and (max-width: 700px) {
         text-align: center;
@@ -33,6 +34,7 @@
       font-weight: 800;
       color: rgba(0, 0, 0, 0.858);
       text-align: left;
+      margin-left: 20px;
 
       @media screen and (max-width: 700px) {
         text-align: center;
@@ -65,7 +67,9 @@
         text-align: center;
       }
       img {
-        width: 320px;
+        width: 240px;
+        height: 240px;
+        object-fit: contain;
        
       }
 

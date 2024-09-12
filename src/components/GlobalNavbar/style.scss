@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 .main-nav {
   background: #fff;
   user-select: none;
+  font-family: "Manrope", sans-serif !important;
+  font-optical-sizing: auto;
 
   nav {
     margin: auto;
@@ -12,6 +16,26 @@
     padding: 20px;
     gap: 50px;
 
+    .add-to-slack-button-nav {
+
+      align-items: center;
+      color: #fff;
+      background-color: #4A154B;
+      border: 0;
+      border-radius: 44px;
+      display: inline-flex;
+      font-family: "Lato" "sans-serif";
+      font-size: 18px;
+      height: 48px;
+      justify-content: center;
+      text-decoration: none;
+      width: 204px;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.625rem;
+      cursor: pointer;;
+    }
+
     div {
       display: flex;
       align-items: center;
@@ -21,6 +45,8 @@
     .nav-links-close {
       display: none;
     }
+
+   
 
     .hamburger-menu {
       width: 30px;
@@ -35,6 +61,7 @@
       @media screen and (max-width: 700px) {
         display: block;
       }
+
       .line {
         width: 40px;
         height: 3px;
@@ -44,25 +71,26 @@
         border: 1px solid rgb(52, 57, 50, 1);
         ;
         transition: transform 0.3s ease, opacity 0.3s ease;
-        margin-bottom: 8px; /* Set a smaller margin for a tighter gap */
-  
+        margin-bottom: 8px;
+        /* Set a smaller margin for a tighter gap */
+
         &:nth-child(1).open {
           transform: rotate(45deg) translate(5px, 5px);
-          margin-top: 4px; 
+          margin-top: 4px;
         }
-      
+
         &:nth-child(2).open {
           transform: rotate(-45deg) translate(5px, -5px);
-          margin-top: 10px; 
+          margin-top: 10px;
         }
-      
+
         &:nth-child(3).open {
-          opacity: 0; 
+          opacity: 0;
         }
 
       }
-      
-      
+
+
     }
 
     .logo-container {
@@ -75,6 +103,7 @@
       align-items: center;
       gap: 5px;
       padding-bottom: 0;
+      margin-right: 10px;
 
       a {
         text-decoration: none;
@@ -101,6 +130,7 @@
         color: #fff;
         border-radius: 50px;
         cursor: pointer;
+
       }
     }
 
