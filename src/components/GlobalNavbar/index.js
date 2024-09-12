@@ -5,6 +5,7 @@ import "./style.scss";
 import { Link, Outlet } from "react-router-dom";
 import { FormDialog } from "../FormDialog";
 import { SlackNotionModal } from "../Modal/SlackNotionModal";
+import { trackEvent } from "../../mixpanel";
 
 export default function GlobalNavbar() {
   const [showMenu, setShowMenu] = useState();
@@ -20,6 +21,7 @@ export default function GlobalNavbar() {
   }, []);
 
   const handleAddSlackClick = () => {
+    trackEvent("add_slack")    
     setShowSlackModal(true); // Show the Slack modal
   };
 
