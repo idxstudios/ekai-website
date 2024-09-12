@@ -47,21 +47,21 @@ function Home() {
       }
     };
   }, []);
+
   return (
     <div className="">
       <EkaiIntro />
       <OurMission />
-     
-      <div className="StickyAnimationHome">  <StickyAnimation/></div>
+      <div className="StickyAnimationHome">  
+        <StickyAnimation/>
+      </div>
       {/* <ElevateYourWorkflow /> */}
-      <div  className="ElevateYourWorkflowHome">
+      <div className="ElevateYourWorkflowHome">
           <ElevateYourWorkflow />
       </div>
       {/* <WhyEkai /> */}
       <WhyEkaiFlow />
-      
       <EnhancingProductivity />
-
       {/* <Benefits /> */}
       {/* <div ref={sectionRef}>
         {isVisible && <Integration />}

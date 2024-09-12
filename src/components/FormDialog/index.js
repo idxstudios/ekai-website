@@ -15,6 +15,7 @@ import { contactDetailSchema } from "../../utils/validators";
 import { db } from "../../firebase/config";
 import { collection, addDoc } from "firebase/firestore";
 import Snackbar from "@mui/material/Snackbar";
+import { trackEvent } from "../../mixpanel";
 
 export const FormDialog = ({ open, setOpenDialog }) => {
   const [step, setStep] = useState(0);
@@ -49,6 +50,7 @@ export const FormDialog = ({ open, setOpenDialog }) => {
         org_size: ogSize.value,
         job_function: jobFunction.value,
       });
+      trackEvent("lead_job_next")
       setStep(3);
     } catch (e) {
       setSnackBar(true);
@@ -110,6 +112,7 @@ export const FormDialog = ({ open, setOpenDialog }) => {
                   }
                   onClick={() => {
                     setStep(1);
+                    trackEvent("lead_contact_next")
                   }}
                 >
                   Next{""}
@@ -161,6 +164,8 @@ export const FormDialog = ({ open, setOpenDialog }) => {
                   disabled={!ogSize?.id}
                   onClick={() => {
                     setStep(2);
+                    trackEvent("lead_org_size_next")
+
                   }}
                 >
                   Next{" "}

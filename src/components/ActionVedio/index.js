@@ -5,6 +5,7 @@ import { FaSpinner } from "react-icons/fa";
 import "./style.scss";
 // import videothumb from "../../assets/videothumb.jpg";
 import play from "../../assets/play.svg";
+import { trackEvent } from "../../mixpanel";
 
 const ActionVedio = () => {
   const [videoUrl, setVideoUrl] = useState("");
@@ -29,6 +30,7 @@ const ActionVedio = () => {
   }, []);
 
   const handlePlayVideo = () => {
+    trackEvent("demo_video_clicked")
     setShowVideo(true);
   };
 
@@ -37,6 +39,7 @@ const ActionVedio = () => {
   };
 
   const handleVideoPlay = () => {
+    trackEvent("demo_video_clicked")
     console.log("Video started playing");
   };
 
