@@ -16,23 +16,24 @@
         font-size: 38px;
         // line-height: 32.74px;
         margin-bottom: 20px;
-        font-weight: 550 !important;
+        font-weight: 500 !important;
         color: rgba(0, 0, 0, 1);
     }
 
     .tell-me-more-btn {
-        background-color: rgba(32, 19, 53, 1);
-        margin-top: 50px;
-        color: white;
         border: none;
-        padding: 15px 20px;
-        border-radius: 25px;
-        cursor: pointer;
-        font-size: 16px;
-        letter-spacing: 1px;
+        background: rgba(32, 19, 53, 1);
+        border-radius: 2.5rem;
+        color: #ffffff;
         display: flex;
         align-items: center;
         gap: 8px;
+        padding: 10px 25px;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 1.625rem;
+        letter-spacing: 0.46px;
+        margin-top: 40px;
     }
 
     // Responsive adjustments

@@ -77,7 +77,6 @@ const StickyAnimation = () => {
     return (
         <div className="sticky-animation-container">
             <div className="sticky-section">
-                {/* Use the `key` prop to force React to re-render the image */}
                 <img key={activeSection.id} src={activeSection?.gifSrc} alt={activeSection?.title} />
             </div>
             <div className="scrollable-content">

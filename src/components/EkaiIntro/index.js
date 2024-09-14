@@ -36,9 +36,9 @@ export const EkaiIntro = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleAddSlackClick = () => {
-    setShowSlackModal(true); // Show the Slack modal
-  };
+  // const handleAddSlackClick = () => {
+  //   setShowSlackModal(true); // Show the Slack modal
+  // };
 
   const handleCloseModal = () => {
     setShowSlackModal(false); // Hide the Slack modal
@@ -73,7 +73,7 @@ export const EkaiIntro = () => {
           <p className="left-cont-subheading"></p>
 
           <div className="horizontal">
-            <button
+            {/* <button
               onClick={handleAddSlackClick}
               className="add-to-slack-button"
               style={{
@@ -116,7 +116,7 @@ export const EkaiIntro = () => {
                 ></path>
               </svg>
               Add to Slack
-            </button>
+            </button> */}
             <button
               className="left-cont-button"
               onClick={() =>handleGetStarted() }
