@@ -108,6 +108,8 @@
       a {
         text-decoration: none;
       }
+
+
     }
 
     .nav-links,
@@ -218,6 +220,10 @@
 @media (max-width: 480px) {
   .main-nav .logo-container {
     font-size: 20px;
+    img{
+      width: 80px;
+      height: 25.64px;
+    }
   }
 
   .main-nav .nav-links {

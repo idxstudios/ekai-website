@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.scss";
 import ElevateCard from "../ElevateCard";
 import GIF1 from "../../assets/whyEkai/realtime.png";
+import GIF2 from "../../assets/compl.png";
 import video from "../../assets/whyEkai/crossplatform.mp4";
 import { WhyEkai } from "../WhyEkai";
 
@@ -45,5 +46,12 @@ const card = [
     title: "Cross-Platform Access",
     para: "Ekai is accessible on various platforms. Users can leverage Ekai's contextual comprehension and AI features across different environments such as Slack, Chrome extensions, mobile keyboards, emails, desktop app etc",
     id: 2,
+  },
+  {
+    isRev: false,
+    gifSrc: GIF2,
+    title: "Security and Compliance",
+    para: "Ekai adheres to security protocols. You can securely employ AI capabilities by hosting knowledge and AI models on either your servers or Ekai's secure servers. Your data is safeguarded and not utilized for training AI models.",
+    id: 3,
   },
 ];

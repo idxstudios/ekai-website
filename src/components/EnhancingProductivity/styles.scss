@@ -7,7 +7,6 @@
     max-width: 1150px !important;
     padding: 50px 0;
 
-
     h1 {
       font-size: 64px;
       font-weight: 600;
@@ -27,7 +26,6 @@
         margin: auto;
       }
     }
-
 
     h4 {
       font-size: 20px;
@@ -54,7 +52,6 @@
     .box1,
     .box2,
     .box3 {
-    
       flex: 1 1 30%;
       /* Ensures each box takes equal space */
       margin: 10px;
@@ -65,12 +62,21 @@
 
       p {
         text-align: center;
+        //styleName: Mobile/Body;
+        font-family: Manrope;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 22.5px;
+        text-align: center;
+        color: rgba(52, 57, 50, 1);
+      }
+      @media screen and (max-width: 700px) {
+        font-size: 15px;
       }
       img {
         width: 240px;
         height: 240px;
         object-fit: contain;
-       
       }
 
       @media screen and (max-width: 700px) {
@@ -83,7 +89,6 @@
           margin-top: -20px;
           font-size: 18px;
         }
-
       }
     }
   }
@@ -99,7 +104,6 @@
     }
 
     .three-container {
-
       .box1,
       .box2,
       .box3 {
@@ -128,7 +132,6 @@
         flex: 1 1 100%;
         max-width: 90%;
         /* Ensures boxes don't stretch too wide */
-
       }
     }
   }
@@ -150,7 +153,6 @@
     }
 
     .three-container {
-
       .box1,
       .box2,
       .box3 {

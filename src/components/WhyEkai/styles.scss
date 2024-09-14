@@ -11,7 +11,7 @@
 
   @media (max-width: 700px) {
     margin: 10px auto;
-    margin-bottom: -100px;
+    margin-bottom: -50px;
   }
 }
 .whyekai h1 {
@@ -23,6 +23,13 @@
   color: #343932;
   @media (max-width: 600px) {
     font-size: 25px;
+    //styleName: Mobile/Title 3;
+    font-family: Manrope;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 17.76px;
+    letter-spacing: -0.012em;
+    text-align: center;
   }
 }
 
@@ -35,6 +42,13 @@
 
   @media (max-width: 600px) {
     font-size: 35px;
+    //styleName: Mobile/Title 2;
+    font-family: Manrope;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32.78px;
+    letter-spacing: -0.022em;
+    text-align: center;
   }
 }
 
