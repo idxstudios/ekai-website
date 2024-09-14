@@ -118,3 +118,9 @@ export const JobFunctionList = [
   { id: 4, value: "Sales and Marketing" },
   { id: 5, value: "Others" },
 ];
+
+export const JobPosition = [
+  { id: 1, value: "Senior management" },
+  { id: 2, value: "Manager" },
+  { id: 3, value: "Individual Contributor" },
+];

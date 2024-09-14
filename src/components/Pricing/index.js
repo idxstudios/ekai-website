@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./styles.scss";
 import Square from "../../assets/CardSquare.svg";
 import Check from "../../assets/CheckCircle.svg";
 import Arrow from "../../assets/ArrowRight.svg";
-import { FormDialog } from "../FormDialog";
 
 // Refactored Card component to accept props
 const Card = ({
@@ -17,9 +16,6 @@ const Card = ({
   buttonText,
   benefits,
 }) => {
-
-  const [openDialog, setOpenDialog] = useState(false);
-
   return (
     <div className="card enterprise">
       {/* <h3>{title}</h3> */}
@@ -56,15 +52,9 @@ const Card = ({
 
      <div className="makeitcenter">
      {trialInfo && <p className="trial-info">{trialInfo}</p>}
-      <button className="contact-btn"
-                    onClick={() => setOpenDialog(true)}
-
-      >
+      <button className="contact-btn">
         {buttonText} <img src={Arrow} alt="ekai" />
       </button>
-
-      <FormDialog open={openDialog} setOpenDialog={setOpenDialog} />
-
      </div>
     </div>
   );

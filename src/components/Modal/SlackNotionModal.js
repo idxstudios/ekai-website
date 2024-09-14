@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import "./SlackNotionModal.scss";
 import { GoArrowSwitch } from "react-icons/go";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
+import { trackEvent } from "../../mixpanel";
 
 export const SlackNotionModal = ({ onClose }) => {
+  
   const [isConnected, setIsConnected] = useState(false);
-
+  
   const handleConnectClick = () => {
+    trackEvent("slack_connect")    
     setIsConnected(true);
     window.open("https://app.ekai.ca/slack/install", "_blank");
   };
@@ -18,10 +21,11 @@ export const SlackNotionModal = ({ onClose }) => {
   ];
 
   const stuckedPoints = [
-    `Slack should open automatically on a new tab. If it doesn't, <a href='https://app.ekai.ca/slack/install' target={"_blank"}>click here to retry</a>.`,
+    <>Slack should open automatically on a new tab. If it doesn't, <a href='https://app.ekai.ca/slack/install' target="_blank" rel="noreferrer" onClick={() => trackEvent('slack_retry')}>click here to retry</a>.</>,
     "If you are a Slack workspace administrator: Follow Slack’s instructions to connect.",
     "If you are not authorized to install external apps: Follow the instructions to request access to the connection.",
-    `Contact us: <a href="https://mail.google.com/mail/u/0/?fs=1&to=ekai@idxstudioz.com&tf=cm" target={"_blank"} >ekai@idxstudioz.com</a>`,
+    <>Contact us: <a href="https://mail.google.com/mail/u/0/?fs=1&to=ekai@idxstudioz.com&tf=cm" target="_blank" rel="noreferrer" onClick={() => trackEvent('contact_us_mail',{'avenue': 'Stack_popup'})}>ekai@idxstudioz.com</a></>,
+
   ];
 
   return (
@@ -121,9 +125,11 @@ const ConnectedState = ({ stuckedPoints }) => (
     <h2 className="title">Follow instructions from Slack in your browser</h2>
     <div className="checkbox-list">
       <ul className="data-safety-list">
-        {stuckedPoints.map((point, i) => (
-          <li key={i} dangerouslySetInnerHTML={{ __html: point }}></li>
-        ))}
+        {stuckedPoints.map((point, i) => {
+          if (typeof point === 'string') return <li key={i} dangerouslySetInnerHTML={{ __html: point }}></li>
+          else return <li key={i}>{point}
+          </li>
+        })}
       </ul>
     </div>
   </div>

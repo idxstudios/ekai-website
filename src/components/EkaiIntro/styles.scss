@@ -353,6 +353,7 @@
   .large-image-container {
     position: relative;
 
+
     .video-box {
       margin: auto;
       overflow: hidden;
@@ -371,8 +372,8 @@
         z-index: -10;
 
         @media screen and (max-width: 700px) {
-          height: 280px !important;
-          width: 100% !important;
+          height: 300px !important;
+          width: 90% !important;
           object-fit: contain;
           background: #faf6ef;
         }
@@ -385,10 +386,16 @@
 
         .thumbnail {
           background: #fff;
-          width: 100% !important;
+          width: 338px !important;
           height: auto !important;
         }
       }
+    }
+    @media screen and (max-width: 500px) {
+      height: 200px;
+    }
+    @media screen and (max-width: 480px) {
+      height: 400px;
     }
   }
 

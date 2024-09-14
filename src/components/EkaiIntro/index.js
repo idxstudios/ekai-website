@@ -11,6 +11,7 @@ import BlurR from "../../assets/blurR.svg";
 import Arrow from "../../assets/ArrowRight.svg";
 import BlurL from "../../assets/blurR.svg";
 import { FormDialog } from "../FormDialog";
+import { trackEvent } from "../../mixpanel";
 // const words = ["repetitive", "interruptions", "busywork", "chaos"];
 
 export const EkaiIntro = () => {
@@ -43,6 +44,10 @@ export const EkaiIntro = () => {
     setShowSlackModal(false); // Hide the Slack modal
   };
 
+  const handleGetStarted = () => {
+    setOpenDialog(true);
+    trackEvent("lead_first_click")
+  }
   return (
     <div className="ekai-intro-main-cont">
       <img src={BlurR} alt="ekai" className="blurR" />
@@ -53,15 +58,12 @@ export const EkaiIntro = () => {
             <div className="left-cont-span-out">
               AI {"{YOU}"} for the{" "}
               <div className="word-animation">
-                <div className="animated-word">
+                <span className="animated-word ">
                   <div>repetitive</div>
                   <div>interruptions</div>
                   <div>busywork</div>
                   <div>chaos</div>
-                  <div>red tape</div>
-                  <div>context switching</div>
-                  <div>documentation</div>
-                </div>
+                </span>
               </div>
             </div>
           </div>
@@ -117,7 +119,7 @@ export const EkaiIntro = () => {
             </button> */}
             <button
               className="left-cont-button"
-              onClick={() => setOpenDialog(true)}
+              onClick={() =>handleGetStarted() }
             >
               Get Started <img src={Arrow} alt="" />
             </button>

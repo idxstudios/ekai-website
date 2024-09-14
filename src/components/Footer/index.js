@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import "./styles.scss";
 import logo from "../../assets/ekai-logo-footer.svg";
+import { trackEvent } from "../../mixpanel";
 // import Linkedin from "../../assets/linkedin.svg";
 // import Gmail from "../../assets/gmail.svg";
 // import Top from "../../assets/top.svg";
@@ -11,6 +12,8 @@ const Footer = () => {
 
   const handleContactUs = () => {
     const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+    
+    trackEvent("contact_us_mail", {'avenue':'footer'})
 
     if (isMobile) {
       // Mobile-specific logic
@@ -45,9 +48,9 @@ const Footer = () => {
 
         <div className="bottom-nav">
           <h4>Resources</h4>
-          <Link to="/FAQs#top">FAQs</Link>
-          <Link to="/termsOfUse#top">Terms of Use</Link>
-          <Link to="/privacyPolicy#top">Privacy Policy</Link>
+          <Link onClick={() => trackEvent("faq_click")} to="/FAQs#top">FAQs</Link>
+          <Link onClick={() => trackEvent("terms_use_click")} to="/termsOfUse#top">Terms of Use</Link>
+          <Link onClick={() => trackEvent("privacy_policy_click")} to="/privacyPolicy#top">Privacy Policy</Link>
         </div>
         <div className="social-media">
           <h4>Contact Us</h4>
@@ -56,6 +59,7 @@ const Footer = () => {
               href="https://www.linkedin.com/company/ekai-0-1/?viewAsMember=true"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackEvent("linkedin_connect")}
             >
               
               <span>Linkedin</span>

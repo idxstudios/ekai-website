@@ -7,6 +7,7 @@
     max-width: 1150px !important;
     padding: 50px 0;
 
+
     h1 {
       font-size: 64px;
       font-weight: 600;
@@ -26,6 +27,7 @@
         margin: auto;
       }
     }
+
 
     h4 {
       font-size: 20px;
@@ -52,6 +54,7 @@
     .box1,
     .box2,
     .box3 {
+    
       flex: 1 1 30%;
       /* Ensures each box takes equal space */
       margin: 10px;
@@ -90,6 +93,23 @@
           font-size: 18px;
         }
       }
+      img {
+        width: 320px;
+       
+      }
+
+      @media screen and (max-width: 700px) {
+        margin: 10px;
+        img {
+          width: 320px;
+        }
+
+        p {
+          margin-top: -20px;
+          font-size: 18px;
+        }
+
+      }
     }
   }
 
@@ -104,6 +124,7 @@
     }
 
     .three-container {
+
       .box1,
       .box2,
       .box3 {
@@ -153,6 +174,7 @@
     }
 
     .three-container {
+
       .box1,
       .box2,
       .box3 {

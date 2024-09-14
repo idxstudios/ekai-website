@@ -10,7 +10,6 @@ main {
   margin: auto;
 
   position: relative;
-
   .Elevate {
     display: flex;
     justify-content: space-between;
@@ -42,10 +41,6 @@ main {
       @media screen and (max-width: 700px) {
         margin: 0;
         padding: 0 !important;
-      }
-
-      img{
-        width: 30px !important;
       }
 
       h1 {
