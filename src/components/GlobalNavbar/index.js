@@ -5,6 +5,7 @@ import "./style.scss";
 import { Link, Outlet } from "react-router-dom";
 import { FormDialog } from "../FormDialog";
 import { SlackNotionModal } from "../Modal/SlackNotionModal";
+import Arrow from "../../assets/ArrowRight.svg"
 
 export default function GlobalNavbar() {
   const [showMenu, setShowMenu] = useState();
@@ -40,9 +41,9 @@ export default function GlobalNavbar() {
               </Link>
             </div>
             <div className={`${showMenu ? "nav-links" : "nav-links-active"}`}>
-            <Link onClick={() => setShowMenu(!showMenu)} to="#features">Features</Link>
+              <Link onClick={() => setShowMenu(!showMenu)} to="#features">Features</Link>
               <Link onClick={() => setShowMenu(!showMenu)} to="#why-ekai">Why Ekai</Link>
-    
+
               <Link onClick={() => setShowMenu(!showMenu)} to="#pricing">Pricing</Link>
 
               {/* <button
@@ -100,7 +101,7 @@ export default function GlobalNavbar() {
               Add to Slack
             </a> */}
 
-            <button
+            {/* <button
               onClick={handleAddSlackClick}
              className="add-to-slack-button-nav"  
             >
@@ -127,7 +128,14 @@ export default function GlobalNavbar() {
                 ></path>
               </svg>
               Add to Slack
+            </button> */}
+
+            <button className="add-to-slack-button-nav"
+              onClick={() => setOpenDialog(true)}
+            >
+              Contact Us <img src={Arrow} alt="ekai" />
             </button>
+
           </div>
           {/* <Link
             onClick={() => setShowMenu(!showMenu)}
