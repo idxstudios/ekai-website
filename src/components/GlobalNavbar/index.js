@@ -20,9 +20,9 @@ export default function GlobalNavbar() {
     return () => clearInterval(interval);
   }, []);
 
-  const handleAddSlackClick = () => {
-    setShowSlackModal(true); // Show the Slack modal
-  };
+  // const handleAddSlackClick = () => {
+  //   setShowSlackModal(true); // Show the Slack modal
+  // };
 
   const handleCloseModal = () => {
     setShowSlackModal(false); // Hide the Slack modal
