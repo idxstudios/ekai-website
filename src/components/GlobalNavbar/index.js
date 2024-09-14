@@ -7,19 +7,23 @@ import { FormDialog } from "../FormDialog";
 import arrow from "../../assets/ArrowRight.svg"
 // import { SlackNotionModal } from "../Modal/SlackNotionModal";
 // import { trackEvent } from "../../mixpanel";
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function GlobalNavbar() {
   const [showMenu, setShowMenu] = useState();
   const [showFirstImage, setShowFirstImage] = useState(true);
   const [openDialog, setOpenDialog] = useState(false);
   // const [showSlackModal, setShowSlackModal] = useState(false); // New state for Slack modal
-
+  const navigate = useNavigate();
+  const location = useLocation();
   useEffect(() => {
     const interval = setInterval(() => {
       setShowFirstImage((prev) => !prev);
     }, 6000); // Change every 6 seconds
     return () => clearInterval(interval);
   }, []);
+
+
 
   // const handleAddSlackClick = () => {
   //   trackEvent("add_slack")    
@@ -43,9 +47,17 @@ export default function GlobalNavbar() {
               </Link>
             </div>
             <div className={`${showMenu ? "nav-links" : "nav-links-active"}`}>
-              <Link onClick={() => setShowMenu(!showMenu)} to="#why-ekai">Why Ekai</Link>
-              <Link onClick={() => setShowMenu(!showMenu)} to="#features">Features</Link>
-              <Link onClick={() => setShowMenu(!showMenu)} to="#pricing">Pricing</Link>
+              {!(location?.pathname === "/FAQs" ||
+                location?.pathname === "/termsOfUse" ||
+                location?.pathname === "/privacyPolicy") && (
+                  <>
+                    <Link onClick={() => setShowMenu(!showMenu)} to="#why-ekai">Why Ekai</Link>
+                    <Link onClick={() => setShowMenu(!showMenu)} to="#features">Features</Link>
+                    <Link onClick={() => setShowMenu(!showMenu)} to="#pricing">Pricing</Link>
+                  </>
+                )}
+
+
 
 
               <FormDialog open={openDialog} setOpenDialog={setOpenDialog} />
