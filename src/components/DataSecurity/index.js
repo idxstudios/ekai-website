@@ -22,19 +22,19 @@ const DataSecurity = () => {
       title: "Data Encryption",
       icon: Img1,
       description:
-        "Your Data is never mixed with other users. Each user gets their own entirely separate Vector Database and your Data is secured with AES-256 military-grade encryption.",
+        "We use a multi-tenant deployment model with isolated resources for each tenant. Data in transit is encrypted using TLS, while AES-256 ensures data encryption at rest. Keys are managed and rotated through a secure key vault.",
     },
     {
       title: "Access Control",
       icon: Img2,
       description:
-        "We follow original access permission around the information so everyone can only query what's meant for them. Giving you peace of mind that no information will ever be leaked to an unauthorized source.",
+        "We enforce original access permissions to ensure that users can only query the information they’re authorized to see. Rest easy knowing your data is fully protected from unauthorized access at all times",
     },
     {
       title: "Private Deployment",
       icon: Img3,
       description:
-        "You have full ownership of your Data & your AI. Everything you share to your AI is strictly yours, and stays under your control. Your Data will never be used by us or by anyone.",
+        "Enjoy full flexibility by deploying our solution on your private infrastructure, giving you complete control over your data and environment. Tailor the deployment to meet your specific security and compliance requirements.",
     },
   ];
 
