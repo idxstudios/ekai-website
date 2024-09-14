@@ -7,14 +7,13 @@ import { FormDialog } from "../FormDialog";
 import arrow from "../../assets/ArrowRight.svg"
 // import { SlackNotionModal } from "../Modal/SlackNotionModal";
 // import { trackEvent } from "../../mixpanel";
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 export default function GlobalNavbar() {
   const [showMenu, setShowMenu] = useState();
   const [showFirstImage, setShowFirstImage] = useState(true);
   const [openDialog, setOpenDialog] = useState(false);
   // const [showSlackModal, setShowSlackModal] = useState(false); // New state for Slack modal
-  const navigate = useNavigate();
   const location = useLocation();
   useEffect(() => {
     const interval = setInterval(() => {

@@ -38,6 +38,14 @@ const Footer = () => {
       }
     }
   }, [location]);
+
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (hash === "#top") {
+      window.scrollTo(0, 0); // Scroll to the top of the page
+    }
+  }, [pathname, hash]);
   return (
     <footer className="footer">
       <div className="footer-content">
