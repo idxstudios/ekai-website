@@ -12,9 +12,30 @@
   > div {
     color: rgba(52, 57, 50, 1);
     font-size: 64px !important;
+    font-weight: 500;
+    letter-spacing: -2.2% !important;
 
     @media screen and (max-width: "700px") {
       font-size: 30px !important;
+      //styleName: Mobile/Title 2;
+font-family: Manrope;
+font-size: 24px;
+font-weight: 500;
+line-height: 32.78px;
+letter-spacing: -0.022em;
+text-align: center;
+
+h1{
+  //styleName: Mobile/Title 3;
+    //styleName: Mobile/Title 3;
+    font-family: Manrope;
+    font-size: 13px !important;
+    font-weight: 800;
+    line-height: 17.76px;
+    letter-spacing: -0.012em;
+    text-align: center;
+}
+
 
     }
   }
@@ -31,6 +52,8 @@
   text-align: center;
   line-height: 1.6;
   color: #575757;
+
+
 }
 
 .outmission .animated-word {
@@ -44,6 +67,7 @@
     #dbc269 65.81%,
     #c87a39 102.13%
   );
+  letter-spacing: -2.2% !important;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 5px;
@@ -74,8 +98,20 @@
 }
 
 @media (max-width: 900px) {
+ 
   .outmission {
-    font-size: 1.25rem;
+    width: 100%;
+    //styleName: Mobile/Title 2;
+font-family: Manrope;
+font-size: 24px !important;
+font-weight: 500 !important;
+line-height: 32.78px !important;
+letter-spacing: -0.022em !important;
+margin: 0;
+padding: 0;
+text-align: center;
+margin-top: 70px;
+
   }
 
   .outmission h1 {
@@ -87,18 +123,3 @@
   }
 }
 
-@media (max-width: 600px) {
-  .outmission {
-    font-size: 2rem;
-    padding: 30px 0;
-    margin: 20px 0;
-  }
-
-  .outmission h1 {
-    font-size: 1.4rem;
-  }
-
-  .outmission .animated-word {
-    font-size: 3rem;
-  }
-}

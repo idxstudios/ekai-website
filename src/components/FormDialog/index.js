@@ -10,7 +10,7 @@ import Button from "@mui/material/Button";
 import Chip from "@mui/material/Chip";
 import { useState } from "react";
 import { useFormik } from "formik";
-import { OgSizeList, JobFunctionList } from "../../utils/constant";
+import { OgSizeList, JobFunctionList, JobPosition } from "../../utils/constant";
 import { contactDetailSchema } from "../../utils/validators";
 import { db } from "../../firebase/config";
 import { collection, addDoc } from "firebase/firestore";
@@ -21,6 +21,7 @@ export const FormDialog = ({ open, setOpenDialog }) => {
   const [step, setStep] = useState(0);
   const [ogSize, setOgSize] = useState(null);
   const [jobFunction, setJobFunction] = useState(null);
+  const [rolePosition, setRolePosition] = useState(null);
   const [snackBar, setSnackBar] = useState(false);
   const contactDetailsForm = useFormik({
     initialValues: {
@@ -42,6 +43,9 @@ export const FormDialog = ({ open, setOpenDialog }) => {
     setJobFunction(chip);
   };
 
+  const handleRolePositionClick = (chip) => {
+    setRolePosition(chip);
+  };
   const submitData = async () => {
     try {
       await addDoc(collection(db, "users"), {
@@ -49,14 +53,18 @@ export const FormDialog = ({ open, setOpenDialog }) => {
         email: contactDetailsForm.values.email,
         org_size: ogSize.value,
         job_function: jobFunction.value,
+        role_function: rolePosition.value,
+        creation_date: new Date()
       });
       trackEvent("lead_job_next")
-      setStep(3);
+      setStep(4);
     } catch (e) {
       setSnackBar(true);
     }
   };
 
+  console.log(new Date(),"new Date()")
+  
   return (
     <>
       <Dialog open={open} onClose={handleClose} className="form-dialog">
@@ -219,7 +227,9 @@ export const FormDialog = ({ open, setOpenDialog }) => {
                 <Button
                   variant="contained"
                   disabled={!jobFunction?.id}
-                  onClick={submitData}
+                  onClick={() => {
+                    setStep(3);
+                  }}
                 >
                   Next{" "}
                   <svg
@@ -237,6 +247,61 @@ export const FormDialog = ({ open, setOpenDialog }) => {
             )}
 
             {step === 3 && (
+              <div>
+                <div className="flex-row items-center">
+                  <img
+                    src={backWardArrow}
+                    alt="Backword Arrow"
+                    className="mr-10 cursor-pointer"
+                    onClick={() => setStep(4)}
+                  />
+                  <h3 className="form-dialog-head">
+                    What is your current role or position?
+                  </h3>
+                </div>
+                <div className="chip-container">
+                  {JobPosition.map((chip) => (
+                    <Chip
+                      key={chip.id}
+                      label={chip.value}
+                      clickable
+                      onClick={() => handleRolePositionClick(chip)}
+                      style={{
+                        backgroundColor:
+                          chip.id === rolePosition?.id
+                            ? "#C87C3C"
+                            : "transparent",
+                        color:
+                          chip.id === rolePosition?.id
+                            ? "#fff"
+                            : "rgba(0, 0, 0, 0.87)",
+                      }}
+                    />
+                  ))}
+                </div>
+                <Button
+                  variant="contained"
+                  disabled={!rolePosition?.id}
+                  onClick={submitData}
+
+
+                >
+                  Next{" "}
+                  <svg
+                    className="forward-arrow"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" />
+                  </svg>
+                </Button>
+              </div>
+            )}
+
+            {step === 4 && (
               <div className="align-center">
                 <h3 className="form-dialog-head">
                   Thank you for showing interest!
