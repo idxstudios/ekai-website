@@ -11,14 +11,13 @@ function App() {
     <div className="app">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<GlobalNavbar />} >       
-          <Route index element={<Home />} />
-          {/* <Route path="/career" element={<Career />} /> */}
-          <Route path="/FAQs" element={<FAQ />} />
-          <Route path="/termsOfUse" element={<TermsOfUse/>} />
-          <Route path="/privacyPolicy" element={<PrivacyPolicy/>} />
+          <Route path="/" element={<GlobalNavbar />}>
+            <Route index element={<Home />} />
+            {/* <Route path="/career" element={<Career />} /> */}
+            <Route path="/FAQs" element={<FAQ />} />
+            <Route path="/termsOfUse" element={<TermsOfUse />} />
+            <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
           </Route>
-          
         </Routes>
       </BrowserRouter>
     </div>
