@@ -1,14 +1,21 @@
 import React from "react";
 import Footer from "../../components/Footer";
 import "./styles.scss"
+import { Helmet } from "react-helmet-async";
 
 export default function PrivacyPolicy() {
   return (
- <div>
+    <>
+      <Helmet>
+          <title>Ekai privacy policy</title>
+          <meta name="description" content="Ekai - Privacy Policy" />
+          <link rel="canonical" href="https://www.ekai.ca/privacyPolicy" />
+      </Helmet>
+      <div>
        <div className="main">
-      <h1>Privacy Policy</h1>
+        <h1>Privacy Policy</h1>
 
-      <p>Last updated: July 08, 2024</p>
+        <p>Last updated: July 08, 2024</p>
       <p>
         This Privacy Policy describes Our policies and procedures on the
         collection, use and disclosure of Your information when You use the
@@ -382,5 +389,7 @@ export default function PrivacyPolicy() {
     </div>
     <Footer/>
  </div>
+ </>
+
   );
 }
