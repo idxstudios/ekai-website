@@ -17,6 +17,7 @@ import Pricing from "../../components/Pricing";
 // import { WhyEkai } from "../../components/WhyEkai";
 import WhyEkaiFlow from "../../components/whyEkaiFlow";
 import StickyAnimation from "../../components/StickyAnimation";
+import { Helmet } from "react-helmet-async";
 
 // import FAQs from "../../components/FAQs";
 
@@ -49,6 +50,21 @@ function Home() {
   }, []);
 
   return (
+    <>
+    <Helmet>
+      <title>ekai</title>
+      <meta name="description" content="Ekai - Revolutionize your workflow with AI automation. Save time and focus on what truly matters by eliminating repetitive tasks and interruptions." />
+      <link rel="canonical" href="https://www.ekai.ca" />
+      <meta property="og:title" content="AI {YOU} for matters that don’t need real YOU" />
+      <meta property="og:description"
+        content="Ekai streamlines hybrid work tasks through secure AI technology, enabling your team to concentrate on their core responsibilities as AI manages documentation, coordination, and scheduling efficiently." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://www.ekai.ca" />
+      <meta property="og:image" content="%PUBLIC_URL%/ekai-og-bg.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="627" />
+      <meta property="og:site_name" content="Ekai" />
+    </Helmet>
     <div className="">
       <EkaiIntro />
       <OurMission />
@@ -75,6 +91,7 @@ function Home() {
       {/* <FAQs/> */}
       <Footer />
     </div>
+    </>
   );
 }
 
