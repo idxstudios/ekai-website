@@ -54,12 +54,12 @@ function Home() {
     <Helmet>
       <title>ekai</title>
       <meta name="description" content="Ekai - Revolutionize your workflow with AI automation. Save time and focus on what truly matters by eliminating repetitive tasks and interruptions." />
-      <link rel="canonical" href="https://www.ekai.ca" />
+      <link rel="canonical" href="https://www.yourekai.com" />
       <meta property="og:title" content="AI {YOU} for matters that don’t need real YOU" />
       <meta property="og:description"
         content="Ekai streamlines hybrid work tasks through secure AI technology, enabling your team to concentrate on their core responsibilities as AI manages documentation, coordination, and scheduling efficiently." />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.ekai.ca" />
+      <meta property="og:url" content="https://www.yourekai.com" />
       <meta property="og:image" content="%PUBLIC_URL%/ekai-og-bg.png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="627" />

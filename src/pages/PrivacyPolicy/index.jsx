@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
       <Helmet>
           <title>Ekai privacy policy</title>
           <meta name="description" content="Ekai - Privacy Policy" />
-          <link rel="canonical" href="https://www.ekai.ca/privacyPolicy" />
+          <link rel="canonical" href="https://www.yourekai.com/privacyPolicy" />
       </Helmet>
       <div>
        <div className="main">
