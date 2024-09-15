@@ -89,7 +89,7 @@ export default Pricing;
 const pricingCards = [
   {
     title: "Pilot",
-    subtitle: "For individuals",
+    subtitle: "For small teams",
     description:
       "Ekai hosted plan ensures data protection and security on our cloud, not shared with other organizations.",
     originalPrice: "$25",
@@ -100,7 +100,7 @@ const pricingCards = [
   },
   {
     title: "Pro",
-    subtitle: "For individuals",
+    subtitle: "For advanced teams",
     description:
       "Self-hosted plan with one-click installation, freedom to choose cloud provider, and preferred LLM.",
     originalPrice: "$250",

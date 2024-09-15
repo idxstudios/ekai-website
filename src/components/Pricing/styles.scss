@@ -9,11 +9,10 @@
 
 
   @media screen and (max-width: 700px) {
-    margin-top: 10px;
-
+    margin-top: 0px;
     margin: 0px;
     margin-top: -50px;
-    
+    padding-top: 0px;
   }
 
   h2 {
@@ -134,6 +133,13 @@
     line-height: 1.4;
     margin-bottom: 1.5rem;
     width: 80%;
+    //styleName: Mobile/Body;
+font-family: Manrope !important;
+// font-size: 15px !important;
+font-weight: 400 !important;
+// line-height: 22.5px !;
+// text-align: left;
+
   }
 
   ul {
