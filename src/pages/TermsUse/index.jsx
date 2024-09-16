@@ -1,9 +1,16 @@
 import React from "react";
 import Footer from "../../components/Footer";
 import "./styles.scss"
+import { Helmet } from "react-helmet-async";
 
 export default function TermsOfUse() {
   return (
+    <>
+    <Helmet>
+      <title>Terms of Service - ekai</title>
+      <meta name="description" content="Review the terms and conditions for using Ekai’s AI-powered automation services. Understand your rights, responsibilities, and our commitment to service quality, privacy, and security" />
+      <link rel="canonical" href="https://www.yourekai.com/termsOfUse" />
+    </Helmet>
     <div>
       <div className="main">
         <h1>Terms of Service</h1>
@@ -619,5 +626,6 @@ export default function TermsOfUse() {
       </div>
       <Footer />
     </div>
+    </>
   );
 }
