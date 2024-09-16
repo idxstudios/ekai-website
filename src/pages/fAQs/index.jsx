@@ -1,5 +1,6 @@
 import React from 'react'
 import FAQs from "../../components/FAQs";
+import { Helmet } from 'react-helmet-async';
 
 const FAQ = () => {
   return (
