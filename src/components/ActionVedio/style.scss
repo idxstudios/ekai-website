@@ -27,6 +27,8 @@
   // background: #FAF6EF;
   
   @media screen and (max-width: 1200px) {
+    display: flex;
+    justify-content: center;
     img{
       
       object-fit: contain;
