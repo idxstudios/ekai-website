@@ -3,7 +3,8 @@ import "./styles.scss";
 import ElevateCard from "../ElevateCard";
 import GIF1 from "../../assets/whyEkai/realtime.png";
 import video from "../../assets/whyEkai/crossplatform.mp4";
-import GIF2 from "../../assets/compl.svg";
+// import GIF2 from "../../assets/compl.svg";
+import GIF2 from "../../assets/complUpdated.svg";
 
 import { WhyEkai } from "../WhyEkai";
 
