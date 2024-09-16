@@ -56,7 +56,7 @@ const Footer = () => {
 
         <div className="bottom-nav">
           <h4>Resources</h4>
-          <Link onClick={() => trackEvent("faq_click")} to="/FAQs#top">FAQs</Link>
+          {/* <Link onClick={() => trackEvent("faq_click")} to="/FAQs#top">FAQs</Link> */}
           <Link onClick={() => trackEvent("terms_use_click")} to="/termsOfUse#top">Terms of Use</Link>
           <Link onClick={() => trackEvent("privacy_policy_click")} to="/privacyPolicy#top">Privacy Policy</Link>
         </div>
