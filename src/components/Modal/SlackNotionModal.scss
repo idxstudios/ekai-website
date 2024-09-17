@@ -1,12 +1,18 @@
 /* Container for the modal overlay */
+// .modal-overlay {
+//   // position: fixed;
+//   // inset: 0;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   // background-color: rgba(0, 0, 0, 0.5);
+//   // z-index: 100;
+// }
 .modal-overlay {
-  position: fixed;
-  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 100;
+  padding: 1rem;
 }
 
 /* Flex container for logos and text */
