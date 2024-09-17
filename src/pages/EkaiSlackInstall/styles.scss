@@ -1,0 +1,30 @@
+.main-nav {
+  background: #fff;
+  user-select: none;
+  font-family: "Manrope", sans-serif !important;
+  font-optical-sizing: auto;
+
+  nav {
+    margin: auto;
+    max-width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 95px;
+    padding: 20px;
+    gap: 50px;
+
+    .logo-container {
+      font-size: 28.83px;
+      font-weight: 800;
+      color: #343932;
+      word-spacing: -10px;
+      letter-spacing: -1px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding-bottom: 0;
+      margin-right: 10px;
+    }
+  }
+}

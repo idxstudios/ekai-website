@@ -4,12 +4,11 @@ import { GoArrowSwitch } from "react-icons/go";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { trackEvent } from "../../mixpanel";
 
-export const SlackNotionModal = ({ onClose }) => {
-  
+export const SlackNotionModal = () => {
   const [isConnected, setIsConnected] = useState(false);
-  
+
   const handleConnectClick = () => {
-    trackEvent("slack_connect")    
+    trackEvent("slack_connect");
     setIsConnected(true);
     window.open("https://app.ekai.ca/slack/install", "_blank");
   };
@@ -21,16 +20,37 @@ export const SlackNotionModal = ({ onClose }) => {
   ];
 
   const stuckedPoints = [
-    <>Slack should open automatically on a new tab. If it doesn't, <a href='https://app.ekai.ca/slack/install' target="_blank" rel="noreferrer" onClick={() => trackEvent('slack_retry')}>click here to retry</a>.</>,
+    <>
+      Slack should open automatically on a new tab. If it doesn't,{" "}
+      <a
+        href="https://app.ekai.ca/slack/install"
+        target="_blank"
+        rel="noreferrer"
+        onClick={() => trackEvent("slack_retry")}
+      >
+        click here to retry
+      </a>
+      .
+    </>,
     "If you are a Slack workspace administrator: Follow Slack’s instructions to connect.",
     "If you are not authorized to install external apps: Follow the instructions to request access to the connection.",
-    <>Contact us: <a href="https://mail.google.com/mail/u/0/?fs=1&to=ekai@idxstudioz.com&tf=cm" target="_blank" rel="noreferrer" onClick={() => trackEvent('contact_us_mail',{'avenue': 'Stack_popup'})}>ekai@idxstudioz.com</a></>,
+    <>
+      Contact us:{" "}
+      <a
+        href="https://mail.google.com/mail/u/0/?fs=1&to=ekai@idxstudioz.com&tf=cm"
+        target="_blank"
+        rel="noreferrer"
+        onClick={() => trackEvent("contact_us_mail", { avenue: "Stack_popup" })}
+      >
+        ekai@idxstudioz.com
+      </a>
+    </>,
   ];
 
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <CloseButton onClose={onClose} />
+        {/* <CloseButton onClose={handleCloseModal} /> */}
         {isConnected ? (
           <ConnectedState stuckedPoints={stuckedPoints} />
         ) : (
@@ -43,26 +63,6 @@ export const SlackNotionModal = ({ onClose }) => {
     </div>
   );
 };
-
-function XIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M18 6 6 18" />
-      <path d="m6 6 12 12" />
-    </svg>
-  );
-}
 
 function SlackIcon({ width = 24, height = 41, ...props }) {
   return (
@@ -112,11 +112,31 @@ const EkaiLogo = ({ width = 24, height = 41, fill = "#C87A3C", ...props }) => {
   );
 };
 
-const CloseButton = ({ onClose }) => (
-  <button onClick={onClose} className="close-button">
-    <XIcon />
-  </button>
-);
+// function XIcon(props) {
+//   return (
+//     <svg
+//       {...props}
+//       xmlns="http://www.w3.org/2000/svg"
+//       width="24"
+//       height="24"
+//       viewBox="0 0 24 24"
+//       fill="none"
+//       stroke="currentColor"
+//       strokeWidth="2"
+//       strokeLinecap="round"
+//       strokeLinejoin="round"
+//     >
+//       <path d="M18 6 6 18" />
+//       <path d="m6 6 12 12" />
+//     </svg>
+//   );
+// }
+
+// const CloseButton = ({ onClose }) => (
+//   <button onClick={onClose} className="close-button">
+//     <XIcon />
+//   </button>
+// );
 
 const ConnectedState = ({ stuckedPoints }) => (
   <div className="modal-content-inner">
@@ -125,9 +145,11 @@ const ConnectedState = ({ stuckedPoints }) => (
     <div className="checkbox-list">
       <ul className="data-safety-list">
         {stuckedPoints.map((point, i) => {
-          if (typeof point === 'string') return <li key={i} dangerouslySetInnerHTML={{ __html: point }}></li>
-          else return <li key={i}>{point}
-          </li>
+          if (typeof point === "string")
+            return (
+              <li key={i} dangerouslySetInnerHTML={{ __html: point }}></li>
+            );
+          else return <li key={i}>{point}</li>;
         })}
       </ul>
     </div>
@@ -138,9 +160,7 @@ const NotConnectedState = ({ safetyPoints, handleConnectClick }) => (
   <>
     <div className="modal-content-inner">
       <LogoContainer />
-      <h2 className="title">
-      Use slack conversation to create documents
-      </h2>
+      <h2 className="title">Use slack conversation to create documents</h2>
     </div>
     {/* <div className="message-box">
       <span>Make a release plan from this thread</span>
