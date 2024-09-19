@@ -37,12 +37,12 @@ export const SlackNotionModal = () => {
     <>
       Contact us:{" "}
       <a
-        href="https://mail.google.com/mail/u/0/?fs=1&to=ekai@idxstudioz.com&tf=cm"
+        href="https://mail.google.com/mail/u/0/?fs=1&to=gtmadmin@yourekai.com&tf=cm"
         target="_blank"
         rel="noreferrer"
         onClick={() => trackEvent("contact_us_mail", { avenue: "Stack_popup" })}
       >
-        ekai@idxstudioz.com
+        gtmadmin@yourekai.com
       </a>
     </>,
   ];

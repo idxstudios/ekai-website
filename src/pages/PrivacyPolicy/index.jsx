@@ -382,7 +382,7 @@ export default function PrivacyPolicy() {
         If you have any questions about this Privacy Policy, You can contact us:
       </p>
       <ul>
-        <li>By email: ekai@idxstudioz.com</li>
+        <li>By email: gtmadmin@yourekai.com</li>
      
         <li>By phone number: +1(604)4997647</li>
       </ul>
