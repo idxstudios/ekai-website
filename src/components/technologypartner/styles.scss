@@ -1,0 +1,19 @@
+.Technology-main{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    margin: 50px auto;
+    padding-top: 80px;
+    .DataSecure-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-self: center;
+    }
+}
+h1{
+    font-size: 36px;
+    font-weight: bolder;
+}

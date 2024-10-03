@@ -2,26 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   font-family: "Manrope", sans-serif !important;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+   font-family: "Manrope", sans-serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Shared */
+
+.flex-row {
+  display: flex;
 }
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.ElevateYourWorkflowHome{
+display: none;
+}
+.StickyAnimationHome{
+  display: block;
+}
+
+@media screen and (max-width: 700px) {
+  .ElevateYourWorkflowHome{
+    display: block;
+    }
+    .StickyAnimationHome{
+      display: none;
+    }
+}
+
