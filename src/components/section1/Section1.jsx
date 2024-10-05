@@ -7,6 +7,8 @@ import Arrow from "../../assets/ArrowRight.svg";
 import videothumb from "../../assets/videothumb.jpg";
 import './style.scss';
 import ActionVedio from '../videoplay/ActionVedio';
+import Contactus from '../contactus/Contactus';
+import { trackEvent } from '@/mixpanel';
 
 
 const Section1=()=> {
@@ -86,6 +88,7 @@ const Section1=()=> {
           </div>
         </div>
       </div>
+      <Contactus isvisible={openDialog} />
       {/* {showSlackModal && <SlackNotionModal onClose={handleCloseModal} />} */}
     </div>
   )

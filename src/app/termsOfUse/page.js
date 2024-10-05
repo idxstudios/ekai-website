@@ -1,24 +1,18 @@
 // import Footer from "../../components/Footer";
 import "./styles.scss"
-import Head from "next/head";
 // import { Helmet } from "react-helmet-async";
 
 export default function TermsOfUse() {
   return (
     <>
-    <Head>
-      <title>Terms of Service - ekai</title>
-      <meta name="description" content="Review the terms and conditions for using Ekai’s AI-powered automation services. Understand your rights, responsibilities, and our commitment to service quality, privacy, and security" />
-      <link rel="canonical" href="https://www.yourekai.com/termsOfUse" />
-    </Head>
     <div>
       <div className="main">
         <h1>Terms of Service</h1>
         <p>Last Updated July 08, 2024</p>
         <p>
-          This Master Service Agreement (the “Agreement”) governs the use of the
+          {`This Master Service Agreement (the “Agreement”) governs the use of the
           Service (defined below), and includes the Service Level Agreement
-          found in Exhibit A (the “SLA''), any support plans in Exhibit B, any
+          found in Exhibit A (the “SLA”), any support plans in Exhibit B, any
           applicable Data Processing Addendum (“DPA”) in Exhibit C, and Security
           Overview in Exhibit D, all of which are hereby incorporated by
           reference in their entirety. This is a legal agreement between IDX
@@ -29,37 +23,37 @@ export default function TermsOfUse() {
           references this Agreement, or by accessing the Service, you agree to
           the terms of this Agreement. If you do not agree with the terms of
           this Agreement, you must not accept this Agreement, and may not use or
-          access the Service.
+          access the Service.`}
         </p>
         <h1>1. Definitions</h1>
         <p>
-          1.1 An “Affiliate” of a party means any entity that directly or
+          {`1.1 An “Affiliate” of a party means any entity that directly or
           indirectly controls, is controlled by, or is under common control with
           the party. For purposes of this definition, “control” means direct or
           indirect ownership or control of more than fifty percent (50%) of the
-          voting interests of the party.
+          voting interests of the party.`}
         </p>
         <p>
-          1.2 “Customer Data” means Customer’s content and application data
-          uploaded by or on behalf of Customer to the Service.
+          {`1.2 “Customer Data” means Customer’s content and application data
+          uploaded by or on behalf of Customer to the Service.`}
         </p>
         <p>
-          1.3 “Customer Personal Data” means Customer Data that is Personal Data
+          {`1.3 “Customer Personal Data” means Customer Data that is Personal Data
           owned or controlled by Customer and which ekai, a ekai affiliate or
-          subcontractor may process in the course of providing the Service.
+          subcontractor may process in the course of providing the Service.`}
         </p>
         <p>
-          1.4 “Documentation” means any documents regarding the Service made
+          {`1.4 “Documentation” means any documents regarding the Service made
           available to Customer by ekai, including user guides made available to
-          Customer within the Service itself.
+          Customer within the Service itself.`}
         </p>
-        <p>1.5 “Downtime Period” means the same as defined in the SLA.</p>
+        <p>{`1.5 “Downtime Period” means the same as defined in the SLA.`}</p>
         <p>
-          1.6 “Effective Date” means the date Customer accepts the terms of this
-          Agreement.
+          {`1.6 “Effective Date” means the date Customer accepts the terms of this
+          Agreement.`}
         </p>
         <p>
-          1.7 “Order” means an order form or other agreed upon legally binding
+          {`1.7 “Order” means an order form or other agreed upon legally binding
           document placed by Customer that specifies a subscription period,
           licence quantities, description of the Service, and any ancillary
           services such as support and professional services purchased by
@@ -67,38 +61,38 @@ export default function TermsOfUse() {
           binding document placed by Customer that specifies a subscription
           period, licence quantities, description of the Service, and any
           ancillary services such as support and professional services purchased
-          by Customer
+          by Customer`}
         </p>
         <p>
-          1.8 “Personal Data” means (i) any information relating to an
+          {`1.8 “Personal Data” means (i) any information relating to an
           identified or identifiable natural person; and/or (ii) any information
           that identifies, relates to, describes, or could reasonably be linked,
           directly or indirectly, with a particular consumer or household.
           Unless prohibited by applicable laws or regulations, Personal Data
           shall not include information or data that is anonymized,
           de-identified and/or compiled on a generic basis and which does not
-          name or identify a specific person.
+          name or identify a specific person.`}
         </p>
         <p>
-          1.9 “Service” means the cloud-based software as a service offering
+          {`1.9 “Service” means the cloud-based software as a service offering
           purchased by Customer as specified in an applicable Order. The Service
           includes all updates, copies, modifications, and derivative works
           thereof. The Service does not include software that originates from
           Customer or a third party and interoperates with the Service. ekai
           shall be deemed to have accepted an Order if it supplies the Services
-          to the Customer.
+          to the Customer.`}
         </p>
         <p>
-          1.10 “Term” means the longer of: (1) one year from the Effective Date;
+          {`1.10 “Term” means the longer of: (1) one year from the Effective Date;
           or (2) the period from the Effective Date until the date the last
           subscription period in any Order expires. If a Customer terminates any
           individual Services, any remaining Services, and this Agreement shall
-          remain in force for the periods described in this section.
+          remain in force for the periods described in this section.`}
         </p>
 
         <h1>2. Customer License</h1>
         <p>
-          2.1 License to Use the Service; Service and Support. Subject to
+          {`2.1 License to Use the Service; Service and Support. Subject to
           Customer’s compliance with this Agreement and Customer’s payment of
           all fees due, for the duration of the applicable subscription period,
           ekai grants Customer a limited, non-exclusive, non-sublicensable,
@@ -123,10 +117,10 @@ export default function TermsOfUse() {
           to provide Customer with notice and an opportunity to remedy such
           breach or threat prior to such suspension. During the applicable
           subscription period, ekai will provide support services to Customers
-          purchased under an applicable Order.
+          purchased under an applicable Order.`}
         </p>
         <p>
-          2.2 Suspension and Discontinuation of Service. ekai shall have the
+          {`2.2 Suspension and Discontinuation of Service. ekai shall have the
           right to suspend the provision of the Services and/or deny the
           Customer's access to the Services without first hearing the Customer
           due to (a) a significant data security risk to the Database Services,
@@ -150,21 +144,21 @@ export default function TermsOfUse() {
           of such services provided by subprocessors. ekai undertakes to inform
           the Customer of such discontinuation without delay after having become
           aware of any third party plans to discontinue the provision of
-          subprocessor hosting services affecting the Customer.
+          subprocessor hosting services affecting the Customer.`}
         </p>
         <p>
-          2.3 Subscription Period; Term of Agreement. Subject to Customer’s
+          {`2.3 Subscription Period; Term of Agreement. Subject to Customer’s
           compliance with its obligations under this Agreement, Customer may use
           the Service for the duration of Customer’s subscription specified in
           the applicable Order. If Customer does not renew the subscription to
           the Service on or before the subscription period renewal date,
           Customer’s right to use the Service terminates and the Service will no
-          longer operate. The Agreement will remain in effect for the Term.
+          longer operate. The Agreement will remain in effect for the Term.`}
         </p>
         <h1>3. Customer Obligations.</h1>
 
         <p>
-          3.1 Use of the Service: ‍Customer will not, nor will Customer assist
+          {`3.1 Use of the Service: ‍Customer will not, nor will Customer assist
           others to: (i) copy or distribute the Service or Documentation (except
           for a reasonable number of copies of the Documentation for internal
           use) or modify, encumber, enhance or create any derivative works of
@@ -190,10 +184,10 @@ export default function TermsOfUse() {
           deploy the Service as a service on behalf of any unaffiliated third
           party without ekai’s express written agreement. Customer must promptly
           notify ekai of any unauthorized use of or access to the Service
-          purchased by Customer.
+          purchased by Customer.`}
         </p>
         <p>
-          3.2 Customer Credentials: Customer is responsible for using a key
+          {`3.2 Customer Credentials: Customer is responsible for using a key
           management system for secure storage of Customer’s passwords, keys or
           other access authentication methods to access the Services
           (“Credentials”). Customer acknowledges and agrees that ekai is unable
@@ -202,11 +196,11 @@ export default function TermsOfUse() {
           Customer may result in the loss of access to Customer Data. Customer
           is responsible for maintaining the confidentiality of all usernames
           and passwords required for its use of and access to the Service and
-          for all activities conducted in connection therewith
+          for all activities conducted in connection therewith`}
         </p>
         <p>
-          3.3 Customer Data in Service: Customer shall only upload Customer Data
-          to the Service that it has the authority to upload.
+          {`3.3 Customer Data in Service: Customer shall only upload Customer Data
+          to the Service that it has the authority to upload.`}
         </p>
         <h1>4. Fees</h1>
         <p>
@@ -263,7 +257,7 @@ export default function TermsOfUse() {
           royalty-free, worldwide, transferable, sublicensable, irrevocable,
           perpetual licence to use or incorporate into its products and services
           any Feedback as it sees fit without obligation or restriction of any
-          kind.{" "}
+          kind.
         </p>
         <p>
           5.3 Open Source Software: ‍ Customers can access any notice and

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Logo from "../../assets/ekai-logo.svg";
 import Link from "next/link";
 import arrow from "../../assets/ArrowRight.svg";
+import Contactus from "../contactus/Contactus";
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState();
   const [showFirstImage, setShowFirstImage] = useState(true);
@@ -18,6 +19,7 @@ const Navbar = () => {
     return () => clearInterval(interval);
   }, []);
   return (
+    <>
     <div className="main-nav">
       <nav>
         <div>
@@ -60,7 +62,10 @@ const Navbar = () => {
           <div className={`line line3 ${showMenu ? "open" : ""}`}></div>
         </div>
       </nav>
+      
     </div>
+    
+    </>
   );
 };
 
