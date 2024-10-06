@@ -10,7 +10,7 @@ export const SlackNotionModal = () => {
   const handleConnectClick = () => {
     trackEvent("slack_connect");
     setIsConnected(true);
-    window.open("https://app.ekai.ca/slack/install", "_blank");
+    window.open("https://app.yourekai.com/slack/install", "_blank");
   };
 
   const safetyPoints = [
@@ -23,7 +23,7 @@ export const SlackNotionModal = () => {
     <>
       Slack should open automatically on a new tab. If it doesn't,{" "}
       <a
-        href="https://app.ekai.ca/slack/install"
+        href="https://app.yourekai.com/slack/install"
         target="_blank"
         rel="noreferrer"
         onClick={() => trackEvent("slack_retry")}
