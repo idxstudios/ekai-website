@@ -232,8 +232,8 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                             setData({ ...data, hearAbout: e.target.value })
                           }
                         >
-                          {hearAbout.map((val) => (
-                            <option>{val}</option>
+                          {hearAbout.map((val, index) => (
+                            <option key={index}>{val}</option>
                           ))}
                         </select>
                         <p className="error">
@@ -257,8 +257,8 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                             setData({ ...data, workType: e.target.value })
                           }
                         >
-                          {workType.map((val) => (
-                            <option>{val}</option>
+                          {workType.map((val, index) => (
+                            <option key={index}>{val}</option>
                           ))}
                         </select>
                         <p className="error">
@@ -282,8 +282,8 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                             })
                           }
                         >
-                          {size.map((val) => (
-                            <option>{val}</option>
+                          {size.map((val, index) => (
+                            <option key={index}>{val}</option>
                           ))}
                         </select>
                         <p className="error">
@@ -304,8 +304,8 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                             setData({ ...data, position: e.target.value })
                           }
                         >
-                          {position.map((val) => (
-                            <option>{val}</option>
+                          {position.map((val, index) => (
+                            <option key={index}>{val}</option>
                           ))}
                         </select>
                         <p className="error">
@@ -352,7 +352,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                   We will get back to you shortly
                 </h2>
                 <div className="mx-auto p-4">
-                  <Image className="mx-auto img" src={LockAndKey} />
+                  <Image className="mx-auto img" alt="lock" src={LockAndKey} />
                 </div>
                 <a href='/'>
                   <button className="flex text-white font-bold py-2 px-2 rounded button1 mx-auto">
