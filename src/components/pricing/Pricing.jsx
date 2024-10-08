@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React,{useState} from "react";
 import "./styles.scss";
 import Square from "../../assets/CardSquare.svg";
 import CardSquarePaperPlane from "../../assets/CardSquarePaperPlane.svg";
@@ -6,6 +7,7 @@ import Check from "../../assets/CheckCircle.svg";
 import Arrow from "../../assets/ArrowRight.svg";
 
 import Image from "next/image";
+import Contactus from "../contactus/Contactus";
 
 // Refactored Card component to accept props
 const Card = ({
@@ -19,14 +21,29 @@ const Card = ({
   trialInfo,
   buttonText,
   benefits,
+  fun,
+  setOpen,
 }) => {
-//   const [openDialog, setOpenDialog] = useState(false);
+  
+  function handleGetStarted(){
+    if (fun === 1) {
+      alert("get started");
+    } else if(
+      fun===2
+    ){
+      alert("get started");
+    }
+    else if(fun===3){
+      setOpen(true);
+    }
+  }
 
 //   const handleGetStarted = () => {
 //     setOpenDialog(true);
 //   };
 
   return (
+    <>
     <div className="card enterprise">
       {/* <h3>{title}</h3> */}
       <div>
@@ -63,26 +80,34 @@ const Card = ({
       <div className="makeitcenter">
         {trialInfo && <p className="trial-info">{trialInfo}</p>}
         <button className="contact-btn" 
-        // onClick={() => handleGetStarted()}
+        onClick={() => handleGetStarted()}
         >
           {buttonText} <Image src={Arrow} alt="ekai" />
         </button>
       </div>
+      
       {/* <FormDialog open={openDialog} setOpenDialog={setOpenDialog} /> */}
     </div>
+    
+      </>
   );
 };
 
 const Pricing = () => {
+  const [open, setOpen]= useState(false)
+  
   return (
+    <>
     <div className="pricing-section">
       <h2>Pricing</h2>
       <div className="pricing-cards">
         {pricingCards.map((card, index) => (
-          <Card key={index} {...card} />
+          <Card key={index} {...card} setOpen={setOpen} />
         ))}
       </div>
     </div>
+    <Contactus  isvisible={open} setIsVisible={()=>setOpen(false)}/>
+    </>
   );
 };
 
@@ -100,6 +125,7 @@ const pricingCards = [
     pricingInfo: "/user per month",
     trialInfo: "30 days free trial",
     buttonText: "Get started",
+    fun: 1,
   },
   {
     icon: Square,
@@ -112,6 +138,7 @@ const pricingCards = [
     pricingInfo: "/user annually",
     trialInfo: " ",
     buttonText: "Get started",
+    fun: 2,
   },
   {
     icon: CardSquarePaperPlane,
@@ -125,5 +152,6 @@ const pricingCards = [
     ],
     trialInfo: " ",
     buttonText: "Contact us",
+    fun: 3,
   },
 ];

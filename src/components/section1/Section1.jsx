@@ -88,7 +88,7 @@ const Section1=()=> {
           </div>
         </div>
       </div>
-      <Contactus isvisible={openDialog} />
+      <Contactus isvisible={openDialog} setIsVisible={()=>setOpenDialog(false)} />
       {/* {showSlackModal && <SlackNotionModal onClose={handleCloseModal} />} */}
     </div>
   )

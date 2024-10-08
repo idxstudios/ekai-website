@@ -62,7 +62,7 @@ const Navbar = () => {
           <div className={`line line3 ${showMenu ? "open" : ""}`}></div>
         </div>
       </nav>
-      
+      <Contactus isvisible={openDialog} setIsVisible={()=>setOpenDialog(false)} />
     </div>
     
     </>
