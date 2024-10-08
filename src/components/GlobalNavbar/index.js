@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import logo from "../../assets/ekai-logo.svg";
 // import menu from "../../assets/menu-bar.svg";
@@ -5,7 +6,7 @@ import "./style.scss";
 import { Link, Outlet } from "react-router-dom";
 import { FormDialog } from "../FormDialog";
 import arrow from "../../assets/ArrowRight.svg"
-// import { SlackNotionModal } from "../Modal/SlackNotionModal";
+import { SlackNotionModal } from "../Modal/SlackNotionModal";
 // import { trackEvent } from "../../mixpanel";
 import { useLocation } from 'react-router-dom';
 
@@ -13,7 +14,7 @@ export default function GlobalNavbar() {
   const [showMenu, setShowMenu] = useState();
   const [showFirstImage, setShowFirstImage] = useState(true);
   const [openDialog, setOpenDialog] = useState(false);
-  // const [showSlackModal, setShowSlackModal] = useState(false); // New state for Slack modal
+  const [showSlackModal, setShowSlackModal] = useState(false); // New state for Slack modal
   const location = useLocation();
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,9 +30,9 @@ export default function GlobalNavbar() {
   //   setShowSlackModal(true); // Show the Slack modal
   // };
 
-  // const handleCloseModal = () => {
-  //   setShowSlackModal(false); // Hide the Slack modal
-  // };
+  const handleCloseModal = () => {
+    setShowSlackModal(false); // Hide the Slack modal
+  };
 
   console.log(showFirstImage);
   return (
@@ -152,16 +153,18 @@ export default function GlobalNavbar() {
               </svg>
               Add to Slack
             </button> */}
+            
             <button
               className="left-cont-button"
-              onClick={() => setOpenDialog(true)}
+              onClick={() => {location?.pathname === "/slack/install" ?setShowSlackModal(true) : setOpenDialog(true)}}
             >
-              Contact Us <img src={arrow} alt="ekai" />
-            </button>
+             {location?.pathname === "/slack/install" ? "Add to Slack": " Contact Us"} <img src={arrow} alt="ekai" />
+            </button> 
           </div>
+          
           {/* <Link
             onClick={() => setShowMenu(!showMenu)}
-            className="menu-container "
+            className="menu-container"
           >
             <img src={menu} alt="Logo" style={{ width: "50px" }} />
           </Link> */}
@@ -175,7 +178,7 @@ export default function GlobalNavbar() {
 
         </nav>
       </div>
-      {/* {showSlackModal && <SlackNotionModal onClose={handleCloseModal} />} */}
+      {showSlackModal && <SlackNotionModal onClose={handleCloseModal} />}
       <Outlet />
     </>
   );
