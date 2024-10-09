@@ -1,0 +1,270 @@
+.outerdiv {
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(8px); /* Adjust the blur value as needed */
+    background-color: rgba(208, 203, 203, 0.116);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  .innerdiv{
+    background-color:  #FFFFFF;
+    padding: 5%;
+    margin-top: 5%;
+    border-radius: 16px;
+}
+
+/* Container for the modal overlay */
+// .modal-overlay {
+//   // position: fixed;
+//   // inset: 0;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   // background-color: rgba(0, 0, 0, 0.5);
+//   // z-index: 100;
+// }
+.modal-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  /* Flex container for logos and text */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Container for the modal content */
+  .modal-content {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Content section of the modal */
+  .modal-content-inner {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Close button */
+  .close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #718096;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  /* Message box */
+  .message-box {
+    background-color: #edf2f7;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #4a5568;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Checkbox and list */
+  .checkbox-list {
+    text-align: left;
+    font-size: 0.875rem;
+    color: #374151;
+    margin-bottom: 1.5rem;
+  }
+  
+  .checkbox-list ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+  }
+  
+  .checkbox-list ul li {
+    padding-bottom: 0.5rem; /* Adjust the value as needed */
+  }
+  
+  /* Title */
+  .title {
+    text-align: center;
+    font-size: 1.25rem; /* 20px for default size */
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .icon-text-container {
+    display: flex;
+    align-items: center;
+    /* gap: 0.5rem; */
+    gap: 0.75rem; /* Adjust the gap between icon and text */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .data-safety-list {
+    list-style-type: square;
+    padding-left: 1.25rem;
+    font-size: 0.875rem;
+    color: #718096;
+    line-height: 1.5;
+  }
+  
+  /* Buttons */
+  .connect-button {
+    width: 100%;
+    background-color: #3182ce;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .connect-button:hover {
+    background-color: #2b6cb0;
+  }
+  
+  /* Media Queries */
+  
+  /* Mobile devices (portrait and landscape) */
+  @media (max-width: 480px) {
+    .icon-text-container {
+      gap: 0.5rem;
+    }
+  
+    .modal-content {
+      width: 95%;
+      padding: 1rem;
+    }
+  
+    .title {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+  
+    .subtitle {
+      font-size: 0.875rem; /* 14px */
+    }
+  
+    .message-box {
+      font-size: 12px;
+    }
+  
+    .connect-button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .checkbox-list {
+      font-size: 0.75rem;
+    }
+  
+    .data-safety-list {
+      font-size: 0.75rem;
+    }
+  }
+  
+  /* Tablets and small screens */
+  @media (max-width: 768px) {
+    .icon-text-container {
+      gap: 0.6rem;
+    }
+  
+    .subtitle {
+      font-size: 0.9375rem; /* 15px */
+    }
+  
+    .modal-content {
+      width: 90%;
+      padding: 1.5rem;
+    }
+  
+    .title {
+      font-size: 1.125rem; /* 18px */
+      margin-bottom: 0.875rem;
+    }
+  
+    .message-box {
+      font-size: 13px;
+    }
+  
+    .connect-button {
+      font-size: 15px;
+      padding: 9px;
+    }
+  
+    .checkbox-list {
+      font-size: 0.8rem;
+    }
+  
+    .data-safety-list {
+      font-size: 0.8125rem; /* 13px */
+    }
+  }
+  
+  /* Large screens (desktop) */
+  @media (min-width: 1024px) {
+    .icon-text-container {
+      gap: 0.875rem;
+    }
+  
+    .subtitle {
+      font-size: 1.125rem; /* 18px */
+    }
+  
+    .modal-content {
+      width: 80%;
+      max-width: 600px;
+      padding: 2.5rem;
+    }
+  
+    .title {
+      font-size: 1.5rem; /* 24px */
+      margin-bottom: 1.25rem;
+    }
+  
+    .message-box {
+      font-size: 15px;
+    }
+  
+    .connect-button {
+      font-size: 17px;
+      padding: 12px;
+    }
+  
+    .checkbox-list {
+      font-size: 1rem;
+    }
+  
+    .data-safety-list {
+      font-size: 15px;
+    }
+  }
+  

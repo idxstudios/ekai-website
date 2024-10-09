@@ -1,0 +1,26 @@
+
+
+.body {
+   font-family: "Manrope", sans-serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+}
+
+
+.ElevateYourWorkflowHome{
+display: none;
+}
+.StickyAnimationHome{
+  display: block;
+}
+
+@media screen and (max-width: 700px) {
+  .ElevateYourWorkflowHome{
+    display: block;
+    }
+    .StickyAnimationHome{
+      display: none;
+    }
+}
+

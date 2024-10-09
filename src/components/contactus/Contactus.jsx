@@ -153,7 +153,6 @@ const Contactus = ({ isvisible, setIsVisible }) => {
     "Individual Contributer",
   ];
   if (!isvisible) return null;
-
   return (
     <div className="outerdiv w-full flex justify-center p-20">
       <div className="md:w-1/2 sm:w-full lg:w-1/3 ">
