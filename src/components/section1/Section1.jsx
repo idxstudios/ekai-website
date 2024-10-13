@@ -1,18 +1,17 @@
 "use client";
-import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
 import BlurR from "../../assets/ArrowRight.svg";
 import BlurL from "../../assets/blurR.svg";
 import Arrow from "../../assets/ArrowRight.svg";
 import videothumb from "../../assets/videothumb.jpg";
-import './style.scss';
-import ActionVedio from '../videoplay/ActionVedio';
-import Contactus from '../contactus/Contactus';
-import { trackEvent } from '@/mixpanel';
+import "./style.scss";
+import ActionVedio from "../videoplay/ActionVedio";
+import Contactus from "../contactus/Contactus";
+import { trackEvent } from "@/mixpanel";
 
-
-const Section1=()=> {
-    const [showFirstImage, setShowFirstImage] = useState(true);
+const Section1 = () => {
+  const [showFirstImage, setShowFirstImage] = useState(true);
   const [openDialog, setOpenDialog] = useState(false);
 
   useEffect(() => {
@@ -22,9 +21,9 @@ const Section1=()=> {
     return () => clearInterval(interval);
   }, []);
 
-//   console.log(showFirstImage);
+  //   console.log(showFirstImage);
 
-//   const [showSlackModal, setShowSlackModal] = useState(false); // New state for Slack modal
+  //   const [showSlackModal, setShowSlackModal] = useState(false); // New state for Slack modal
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -37,14 +36,14 @@ const Section1=()=> {
   //   setShowSlackModal(true); // Show the Slack modal
   // };
 
-//   const handleCloseModal = () => {
-//     setShowSlackModal(false); // Hide the Slack modal
-//   };
+  //   const handleCloseModal = () => {
+  //     setShowSlackModal(false); // Hide the Slack modal
+  //   };
 
   const handleGetStarted = () => {
     setOpenDialog(true);
-    trackEvent("lead_first_click")
-  }
+    trackEvent("lead_first_click");
+  };
   return (
     <div className="ekai-intro-main-cont">
       <Image src={BlurR} alt="ekai" className="blurR" />
@@ -52,27 +51,29 @@ const Section1=()=> {
       <div className="ekai-intro-cont">
         <div className="left-cont">
           <div className="left-cont-heading">
-            <div className="left-cont-span-out">
+            <div className="left-cont-span-out text-center ">
               AI {"{YOU}"} for the{" "}
               <div className="word-animation">
                 <span className="animated-word ">
-                  <div>repetitive</div>
-                  <div>interruptions</div>
-                  <div>busywork</div>
-                  <div>chaos</div>
+                  <div className="word">repetitive</div>
+                  <div className="word">interruptions</div>
+                  <div className="word">busywork</div>
+                  <div className="word">chaos</div>
                 </span>
               </div>
             </div>
           </div>
           <div className="left-cont-heading">
-            <span className="rep-text">More time for what matters</span>
+            <span className="rep-text text-center">
+              More time for what matters
+            </span>
           </div>
           <p className="left-cont-subheading"></p>
 
           <div className="horizontal">
             <button
               className="left-cont-button"
-              onClick={() =>handleGetStarted() }
+              onClick={() => handleGetStarted()}
             >
               Get Started <Image src={Arrow} alt="" />
             </button>
@@ -88,10 +89,13 @@ const Section1=()=> {
           </div>
         </div>
       </div>
-      <Contactus isvisible={openDialog} setIsVisible={()=>setOpenDialog(false)} />
+      <Contactus
+        isvisible={openDialog}
+        setIsVisible={() => setOpenDialog(false)}
+      />
       {/* {showSlackModal && <SlackNotionModal onClose={handleCloseModal} />} */}
     </div>
-  )
-}
+  );
+};
 
-export default Section1
+export default Section1;

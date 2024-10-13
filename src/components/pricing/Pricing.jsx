@@ -27,11 +27,11 @@ const Card = ({
   
   function handleGetStarted(){
     if (fun === 1) {
-      alert("get started");
+      setOpen(true);
     } else if(
       fun===2
     ){
-      alert("get started");
+      setOpen(true);
     }
     else if(fun===3){
       setOpen(true);
@@ -50,16 +50,15 @@ const Card = ({
         <div className="card-header">
           <Image src={icon} alt="Icon" className="card-icon" />
           <div>
-            <h5>{subtitle}</h5>
-            <h4>{title}</h4>
+            <h4 className="font-bold flex items-center justify-center mb-0 h-full">{title}</h4>
           </div>
-        </div>{" "}
+        </div>
         <p>{description}</p>
         {benefits && (
           <ul>
             {benefits.map((benefit, index) => (
-              <li key={index}>
-                <Image src={Check} alt="ekai" />
+              <li className="mb-2" key={index}>
+                <Image width={26} height={26} src={Check} alt="ekai" />
                 {benefit}
               </li>
             ))}
@@ -117,7 +116,6 @@ const pricingCards = [
   {
     icon: Square,
     title: "Pilot",
-    subtitle: "For small teams",
     description:
       "Ekai hosted plan ensures data protection and security on our cloud, not shared with other organizations.",
     originalPrice: "$25",
@@ -130,7 +128,6 @@ const pricingCards = [
   {
     icon: Square,
     title: "Pro",
-    subtitle: "For advanced teams",
     description:
       "Self-hosted plan with one-click installation, freedom to choose cloud provider, and preferred LLM.",
     originalPrice: "$250",
@@ -143,12 +140,11 @@ const pricingCards = [
   {
     icon: CardSquarePaperPlane,
     title: "Enterprise",
-    subtitle: "For Enterprise",
     description:
       "Includes all features from Pilot and Pro, with additional benefits:",
     benefits: [
       "Ability to upload company-level documents from webpages, Wiki, or PDFs to train Ekai with basic knowledge.",
-      "Employee directory mapping.",
+      "Employee directory mapping.", "Admin Support & Maintenance included"
     ],
     trialInfo: " ",
     buttonText: "Contact us",

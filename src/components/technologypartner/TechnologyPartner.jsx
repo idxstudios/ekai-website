@@ -1,7 +1,7 @@
 // src/DataSecure.js
 import React from 'react';
 import './styles.scss';
-import Invidia from "../../assets/nvidia-inception-logo.jpg";
+import Invidia from "../../assets/nvdia.png";
 import Image from 'next/image';
 
 const TechnologyPartner = () => {
@@ -11,9 +11,9 @@ const TechnologyPartner = () => {
             <div className="DataSecure-container">
 
                 <div className="DataSecure-item">
-                <h1>Technology Partner</h1>
+                <h2 className='font-bold text-center'>Technology Partner</h2>
                     <div className="icon">
-                        <Image src={Invidia} style={{ objectFit: "contain", width: "300px", height:"80px" }} alt='' />
+                        <Image src={Invidia} style={{ objectFit: "contain", width: "320px", height:"180px" }} alt='nvidia' />
                     </div>
                     {/* <div className="text">
                         <h3>Flexible Deployment Options</h3>

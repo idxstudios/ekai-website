@@ -1,126 +1,118 @@
 .outmission {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 50px 0;
-    margin: 40px 0;
-    font-size: 64px;
-    text-align: center;
-    font-weight: 600;
-    color: rgba(52, 57, 50, 1);
-  
-    > div {
-      color: rgba(52, 57, 50, 1);
-      font-size: 64px !important;
-      font-weight: 500;
-      letter-spacing: -2.2% !important;
-  
-      @media screen and (max-width: "700px") {
-        font-size: 30px !important;
-        //styleName: Mobile/Title 2;
-  font-family: Manrope;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 32.78px;
-  letter-spacing: -0.022em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 0;
+  margin: 40px 0;
+  font-size: 64px;
   text-align: center;
-  
-  h1{
-    //styleName: Mobile/Title 3;
-      //styleName: Mobile/Title 3;
+  font-weight: 600;
+  color: rgba(52, 57, 50, 1);
+
+  > div {
+    color: rgba(52, 57, 50, 1);
+    font-size: 64px !important;
+    font-weight: 500;
+    letter-spacing: -2.2% !important;
+
+    @media screen and (max-width: "700px") {
+      font-size: 30px !important;
+      //styleName: Mobile/Title 2;
       font-family: Manrope;
-      font-size: 13px !important;
-      font-weight: 800;
-      line-height: 17.76px;
-      letter-spacing: -0.012em;
+      
+      font-weight: 500;
+      line-height: 32.78px;
+      letter-spacing: -0.022em;
       text-align: center;
-  }
-  
-  
+
+      h1 {
+        //styleName: Mobile/Title 3;
+        //styleName: Mobile/Title 3;
+        font-family: Manrope;
+        font-size: 13px !important;
+        font-weight: 800;
+        line-height: 17.76px;
+        letter-spacing: -0.012em;
+        text-align: center;
       }
     }
   }
-  
-  .outmission h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: 700;
-  }
-  
-  .outmission p {
-    text-align: center;
-    line-height: 1.6;
-    color: #575757;
-  
-  
-  }
-  
-  .outmission .animated-word {
-    font-weight: bolder !important;
-    font-size: 80px !important;
-    color: #333;
-    background: linear-gradient(
-      90deg,
-      #cadbc9 -2.43%,
-      #d29e51 31.3%,
-      #dbc269 65.81%,
-      #c87a39 102.13%
-    );
-    letter-spacing: -2.2% !important;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding: 5px;
-    border-radius: 10px;
-    white-space: nowrap;
-    display: inline-block;
-    letter-spacing: -5px;
-    @media screen and (max-width: "700px") {
-      font-size: 34px !important;
-      letter-spacing: 0px;
-      font-weight: bold;
-    }
-  }
-  
-  /* Media queries for responsiveness */
-  @media (max-width: 1200px) {
-    .outmission {
-      font-size: 1.5rem;
-    }
-  
-    .outmission h1 {
-      font-size: 1rem;
-    }
-  
-    .outmission .animated-word {
-      font-size: 1.5rem;
-    }
-  }
-  
-  @media (max-width: 900px) {
-   
-    .outmission {
-      width: 100%;
-      //styleName: Mobile/Title 2;
-  font-family: Manrope;
-  font-size: 24px !important;
-  font-weight: 500 !important;
-  line-height: 32.78px !important;
-  letter-spacing: -0.022em !important;
-  margin: 0;
-  padding: 0;
+}
+
+.outmission h1 {
   text-align: center;
-  margin-top: 70px;
-  
-    }
-  
-    .outmission h1 {
-      font-size: 0.875rem;
-    }
-  
-    .outmission .animated-word {
-      font-size: 1.25rem;
-    }
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.outmission p {
+  text-align: center;
+  line-height: 1.6;
+  color: #575757;
+}
+
+.outmission .animated-word {
+  font-weight: bolder !important;
+  font-size: 80px !important;
+  color: #333;
+  background: linear-gradient(
+    90deg,
+    #cadbc9 -2.43%,
+    #d29e51 31.3%,
+    #dbc269 65.81%,
+    #c87a39 102.13%
+  );
+  letter-spacing: -2.2% !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 5px;
+  border-radius: 10px;
+  white-space: nowrap;
+  display: inline-block;
+  letter-spacing: -5px;
+  @media screen and (max-width: "700px") {
+    font-size: 34px !important;
+    letter-spacing: 0px;
+    font-weight: bold;
   }
-  
-  
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .outmission {
+    font-size: 1.5rem;
+  }
+
+  .outmission h1 {
+    font-size: 1rem;
+  }
+
+  .outmission .animated-word {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .outmission {
+    width: 100%;
+    //styleName: Mobile/Title 2;
+    font-family: Manrope;
+    font-size: 24px !important;
+    font-weight: 500 !important;
+    line-height: 32.78px !important;
+    letter-spacing: -0.022em !important;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 70px;
+  }
+
+  .outmission h1 {
+    font-size: 0.875rem;
+  }
+
+  .outmission .animated-word {
+    font-size: 1.25rem;
+  }
+}
