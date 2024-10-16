@@ -140,7 +140,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
   ];
   const size = [
     "Select",
-    "0-40",
+    "0-50",
     "50-500",
     "501-5000",
     ">5000",
@@ -154,7 +154,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
   ];
   if (!isvisible) return null;
   return (
-    <div className="outerdiv w-full flex justify-center p-20">
+    <div className="outerdiv w-full flex justify-center py-20">
       <div className="md:w-1/2 sm:w-full lg:w-1/3 ">
         <div>
           <div className="flex justify-center">
@@ -175,7 +175,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                 <div className="content py-10">
                   {step === 1 ? (
                     <div>
-                      <div className="my-2">
+                      <div className="mb-2 mt-3">
                         <label
                           class="block text-gray-700 text-sm  mb-2 ml-2"
                           for="username"
@@ -196,7 +196,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                         />
                         <p className="error">{error.name && error.name}</p>
                       </div>
-                      <div className="my-2">
+                      <div className="mb-2 mt-3">
                         <label
                           class="block text-gray-700 text-sm  mb-2 ml-2"
                           for="username"
@@ -217,7 +217,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                         />
                         <p className="error">{error.email && error.email}</p>
                       </div>
-                      <div className="my-2">
+                      <div className="mb-2 mt-3">
                         <label
                           className="block text-gray-700 text-sm mb-2 ml-2"
                           htmlFor="username"
@@ -232,7 +232,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                           }
                         >
                           {hearAbout.map((val, index) => (
-                            <option key={index}>{val}</option>
+                            <option className="bg-white-900" key={index}>{val}</option>
                           ))}
                         </select>
                         <p className="error">
@@ -242,7 +242,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                     </div>
                   ) : (
                     <div>
-                      <div className="my-2">
+                      <div className="mb-2 mt-3">
                         <label
                           class="block text-gray-700 text-sm  mb-2 ml-2"
                           for="username"
@@ -257,14 +257,14 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                           }
                         >
                           {workType.map((val, index) => (
-                            <option key={index}>{val}</option>
+                            <option className="bg-white-900" key={index}>{val}</option>
                           ))}
                         </select>
                         <p className="error">
                           {error.workType && error.workType}
                         </p>
                       </div>
-                      <div className="my-2">
+                      <div className="mb-2 mt-3">
                         <label
                           class="block text-gray-700 text-sm  mb-2 ml-2"
                           for="username"
@@ -272,7 +272,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                           What is the size of your organization?
                         </label>
                         <select
-                          className=" border rounded w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300"
+                          className="border rounded w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 "
                           value={data.organizationSize}
                           onChange={(e) =>
                             setData({
@@ -282,14 +282,14 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                           }
                         >
                           {size.map((val, index) => (
-                            <option key={index}>{val}</option>
+                            <option  className="bg-white-900 focus:bg-blue-500" key={index}>{val}</option>
                           ))}
                         </select>
                         <p className="error">
                           {error.organizationSize && error.organizationSize}
                         </p>
                       </div>
-                      <div className="my-2">
+                      <div className="mb-2 mt-3">
                         <label
                           class="block text-gray-700 text-sm  mb-2 ml-2"
                           for="username"
@@ -304,7 +304,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                           }
                         >
                           {position.map((val, index) => (
-                            <option key={index}>{val}</option>
+                            <option className="bg-white-900" key={index}>{val}</option>
                           ))}
                         </select>
                         <p className="error">

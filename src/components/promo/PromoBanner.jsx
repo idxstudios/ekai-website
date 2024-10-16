@@ -4,6 +4,7 @@ import './styles.scss';
 // import { FormDialog } from '../FormDialog';
 import Arrow from "../../assets/ArrowRight.svg";
 import Image from 'next/image';
+import Contactus from '../contactus/Contactus';
 
 
 const PromoBanner = () => {
@@ -18,6 +19,7 @@ const PromoBanner = () => {
 
   console.log(showFirstImage);
   return (
+    <>
     <div className="promo-banner">
       <p>
         Transform workplace communication with ekai <br /> — your secure AI twin for unmatched <br /> productivity and seamless collaboration.
@@ -28,8 +30,13 @@ const PromoBanner = () => {
       >
         Get Started <Image src={Arrow} alt="ekai" />
       </button>
-      {/* <FormDialog open={openDialog} setOpenDialog={setOpenDialog} /> */}
+      
     </div>
+    <Contactus
+        isvisible={openDialog}
+        setIsVisible={() => setOpenDialog(false)}
+      />
+      </>
   );
 };
 

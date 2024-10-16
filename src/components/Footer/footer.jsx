@@ -82,7 +82,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              mail
+              Gmail
             </span>
           </div>
         </div>
