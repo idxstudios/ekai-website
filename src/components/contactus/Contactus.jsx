@@ -8,6 +8,7 @@ import Arrow from "../../assets/ArrowRight.svg";
 import { db } from "@/firebase/firebase";
 import { addDoc, collection } from "firebase/firestore";
 import LockAndKey from "../../assets/lockandkey.png";
+import Vector from '../../assets/vector.png';
 import { SendMailClient } from "zeptomail";
 
 const Contactus = ({ isvisible, setIsVisible }) => {
@@ -135,7 +136,8 @@ let client = new SendMailClient({url, token});
                       </b>
                     </div>`,
         }).then((resp) => console.log("success")).catch((error) => console.log("error"));
-        
+
+        return true;
       } catch (error) {
         console.error("Error sending mail:", error);
       }
@@ -225,7 +227,7 @@ let client = new SendMailClient({url, token});
                         </label>
                         <input
                           type="text"
-                          className=" border rounded w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300"
+                          className=" border rounded w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem"
                           placeholder="Insert your name"
                           value={data.name}
                           onChange={(e) =>
@@ -235,7 +237,7 @@ let client = new SendMailClient({url, token});
                             })
                           }
                         />
-                        <p className="error">{error.name && error.name}</p>
+                        {error.name && <p className="error"><Image src={Vector} alt="vector" style={{width: "12px", height: "12px", margin: "2px"}} /> <p>{error.name}</p> </p>}
                       </div>
                       <div className="mb-2 mt-3">
                         <label
@@ -246,7 +248,7 @@ let client = new SendMailClient({url, token});
                         </label>
                         <input
                           type="email"
-                          className=" border rounded w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300"
+                          className=" border rounded  w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem"
                           placeholder="Insert your mail address"
                           value={data.email}
                           onChange={(e) =>
@@ -256,7 +258,7 @@ let client = new SendMailClient({url, token});
                             })
                           }
                         />
-                        <p className="error">{error.email && error.email}</p>
+                        {error.email && <p className="error"><Image src={Vector} alt="vector" style={{width: "12px", height: "12px", margin: "2px"}} /> {error.email}</p>}
                       </div>
                       <div className="mb-2 mt-3">
                         <label
@@ -266,7 +268,7 @@ let client = new SendMailClient({url, token});
                           How did you hear about ekai?
                         </label>
                         <select
-                          className="border rounded w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300"
+                          className="border rounded w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem"
                           value={data.hearAbout}
                           onChange={(e) =>
                             setData({ ...data, hearAbout: e.target.value })
@@ -278,9 +280,8 @@ let client = new SendMailClient({url, token});
                             </option>
                           ))}
                         </select>
-                        <p className="error">
-                          {error.hearAbout && error.hearAbout}
-                        </p>
+                          {error.hearAbout && <p className="error"><Image src={Vector} alt="vector" style={{width: "12px", height: "12px", margin: "2px"}} /> {error.hearAbout}</p>}
+                        
                       </div>
                     </div>
                   ) : (
@@ -293,7 +294,7 @@ let client = new SendMailClient({url, token});
                           What type of work do you do?
                         </label>
                         <select
-                          className=" border rounded w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300"
+                          className=" border rounded w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem"
                           value={data.workType}
                           onChange={(e) =>
                             setData({ ...data, workType: e.target.value })
@@ -305,9 +306,8 @@ let client = new SendMailClient({url, token});
                             </option>
                           ))}
                         </select>
-                        <p className="error">
-                          {error.workType && error.workType}
-                        </p>
+                          {error.workType &&<p className="error"><Image src={Vector} alt="vector" style={{width: "12px", height: "12px", margin: "2px"}} /> { error.workType}</p>}
+                        
                       </div>
                       <div className="mb-2 mt-3">
                         <label
@@ -317,7 +317,7 @@ let client = new SendMailClient({url, token});
                           What is the size of your organization?
                         </label>
                         <select
-                          className="border rounded w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 "
+                          className="border rounded w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem "
                           value={data.organizationSize}
                           onChange={(e) =>
                             setData({
@@ -335,9 +335,8 @@ let client = new SendMailClient({url, token});
                             </option>
                           ))}
                         </select>
-                        <p className="error">
-                          {error.organizationSize && error.organizationSize}
-                        </p>
+                          {error.organizationSize && <p className="error"><Image src={Vector} alt="vector" style={{width: "12px", height: "12px", margin: "2px"}} /> {error.organizationSize}</p>}
+                        
                       </div>
                       <div className="mb-2 mt-3">
                         <label
@@ -347,7 +346,7 @@ let client = new SendMailClient({url, token});
                           What is your current position within the organization?
                         </label>
                         <select
-                          className=" border rounded w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300"
+                          className=" border rounded w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem"
                           value={data.position}
                           onChange={(e) =>
                             setData({ ...data, position: e.target.value })
@@ -359,9 +358,8 @@ let client = new SendMailClient({url, token});
                             </option>
                           ))}
                         </select>
-                        <p className="error">
-                          {error.position && error.position}
-                        </p>
+                          {error.position && <p className="error"><Image src={Vector} alt="vector" style={{width: "12px", height: "12px", margin: "2px"}} /> {error.position}</p>}
+                        
                       </div>
                     </div>
                   )}

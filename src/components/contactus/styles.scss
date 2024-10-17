@@ -20,9 +20,7 @@
     font-weight: 600;
 
 }
-.input {
-    border: 1px gray solid ;
-}
+
 .button{
     height: 48px;
     width: 174px;
@@ -31,7 +29,7 @@
     align-items: center;
     padding: auto;
     justify-content: center;
-    opacity: 60%;
+    
 }
 .button1{
     height: 48px;
@@ -41,17 +39,46 @@
     align-items: center;
     padding: auto;
     justify-content: center;
+    opacity: 60%;
 }
 
 .error{
     color:  #EC5859;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
     margin-left: 10px;
     margin-top: 2px;
+    display: flex;
+    height: 16px;
+    gap: 2px;
 }
 
 .img {
     width: 148px;
     height: 213px;
+}
+.outlinem {
+    border: 1px gray solid ; 
+    border-radius: 8px;
+}
+input.outlinem:focus, input.outlinem:active {
+    border-color: #C87A3C !important;
+    box-shadow: 0 0 5px rgba(200, 122, 60, 0.5); /* Add box-shadow for emphasis */
+    border-radius: 8px;
+}
+.outlinem:focus, .outlinem:active, .outlinem:focus-within {
+    border: 1px solid #C87A3C !important;
+    box-shadow: 0 0 5px rgba(200, 122, 60, 0.5); /* Optional shadow for emphasis */
+    border-radius: 8px;
+}
+
+input::placeholder {
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.86px;
+    text-align: left;
+    color: #34393266;
+
+     /* Ensure full opacity, as some browsers use a default opacity */
 }

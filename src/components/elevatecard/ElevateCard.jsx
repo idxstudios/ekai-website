@@ -27,7 +27,8 @@ export default function ElevateCard({
               </video>
             </div>
           ) : (
-            <Image style={{borderRadius: '16px'}} alt="card" src={gifSrc} />
+            <div className="p-4"> <Image style={{borderRadius: '16px'}} alt="card" src={gifSrc} /></div>
+           
           )}
           {/* <img alt="card" src={gifSrc} /> */}
         </div>
