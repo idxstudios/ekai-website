@@ -8,6 +8,7 @@ import Arrow from "../../assets/ArrowRight.svg";
 import { db } from "@/firebase/firebase";
 import { addDoc, collection } from "firebase/firestore";
 import LockAndKey from "../../assets/lockandkey.png";
+import { SendMailClient } from "zeptomail";
 
 const Contactus = ({ isvisible, setIsVisible }) => {
   const [step, setStep] = useState(1);
@@ -29,6 +30,11 @@ const Contactus = ({ isvisible, setIsVisible }) => {
     organizationSize: "",
     position: "",
   });
+  const url = "api.zeptomail.in/";
+const token = "Zoho-enczapikey PHtE6r0IF+7u2TUo+hRW4KftFsGkN9srrr81eAhAt4gRWacAGk0BrdkvkGXkqU0iXPZBEfefy4JrsLqV4uOGIG+5Y2xOWGqyqK3sx/VYSPOZsbq6x00YsVQTcEXaVYLuddZo0yHRudjdNA==";
+
+let client = new SendMailClient({url, token});
+
   function validate1() {
     const newErrors = {};
 
@@ -92,7 +98,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
     }
   };
 
-  async function saveData() {
+ const saveData=async ()=> {
     try {
       const docRef = await addDoc(collection(db, "users"), {
         creation_date: new Date(),
@@ -103,22 +109,57 @@ const Contactus = ({ isvisible, setIsVisible }) => {
         role_function: data.position,
         job_function: data.workType,
       });
-      return true;
+  
+      
+      try {
+        client.sendMail({
+          from: {
+            address: "noreply@yourekai.com",
+            name: "ekai-notification",
+          },
+          to: [
+            {
+              email_address: {
+                address: "sonkariamayank@gmail.com",
+              },
+            },
+          ],
+          subject: "User Details from Contact Us form",
+          htmlbody: `<div><b><h3>User details are:</h3> 
+                      <h4>Email: ${data.email}</h4>
+                      <h4>Name: ${data.name}</h4>
+                      <h4>Heard About: ${data.hearAbout}</h4>
+                      <h4>Organization Size: ${data.organizationSize}</h4>
+                      <h4>Position: ${data.position}</h4>
+                      <h4>Work Type: ${data.workType}</h4>
+                      </b>
+                    </div>`,
+        }).then((resp) => console.log("success")).catch((error) => console.log("error"));
+        
+      } catch (error) {
+        console.error("Error sending mail:", error);
+      }
+      
     } catch (error) {
       console.error("Error adding document:", error);
       return error;
     }
   }
+ 
+  // "address": "gtmadmin@yourekai.com",
+                // "address": "sonkariamayank@gmail.com",
   const submit = async () => {
     if (validate2()) {
       const response = await saveData();
-      if (response) {
-        setSubmitted(true);
+      if (response === true) {
+        await setSubmitted(true);
       } else {
-        console.log(response);
+        console.log("Error response:", response);
       }
     }
   };
+  
+  
 
   console.log("userData: ", data);
   const hearAbout = [
@@ -232,7 +273,9 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                           }
                         >
                           {hearAbout.map((val, index) => (
-                            <option className="bg-white-900" key={index}>{val}</option>
+                            <option className="bg-white-900" key={index}>
+                              {val}
+                            </option>
                           ))}
                         </select>
                         <p className="error">
@@ -257,7 +300,9 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                           }
                         >
                           {workType.map((val, index) => (
-                            <option className="bg-white-900" key={index}>{val}</option>
+                            <option className="bg-white-900" key={index}>
+                              {val}
+                            </option>
                           ))}
                         </select>
                         <p className="error">
@@ -282,7 +327,12 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                           }
                         >
                           {size.map((val, index) => (
-                            <option  className="bg-white-900 focus:bg-blue-500" key={index}>{val}</option>
+                            <option
+                              className="bg-white-900 focus:bg-blue-500"
+                              key={index}
+                            >
+                              {val}
+                            </option>
                           ))}
                         </select>
                         <p className="error">
@@ -304,7 +354,9 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                           }
                         >
                           {position.map((val, index) => (
-                            <option className="bg-white-900" key={index}>{val}</option>
+                            <option className="bg-white-900" key={index}>
+                              {val}
+                            </option>
                           ))}
                         </select>
                         <p className="error">
@@ -353,7 +405,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                 <div className="mx-auto p-4">
                   <Image className="mx-auto img" alt="lock" src={LockAndKey} />
                 </div>
-                <a href='/'>
+                <a href="/">
                   <button className="flex text-white font-bold py-2 px-2 rounded button1 mx-auto">
                     <span>Take me back Home</span>
                   </button>
