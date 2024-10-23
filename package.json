@@ -9,8 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@nextui-org/modal": "^2.0.41",
-    "@nextui-org/react": "^2.4.8",
     "firebase": "^10.14.0",
     "lodash": "^4.17.21",
     "mixpanel-browser": "^2.55.1",

@@ -63,6 +63,7 @@ const Footer = () => {
           {/* <Link onClick={() => trackEvent("faq_click")} to="/FAQs#top">FAQs</Link> */}
           <Link  href="/termsOfUse"><span onClick={() => trackEvent("terms_use_click")}>Terms of Use </span></Link>
           <Link  href="/privacyPolicy"> <span onClick={() => trackEvent("privacy_policy_click")}>Privacy Policy</span></Link>
+          <Link  href="/blogs"> <span onClick={() => trackEvent("blogs_click")}>Blogs</span></Link>
         </div>
         <div className="social-media">
           <h4>Contact Us</h4>

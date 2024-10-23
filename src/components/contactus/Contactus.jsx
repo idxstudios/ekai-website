@@ -220,7 +220,7 @@ let client = new SendMailClient({url, token});
                     <div>
                       <div className="mb-2 mt-3">
                         <label
-                          class="block text-gray-700 text-sm  mb-2 ml-2"
+                          className="block text-gray-700 text-sm  mb-2 ml-2"
                           for="username"
                         >
                           Full Name
@@ -241,7 +241,7 @@ let client = new SendMailClient({url, token});
                       </div>
                       <div className="mb-2 mt-3">
                         <label
-                          class="block text-gray-700 text-sm  mb-2 ml-2"
+                          className="block text-gray-700 text-sm  mb-2 ml-2"
                           for="username"
                         >
                           Work Email
@@ -288,7 +288,7 @@ let client = new SendMailClient({url, token});
                     <div>
                       <div className="mb-2 mt-3">
                         <label
-                          class="block text-gray-700 text-sm  mb-2 ml-2"
+                          className="block text-gray-700 text-sm  mb-2 ml-2"
                           for="username"
                         >
                           What type of work do you do?
@@ -311,7 +311,7 @@ let client = new SendMailClient({url, token});
                       </div>
                       <div className="mb-2 mt-3">
                         <label
-                          class="block text-gray-700 text-sm  mb-2 ml-2"
+                          className="block text-gray-700 text-sm  mb-2 ml-2"
                           for="username"
                         >
                           What is the size of your organization?
@@ -340,7 +340,7 @@ let client = new SendMailClient({url, token});
                       </div>
                       <div className="mb-2 mt-3">
                         <label
-                          class="block text-gray-700 text-sm  mb-2 ml-2"
+                          className="block text-gray-700 text-sm  mb-2 ml-2"
                           for="username"
                         >
                           What is your current position within the organization?
