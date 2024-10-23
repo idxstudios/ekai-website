@@ -6,4 +6,4 @@ const Blog2=()=> {
   )
 }
 
-export default Blog3
+export default Blog2

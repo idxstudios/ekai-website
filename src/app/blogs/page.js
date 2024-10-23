@@ -5,6 +5,7 @@ import Image from "next/image";
 import './style.css';
 const blogData = [
   {
+    id: 1,
     header:
       "40+ AI prompt examples for different department use cases in an organization",
     imagesrc: elevate,
@@ -12,6 +13,7 @@ const blogData = [
     creator: "Anuja",
   },
   {
+    id: 2,
     header:
       "A complete guide to generative AI agents in 2024",
     imagesrc: videothumb,
@@ -19,6 +21,7 @@ const blogData = [
     creator: "Anuja",
   },
   {
+    id: 3,
     header:
       "Glean and Miro partner to bring contextual enterprise knowledge directly into Miro’s Innovation Workspace",
     imagesrc: elevate,
@@ -26,6 +29,7 @@ const blogData = [
     creator: "Anuja",
   },
   {
+    id: 4,
     header:
       "40+ AI prompt examples for different department use cases in an organization",
     imagesrc: elevate,
@@ -33,6 +37,7 @@ const blogData = [
     creator: "Anuja",
   },
   {
+    id: 5,
     header:
       "40+ AI prompt examples for different department use cases in an organization",
     imagesrc: elevate,
@@ -45,13 +50,13 @@ const page = () => {
   return (
     <div>
       <h1 className="text-4xl black text-center font-bold my-5">
-        What's new at Ekai
+        {`What's new at Ekai`}
       </h1>
 
       <div className="grid grid-cols-1 lg:mx-20 md:mx-5 sm:mx-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 mb-20">
         {blogData.map((blog) => (
-          <div className="p-5 my-5 hover:animate-up-down blog">
-            <div className="">
+          <div key={blog.id} className="p-5 my-5 hover:animate-up-down blog">
+            <div className="pb-1">
               <Image className="img m-auto w-full" src={blog.imagesrc} alt="blogimage"/>
             </div>
             <div className="img m-auto">
