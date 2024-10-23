@@ -11,17 +11,19 @@
       h1 {
         font-size: 64px;
         font-weight: 500;
-        color: rgba(0, 0, 0, 0.858);
+        color: #343932;
+
         letter-spacing: -2.2%;
         text-align: left;
         margin-left: 20px;
   
         @media screen and (max-width: 700px) {
           text-align: center;
-          font-size: 30px;
+          font-size: 24px;
           font-weight: 500;
           display: flex;
           justify-content: center;
+          line-height: 33px;
           width: 90%;
           white-space: wrap;
           margin: auto;
@@ -39,7 +41,7 @@
         @media screen and (max-width: 700px) {
           text-align: center;
           font-size: 20px;
-          font-weight: 400;
+          font-weight: 800;
           padding: auto 10px !important;
         }
       }
@@ -165,7 +167,8 @@
       }
   
       h4 {
-        font-size: 16px;
+        font-size: 13px;
+
       }
   
       .Enhcontainer {

@@ -52,7 +52,7 @@ let client = new SendMailClient({url, token});
 
       // Validate that the domain is not "gmail.com"
       if (domain?.toLowerCase() === "gmail.com") {
-        newErrors.email = "Please enter your work email address";
+        newErrors.email = "Please enter your work email address (e.g., name@company.com)";
       }
     }
 

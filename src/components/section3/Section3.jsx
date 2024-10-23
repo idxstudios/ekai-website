@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from "react";
 import GIF1 from "../../assets/cardsGif/ekaiGPT.gif";
 import GIF2 from "../../assets/cardsGif/autoreply.gif";
-import GIF3 from "../../assets/cardsGif/learn.png";
-import GIF4 from "../../assets/cardsGif/create.png";
+import GIF3 from "../../assets/cardsGif/learn.svg";
+import GIF4 from "../../assets/cardsGif/create.svg";
 import { throttle } from "lodash";
 import Image from "next/image";
 import './style.scss';
@@ -78,7 +78,7 @@ const Section3 = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
   return (
-    <div className="sticky-animation-container">
+    <div className="sticky-animation-container ">
       <div className="sticky-section">
         <Image
           key={activeSection.id}
