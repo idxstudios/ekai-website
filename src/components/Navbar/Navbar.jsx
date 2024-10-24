@@ -24,7 +24,7 @@ const Navbar = () => {
 
   useEffect(() => {
     // Run only on the client side
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       setIsSlackInstallRoute(window.location.pathname === "/slack/install");
     }
   }, []);
@@ -35,7 +35,7 @@ const Navbar = () => {
           <div>
             <div className="logo-container flex-row items-center">
               <Link className="logo-container " href="/">
-                <Image src={Logo} alt="Logo" />
+                <Image loading="eager" priority={true} src={Logo} alt="Logo" />
                 {/* <span className="app-name">ekai</span> */}
               </Link>
             </div>
@@ -54,19 +54,26 @@ const Navbar = () => {
             </div>
           </div>
           <div>
-            {isSlackInstallRoute? (
+            {isSlackInstallRoute ? (
               <button
                 className="left-cont-button"
                 onClick={() => setShowSlackModal(true)}
               >
-                <Image src={slackLogo} alt="ekai" /> Add to Slack
+                <Image
+                  loading="eager"
+                  priority={true}
+                  src={slackLogo}
+                  alt="ekai"
+                />{" "}
+                Add to Slack
               </button>
             ) : (
               <button
                 className="left-cont-button"
                 onClick={() => setOpenDialog(true)}
               >
-                Contact Us <Image src={arrow} alt="ekai" />
+                Contact Us{" "}
+                <Image loading="eager" priority={true} src={arrow} alt="ekai" />
               </button>
             )}
           </div>
@@ -86,8 +93,9 @@ const Navbar = () => {
           setIsVisible={() => setOpenDialog(false)}
         />
         <AddToSlack
-        isvisible={showSlackModal}
-        setIsVisible={()=>setShowSlackModal(false)} />
+          isvisible={showSlackModal}
+          setIsVisible={() => setShowSlackModal(false)}
+        />
       </div>
     </>
   );

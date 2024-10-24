@@ -6,7 +6,7 @@ import GIF3 from "../../assets/cardsGif/learn.svg";
 import GIF4 from "../../assets/cardsGif/create.svg";
 import { throttle } from "lodash";
 import Image from "next/image";
-import './style.scss';
+import "./style.scss";
 
 const card = [
   {
@@ -81,6 +81,8 @@ const Section3 = () => {
     <div className="sticky-animation-container ">
       <div className="sticky-section">
         <Image
+          loading="eager"
+          priority={true}
           key={activeSection.id}
           src={activeSection?.gifSrc}
           alt={activeSection?.title}

@@ -46,8 +46,20 @@ const Section1 = () => {
   };
   return (
     <div className="ekai-intro-main-cont">
-      <Image src={BlurR} alt="ekai" className="blurR" />
-      <Image src={BlurL} alt="ekai" className="blurL" />
+      <Image
+        loading="eager"
+        priority={true}
+        src={BlurR}
+        alt="ekai"
+        className="blurR"
+      />
+      <Image
+        loading="eager"
+        priority={true}
+        src={BlurL}
+        alt="ekai"
+        className="blurL"
+      />
       <div className="ekai-intro-cont">
         <div className="left-cont">
           <div className="left-cont-heading">
@@ -75,7 +87,8 @@ const Section1 = () => {
               className="left-cont-button"
               onClick={() => handleGetStarted()}
             >
-              Get Started <Image src={Arrow} alt="" />
+              Get Started{" "}
+              <Image loading="eager" priority={true} src={Arrow} alt="" />
             </button>
           </div>
           {/* <FormDialog open={openDialog} setOpenDialog={setOpenDialog} /> */}
@@ -83,7 +96,13 @@ const Section1 = () => {
         <div className="right-cont">
           <div className="large-image-container">
             <div className="video-box">
-              <Image src={videothumb} alt="ekai" className="thumbnail" />
+              <Image
+                loading="eager"
+                priority={true}
+                src={videothumb}
+                alt="ekai"
+                className="thumbnail"
+              />
               <ActionVedio />
             </div>
           </div>

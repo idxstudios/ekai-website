@@ -66,7 +66,13 @@ const ActionVedio = () => {
         </div>
       ) : (
         <div onClick={handlePlayVideo} className="action-vedio-container">
-          <Image src={play} alt="Play" className="play" />
+          <Image
+            loading="eager"
+            priority={true}
+            src={play}
+            alt="Play"
+            className="play"
+          />
         </div>
       )}
     </div>

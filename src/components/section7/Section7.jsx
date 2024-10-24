@@ -1,17 +1,23 @@
 // src/DataSecure.js
 "use client";
-import React from 'react';
-import './style.scss';
+import React from "react";
+import "./style.scss";
 import lock from "../../assets/security/lock.svg";
-import Img1 from "../../assets/security/enc.svg"
-import Img2 from "../../assets/security/db.svg"
-import Img3 from "../../assets/security/cloud.svg"
-import Image from 'next/image';
+import Img1 from "../../assets/security/enc.svg";
+import Img2 from "../../assets/security/db.svg";
+import Img3 from "../../assets/security/cloud.svg";
+import Image from "next/image";
 
 const Card = ({ title, icon, description }) => {
   return (
-    <div className='card-secure'>
-      <Image src={icon} alt={title} className="card-icon" /> 
+    <div className="card-secure">
+      <Image
+        loading="eager"
+        priority={true}
+        src={icon}
+        alt={title}
+        className="card-icon"
+      />
       <h3>{title}</h3>
       <p>{description}</p>
     </div>
@@ -41,12 +47,14 @@ const Section7 = () => {
   ];
 
   return (
-    <main className='DataSecure-main'>
-      <div className='DataSecure-upper'>
-        <Image src={lock} alt='ekai' />
-        <p>We help keep your <br /> data secure & private</p>
+    <main className="DataSecure-main">
+      <div className="DataSecure-upper">
+        <Image loading="eager" priority={true} src={lock} alt="ekai" />
+        <p>
+          We help keep your <br /> data secure & private
+        </p>
       </div>
-      <div className='three-cards'>
+      <div className="three-cards">
         {cardsArray.map((card, index) => (
           <Card
             key={index}

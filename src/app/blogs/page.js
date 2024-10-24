@@ -1,8 +1,8 @@
 import React from "react";
 import elevate from "../../assets/elevateCard.png";
-import videothumb from '../../assets/videothumb.jpg'
+import videothumb from "../../assets/videothumb.jpg";
 import Image from "next/image";
-import './style.css';
+import "./style.css";
 const blogData = [
   {
     id: 1,
@@ -14,8 +14,7 @@ const blogData = [
   },
   {
     id: 2,
-    header:
-      "A complete guide to generative AI agents in 2024",
+    header: "A complete guide to generative AI agents in 2024",
     imagesrc: videothumb,
     para: "Discover what you need to know about generative AI agents in 2024, along with their capabilities, applications, and future prospects.",
     creator: "Anuja",
@@ -57,7 +56,13 @@ const page = () => {
         {blogData.map((blog) => (
           <div key={blog.id} className="p-5 my-5 hover:animate-up-down blog">
             <div className="pb-1">
-              <Image className="img m-auto w-full" src={blog.imagesrc} alt="blogimage"/>
+              <Image
+                loading="eager"
+                priority={true}
+                className="img m-auto w-full"
+                src={blog.imagesrc}
+                alt="blogimage"
+              />
             </div>
             <div className="img m-auto">
               <div className="py-2">
@@ -68,7 +73,7 @@ const page = () => {
               </div>
               <div className="flex justify-start gap-3 my-3">
                 <div className="profile rounded">
-                {blog.creator.slice(0,1)}
+                  {blog.creator.slice(0, 1)}
                 </div>
                 <p>{blog.creator}</p>
               </div>

@@ -12,12 +12,12 @@ import Image from "next/image";
 // import Top from "../../assets/top.svg";
 
 const Footer = () => {
-//   const location = useLocation();
+  //   const location = useLocation();
 
   const handleContactUs = () => {
     const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-    
-    trackEvent("contact_us_mail", {'avenue':'footer'})
+
+    trackEvent("contact_us_mail", { avenue: "footer" });
 
     if (isMobile) {
       // Mobile-specific logic
@@ -34,36 +34,48 @@ const Footer = () => {
     }
   };
 
-//   useEffect(() => {
-//     if (location.hash) {
-//       const element = document.getElementById(location.hash.substring(1));
-//       if (element) {
-//         element.scrollIntoView({ behavior: "smooth" });
-//       }
-//     }
-//   }, [location]);
+  //   useEffect(() => {
+  //     if (location.hash) {
+  //       const element = document.getElementById(location.hash.substring(1));
+  //       if (element) {
+  //         element.scrollIntoView({ behavior: "smooth" });
+  //       }
+  //     }
+  //   }, [location]);
 
-//   const { pathname, hash } = useLocation();
+  //   const { pathname, hash } = useLocation();
 
-//   useEffect(() => {
-//     if (hash === "#top") {
-//       window.scrollTo(0, 0); // Scroll to the top of the page
-//     }
-//   }, [pathname, hash]);
+  //   useEffect(() => {
+  //     if (hash === "#top") {
+  //       window.scrollTo(0, 0); // Scroll to the top of the page
+  //     }
+  //   }, [pathname, hash]);
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="logo">
-          <Image src={logo} alt="ekai logo" />
+          <Image loading="eager" priority={true} src={logo} alt="ekai logo" />
           {/* <span>ekai</span> */}
         </div>
 
         <div className="bottom-nav">
           <h4>Resources</h4>
           {/* <Link onClick={() => trackEvent("faq_click")} to="/FAQs#top">FAQs</Link> */}
-          <Link  href="/termsOfUse"><span onClick={() => trackEvent("terms_use_click")}>Terms of Use </span></Link>
-          <Link  href="/privacyPolicy"> <span onClick={() => trackEvent("privacy_policy_click")}>Privacy Policy</span></Link>
-          <Link  href="/blogs"> <span onClick={() => trackEvent("blogs_click")}>Blogs</span></Link>
+          <Link href="/termsOfUse">
+            <span onClick={() => trackEvent("terms_use_click")}>
+              Terms of Use{" "}
+            </span>
+          </Link>
+          <Link href="/privacyPolicy">
+            {" "}
+            <span onClick={() => trackEvent("privacy_policy_click")}>
+              Privacy Policy
+            </span>
+          </Link>
+          <Link href="/blogs">
+            {" "}
+            <span onClick={() => trackEvent("blogs_click")}>Blogs</span>
+          </Link>
         </div>
         <div className="social-media">
           <h4>Contact Us</h4>
@@ -72,10 +84,10 @@ const Footer = () => {
               href="https://www.linkedin.com/company/ekai-0-1/?viewAsMember=true"
               target="_blank"
               rel="noopener noreferrer"
-              
             >
-              
-              <span onClick={() => trackEvent("linkedin_connect")}>Linkedin</span>
+              <span onClick={() => trackEvent("linkedin_connect")}>
+                Linkedin
+              </span>
             </a>
 
             <span

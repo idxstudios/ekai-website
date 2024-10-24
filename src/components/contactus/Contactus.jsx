@@ -8,7 +8,7 @@ import Arrow from "../../assets/ArrowRight.svg";
 import { db } from "@/firebase/firebase";
 import { addDoc, collection } from "firebase/firestore";
 import LockAndKey from "../../assets/lockandkey.png";
-import Vector from '../../assets/vector.png';
+import Vector from "../../assets/vector.png";
 import { SendMailClient } from "zeptomail";
 
 const Contactus = ({ isvisible, setIsVisible }) => {
@@ -32,9 +32,10 @@ const Contactus = ({ isvisible, setIsVisible }) => {
     position: "",
   });
   const url = "api.zeptomail.in/";
-const token = "Zoho-enczapikey PHtE6r0IF+7u2TUo+hRW4KftFsGkN9srrr81eAhAt4gRWacAGk0BrdkvkGXkqU0iXPZBEfefy4JrsLqV4uOGIG+5Y2xOWGqyqK3sx/VYSPOZsbq6x00YsVQTcEXaVYLuddZo0yHRudjdNA==";
+  const token =
+    "Zoho-enczapikey PHtE6r0IF+7u2TUo+hRW4KftFsGkN9srrr81eAhAt4gRWacAGk0BrdkvkGXkqU0iXPZBEfefy4JrsLqV4uOGIG+5Y2xOWGqyqK3sx/VYSPOZsbq6x00YsVQTcEXaVYLuddZo0yHRudjdNA==";
 
-let client = new SendMailClient({url, token});
+  let client = new SendMailClient({ url, token });
 
   function validate1() {
     const newErrors = {};
@@ -52,7 +53,8 @@ let client = new SendMailClient({url, token});
 
       // Validate that the domain is not "gmail.com"
       if (domain?.toLowerCase() === "gmail.com") {
-        newErrors.email = "Please enter your work email address (e.g., name@company.com)";
+        newErrors.email =
+          "Please enter your work email address (e.g., name@company.com)";
       }
     }
 
@@ -99,7 +101,7 @@ let client = new SendMailClient({url, token});
     }
   };
 
- const saveData=async ()=> {
+  const saveData = async () => {
     try {
       const docRef = await addDoc(collection(db, "users"), {
         creation_date: new Date(),
@@ -110,23 +112,23 @@ let client = new SendMailClient({url, token});
         role_function: data.position,
         job_function: data.workType,
       });
-  
-      
+
       try {
-        client.sendMail({
-          from: {
-            address: "noreply@yourekai.com",
-            name: "ekai-notification",
-          },
-          to: [
-            {
-              email_address: {
-                address: "sonkariamayank@gmail.com",
-              },
+        client
+          .sendMail({
+            from: {
+              address: "noreply@yourekai.com",
+              name: "ekai-notification",
             },
-          ],
-          subject: "User Details from Contact Us form",
-          htmlbody: `<div><b><h3>User details are:</h3> 
+            to: [
+              {
+                email_address: {
+                  address: "sonkariamayank@gmail.com",
+                },
+              },
+            ],
+            subject: "User Details from Contact Us form",
+            htmlbody: `<div><b><h3>User details are:</h3> 
                       <h4>Email: ${data.email}</h4>
                       <h4>Name: ${data.name}</h4>
                       <h4>Heard About: ${data.hearAbout}</h4>
@@ -135,21 +137,22 @@ let client = new SendMailClient({url, token});
                       <h4>Work Type: ${data.workType}</h4>
                       </b>
                     </div>`,
-        }).then((resp) => console.log("success")).catch((error) => console.log("error"));
+          })
+          .then((resp) => console.log("success"))
+          .catch((error) => console.log("error"));
 
         return true;
       } catch (error) {
         console.error("Error sending mail:", error);
       }
-      
     } catch (error) {
       console.error("Error adding document:", error);
       return error;
     }
-  }
- 
+  };
+
   // "address": "gtmadmin@yourekai.com",
-                // "address": "sonkariamayank@gmail.com",
+  // "address": "sonkariamayank@gmail.com",
   const submit = async () => {
     if (validate2()) {
       const response = await saveData();
@@ -160,8 +163,6 @@ let client = new SendMailClient({url, token});
       }
     }
   };
-  
-  
 
   console.log("userData: ", data);
   const hearAbout = [
@@ -237,7 +238,22 @@ let client = new SendMailClient({url, token});
                             })
                           }
                         />
-                        {error.name && <p className="error"><Image src={Vector} alt="vector" style={{width: "12px", height: "12px", margin: "2px"}} /> <p>{error.name}</p> </p>}
+                        {error.name && (
+                          <p className="error">
+                            <Image
+                              loading="eager"
+                              priority={true}
+                              src={Vector}
+                              alt="vector"
+                              style={{
+                                width: "12px",
+                                height: "12px",
+                                margin: "2px",
+                              }}
+                            />{" "}
+                            <p>{error.name}</p>{" "}
+                          </p>
+                        )}
                       </div>
                       <div className="mb-2 mt-3">
                         <label
@@ -258,7 +274,22 @@ let client = new SendMailClient({url, token});
                             })
                           }
                         />
-                        {error.email && <p className="error"><Image src={Vector} alt="vector" style={{width: "12px", height: "12px", margin: "2px"}} /> {error.email}</p>}
+                        {error.email && (
+                          <p className="error">
+                            <Image
+                              loading="eager"
+                              priority={true}
+                              src={Vector}
+                              alt="vector"
+                              style={{
+                                width: "12px",
+                                height: "12px",
+                                margin: "2px",
+                              }}
+                            />{" "}
+                            {error.email}
+                          </p>
+                        )}
                       </div>
                       <div className="mb-2 mt-3">
                         <label
@@ -280,8 +311,22 @@ let client = new SendMailClient({url, token});
                             </option>
                           ))}
                         </select>
-                          {error.hearAbout && <p className="error"><Image src={Vector} alt="vector" style={{width: "12px", height: "12px", margin: "2px"}} /> {error.hearAbout}</p>}
-                        
+                        {error.hearAbout && (
+                          <p className="error">
+                            <Image
+                              loading="eager"
+                              priority={true}
+                              src={Vector}
+                              alt="vector"
+                              style={{
+                                width: "12px",
+                                height: "12px",
+                                margin: "2px",
+                              }}
+                            />{" "}
+                            {error.hearAbout}
+                          </p>
+                        )}
                       </div>
                     </div>
                   ) : (
@@ -306,8 +351,22 @@ let client = new SendMailClient({url, token});
                             </option>
                           ))}
                         </select>
-                          {error.workType &&<p className="error"><Image src={Vector} alt="vector" style={{width: "12px", height: "12px", margin: "2px"}} /> { error.workType}</p>}
-                        
+                        {error.workType && (
+                          <p className="error">
+                            <Image
+                              loading="eager"
+                              priority={true}
+                              src={Vector}
+                              alt="vector"
+                              style={{
+                                width: "12px",
+                                height: "12px",
+                                margin: "2px",
+                              }}
+                            />{" "}
+                            {error.workType}
+                          </p>
+                        )}
                       </div>
                       <div className="mb-2 mt-3">
                         <label
@@ -335,8 +394,22 @@ let client = new SendMailClient({url, token});
                             </option>
                           ))}
                         </select>
-                          {error.organizationSize && <p className="error"><Image src={Vector} alt="vector" style={{width: "12px", height: "12px", margin: "2px"}} /> {error.organizationSize}</p>}
-                        
+                        {error.organizationSize && (
+                          <p className="error">
+                            <Image
+                              loading="eager"
+                              priority={true}
+                              src={Vector}
+                              alt="vector"
+                              style={{
+                                width: "12px",
+                                height: "12px",
+                                margin: "2px",
+                              }}
+                            />{" "}
+                            {error.organizationSize}
+                          </p>
+                        )}
                       </div>
                       <div className="mb-2 mt-3">
                         <label
@@ -358,8 +431,22 @@ let client = new SendMailClient({url, token});
                             </option>
                           ))}
                         </select>
-                          {error.position && <p className="error"><Image src={Vector} alt="vector" style={{width: "12px", height: "12px", margin: "2px"}} /> {error.position}</p>}
-                        
+                        {error.position && (
+                          <p className="error">
+                            <Image
+                              loading="eager"
+                              priority={true}
+                              src={Vector}
+                              alt="vector"
+                              style={{
+                                width: "12px",
+                                height: "12px",
+                                margin: "2px",
+                              }}
+                            />{" "}
+                            {error.position}
+                          </p>
+                        )}
                       </div>
                     </div>
                   )}
@@ -382,6 +469,8 @@ let client = new SendMailClient({url, token});
                     >
                       <span>Next</span>{" "}
                       <Image
+                        loading="eager"
+                        priority={true}
                         width={"10px"}
                         height={"10px"}
                         src={Arrow}
@@ -401,7 +490,13 @@ let client = new SendMailClient({url, token});
                   We will get back to you shortly
                 </h2>
                 <div className="mx-auto p-4">
-                  <Image className="mx-auto img" alt="lock" src={LockAndKey} />
+                  <Image
+                    loading="eager"
+                    priority={true}
+                    className="mx-auto img"
+                    alt="lock"
+                    src={LockAndKey}
+                  />
                 </div>
                 <a href="/">
                   <button className="flex text-white font-bold py-2 px-2 rounded button1 mx-auto">
