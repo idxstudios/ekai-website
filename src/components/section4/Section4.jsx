@@ -1,9 +1,5 @@
 "use client";
 import React from 'react';
-import GIF1 from "../../assets/cardsGif/ekaiGPT.gif";
-import GIF2 from "../../assets/cardsGif/autoreply.gif";
-import GIF3 from "../../assets/cardsGif/learn.png";
-import GIF4 from "../../assets/cardsGif/create.png";
 import ElevateCard from '../elevatecard/ElevateCard';
 
 
@@ -11,7 +7,7 @@ import ElevateCard from '../elevatecard/ElevateCard';
 const card = [
     {
       isRev: true,
-      gifSrc: GIF1,
+      gifSrc: "https://i.ibb.co/Vv0YbRz/ekaiGPT.gif",
       category: "Ask",
       title: "/ekai anything, anywhere",
       para: "ekaiGPT harnesses the power of LLMs and your specialized knowledge, all while ensuring it remains Private & Secure.",
@@ -19,7 +15,7 @@ const card = [
     },
     {
       isRev: true,
-      gifSrc: GIF2,
+      gifSrc: "https://i.ibb.co/4NSpJFK/autoreply.gif",
       category: "Compose",
       title: "Tailored response that sounds just like you",
       para: "Your AI twin automatically crafts answers to routine queries, provides updates, and engages in discussions, all while keeping your tone and context.",
@@ -27,7 +23,7 @@ const card = [
     },
     {
       isRev: true,
-      gifSrc: GIF3,
+      gifSrc: "https://i.ibb.co/TRqfPZc/learn.png",
       category: "Learn",
       title: "Synchronize scattered information seamlessly",
       para: "Ekai becomes smarter every time you add articles, documents, and meeting notes to its knowledge base.",
@@ -35,7 +31,7 @@ const card = [
     },
     {
       isRev: true,
-      gifSrc: GIF4,
+      gifSrc: "https://i.ibb.co/fv6NVPj/create.png",
       category: "Create",
       title: "Feeling anxious about writing a report?",
       para: "Ekai initiates writing documents for you by pulling context from Slack, meetings, and other data sources.",

@@ -10,6 +10,7 @@ import { addDoc, collection } from "firebase/firestore";
 import LockAndKey from "../../assets/lockandkey.png";
 import Vector from "../../assets/vector.png";
 import { SendMailClient } from "zeptomail";
+import { Select, SelectItem } from "@nextui-org/select";
 
 const Contactus = ({ isvisible, setIsVisible }) => {
   const [step, setStep] = useState(1);
@@ -46,7 +47,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
     }
 
     // Validate email
-    if (!data.email?.length) {
+    if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)){
       newErrors.email = "Please fill your email";
     } else {
       const [username, domain] = data.email.split("@");
@@ -123,11 +124,11 @@ const Contactus = ({ isvisible, setIsVisible }) => {
             to: [
               {
                 email_address: {
-                  address: "sonkariamayank@gmail.com",
+                  address: "gtmadmin@yourekai.com",
                 },
               },
             ],
-            subject: "User Details from Contact Us form",
+            subject: "lead from website",
             htmlbody: `<div><b><h3>User details are:</h3> 
                       <h4>Email: ${data.email}</h4>
                       <h4>Name: ${data.name}</h4>
@@ -298,7 +299,8 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                         >
                           How did you hear about ekai?
                         </label>
-                        <select
+                        <Select
+                          
                           className="border rounded w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem"
                           value={data.hearAbout}
                           onChange={(e) =>
@@ -306,11 +308,11 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                           }
                         >
                           {hearAbout.map((val, index) => (
-                            <option className="bg-white-900" key={index}>
+                            <SelectItem className="bg-white-900" key={index}>
                               {val}
-                            </option>
+                            </SelectItem>
                           ))}
-                        </select>
+                        </Select>
                         {error.hearAbout && (
                           <p className="error">
                             <Image

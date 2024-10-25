@@ -63,18 +63,19 @@ const Footer = () => {
           {/* <Link onClick={() => trackEvent("faq_click")} to="/FAQs#top">FAQs</Link> */}
           <Link href="/termsOfUse">
             <span onClick={() => trackEvent("terms_use_click")}>
-              Terms of Use{" "}
+              Terms of Use
             </span>
           </Link>
           <Link href="/privacyPolicy">
-            {" "}
             <span onClick={() => trackEvent("privacy_policy_click")}>
               Privacy Policy
             </span>
           </Link>
           <Link href="/blogs">
-            {" "}
             <span onClick={() => trackEvent("blogs_click")}>Blogs</span>
+          </Link>
+          <Link target="_blank" href="https://sphenoid-rhodium-e2a.notion.site/Customer-Onboarding-Document-126563cdf41d8072a083ead5cef71299">
+            <span onClick={() => trackEvent("blogs_click")}>FAQs</span>
           </Link>
         </div>
         <div className="social-media">

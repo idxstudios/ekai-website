@@ -28,13 +28,11 @@ export default function ElevateCard({
             </div>
           ) : (
             <div className="p-4">
-              {" "}
-              <Image
-                loading="eager"
-                priority={true}
+              <img
+                src={gifSrc}
                 style={{ borderRadius: "16px" }}
                 alt="card"
-                src={gifSrc}
+                
               />
             </div>
           )}

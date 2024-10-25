@@ -6,42 +6,19 @@ import "./style.css";
 const blogData = [
   {
     id: 1,
-    header:
-      "40+ AI prompt examples for different department use cases in an organization",
+    header:`AI {You} for the matters that don't need REAL YOU`,
     imagesrc: elevate,
-    para: "Make the most of AI by exploring 40 different prompting examples fit for a variety of use cases and departments, like marketing, sales, finance, operations, and more.",
-    creator: "Anuja",
+    para: `Imagine a world where your team's productivity isn't hindered by time zones, scattered information, or constant interruptions. A world where you can focus on what truly matters without the constant interruptions of the digital age.`,
+    creator: "Ashutosh Tiwari",
+    url: "/blogs/enableAI"
   },
   {
     id: 2,
-    header: "A complete guide to generative AI agents in 2024",
+    header: `Building Ekai: Revolutionizing Productivity with AI in a Global Team`,
     imagesrc: videothumb,
-    para: "Discover what you need to know about generative AI agents in 2024, along with their capabilities, applications, and future prospects.",
-    creator: "Anuja",
-  },
-  {
-    id: 3,
-    header:
-      "Glean and Miro partner to bring contextual enterprise knowledge directly into Miro’s Innovation Workspace",
-    imagesrc: elevate,
-    para: "Glean in Miro brings Glean's Work AI platform directly into Miro's Innovation Workspace, streamlining the brainstorming process and enhancing productivity.",
-    creator: "Anuja",
-  },
-  {
-    id: 4,
-    header:
-      "40+ AI prompt examples for different department use cases in an organization",
-    imagesrc: elevate,
-    para: "Make the most of AI by exploring 40 different prompting examples fit for a variety of use cases and departments, like marketing, sales, finance, operations, and more.",
-    creator: "Anuja",
-  },
-  {
-    id: 5,
-    header:
-      "40+ AI prompt examples for different department use cases in an organization",
-    imagesrc: elevate,
-    para: "Make the most of AI by exploring 40 different prompting examples fit for a variety of use cases and departments, like marketing, sales, finance, operations, and more.",
-    creator: "Anuja",
+    para: `In early 2023, I first connected with Ashutosh Tiwari, a close friend of my elder brother and now co-founder and CEO at Ekai, while I was exploring new opportunities and he was thriving at Coinbase.`,
+    creator: "Gaurav Agrawal",
+    url: "/blogs/buildingEkai"
   },
 ];
 
@@ -52,15 +29,16 @@ const page = () => {
         {`What's new at Ekai`}
       </h1>
 
-      <div className="grid grid-cols-1 lg:mx-20 md:mx-5 sm:mx-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 mb-20">
+      <div className="grid grid-cols-1 lg:mx-20 md:mx-5 sm:mx-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 mb-20 text-center">
         {blogData.map((blog) => (
-          <div key={blog.id} className="p-5 my-5 hover:animate-up-down blog">
+          <a key={blog.id} href={blog.url}>
+          <div  className="p-5 my-5 hover:animate-up-down blog" >
             <div className="pb-1">
-              <Image
+              <img
                 loading="eager"
                 priority={true}
                 className="img m-auto w-full"
-                src={blog.imagesrc}
+                src="https://media.licdn.com/dms/image/v2/D5612AQEXnxrZx2DYmQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1722273329594?e=1735171200&v=beta&t=iUPz3TWmapDdcYPg_ye7Lw7TByw47qi_9Pz5k5yASzg"
                 alt="blogimage"
               />
             </div>
@@ -71,14 +49,15 @@ const page = () => {
               <div>
                 <h3>{blog.para}</h3>
               </div>
-              <div className="flex justify-start gap-3 my-3">
-                <div className="profile rounded">
+              <div className=" my-3">
+                {/* <div className="profile rounded">
                   {blog.creator.slice(0, 1)}
-                </div>
-                <p>{blog.creator}</p>
+                </div> */}
+                <p className="text-center"> ~{blog.creator}</p>
               </div>
             </div>
           </div>
+          </a>
         ))}
       </div>
     </div>
