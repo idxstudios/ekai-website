@@ -10,7 +10,6 @@ import { addDoc, collection } from "firebase/firestore";
 import LockAndKey from "../../assets/lockandkey.png";
 import Vector from "../../assets/vector.png";
 import { SendMailClient } from "zeptomail";
-import { Select, SelectItem } from "@nextui-org/select";
 
 const Contactus = ({ isvisible, setIsVisible }) => {
   const [step, setStep] = useState(1);
@@ -47,7 +46,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
     }
 
     // Validate email
-    if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)){
+    if (data.email &&  !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)){
       newErrors.email = "Please fill your email";
     } else {
       const [username, domain] = data.email.split("@");
@@ -299,8 +298,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                         >
                           How did you hear about ekai?
                         </label>
-                        <Select
-                          
+                        <select
                           className="border rounded w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem"
                           value={data.hearAbout}
                           onChange={(e) =>
@@ -308,11 +306,11 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                           }
                         >
                           {hearAbout.map((val, index) => (
-                            <SelectItem className="bg-white-900" key={index}>
+                            <option className="bg-white-900" key={index}>
                               {val}
-                            </SelectItem>
+                            </option>
                           ))}
-                        </Select>
+                        </select>
                         {error.hearAbout && (
                           <p className="error">
                             <Image
