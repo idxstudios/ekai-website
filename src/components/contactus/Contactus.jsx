@@ -38,7 +38,8 @@ const Contactus = ({ isvisible, setIsVisible }) => {
       borderRadius: "0.375rem", // Customize border radius
       padding: "0.125rem", // Customize padding
       boxShadow: "none", // Remove default shadow
-      
+      backgroundColor: "white",
+      outline: "none",
     }),
     placeholder: (base) => ({
       ...base,
@@ -50,10 +51,18 @@ const Contactus = ({ isvisible, setIsVisible }) => {
     }),
     menu: (base) => ({
       ...base,
+      position: 'absolute',
+      zIndex: 1000,
       backgroundColor: "#FFFFFF", // Customize dropdown background color
     }),
     option: (base, { isFocused, isSelected }) => ({
       ...base,
+      borderBottom: `0.6px solid #E8E1DB`,
+      "&:last-of-type": {
+      borderBottom: "none",
+    },
+      width: "calc(100%-16px)",
+      margin: "4px 8px 4px 8px",
       backgroundColor: isSelected
         ? "#FFFFFF"
         : isFocused
@@ -61,9 +70,18 @@ const Contactus = ({ isvisible, setIsVisible }) => {
         : "#FFFFFF", // Colors for selection and focus
       color: isSelected ? "#4A5568" : "#4A5568", // Text color for selected and focused
       "&:active": {
-      backgroundColor: "#E8E1DB4D", // Customize color when clicking
-    },
+        backgroundColor: "#E8E1DB4D", // Customize color when clicking
+        
+        // "&:last-of-type": {
+        //   borderBottom: "none", // Remove border from the last option if desired
+        // },
+      },
     }),
+    // option: (base) => ({
+    //   ...base,
+    //   border: `1px dotted black`,
+    //   height: '100%',
+    // }),
   };
   const url = "api.zeptomail.in/";
   const token =

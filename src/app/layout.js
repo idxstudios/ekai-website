@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://yourekai.com" />
-        <meta property="og:image" content="%PUBLIC_URL%/ekai-og-bg.png" />
+        <meta property="og:image" content="https://i.ibb.co/jT9z8D4/ekai-og-bg.png" />
         {/* <meta property="og:image" content="%app%/ekai-og-bg.png" /> */}
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="627" />

@@ -1,6 +1,6 @@
 "use client";
 
-// import { useEffect } from "react";
+import React, {useState, useEffect } from "react";
 import "./styles.scss";
 import logo from "../../assets/ekai-logo-footer.svg";
 import { trackEvent } from "@/mixpanel";
@@ -13,7 +13,13 @@ import Image from "next/image";
 
 const Footer = () => {
   //   const location = useLocation();
-
+  const [isSlackInstallRoute, setIsSlackInstallRoute] = useState(false);
+  useEffect(() => {
+    // Run only on the client side
+    if (typeof window !== "undefined") {
+      setIsSlackInstallRoute(window.location.pathname === "/slack/install");
+    }
+  }, []);
   const handleContactUs = () => {
     const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
@@ -74,9 +80,11 @@ const Footer = () => {
           <Link href="/blogs">
             <span onClick={() => trackEvent("blogs_click")}>Blogs</span>
           </Link>
+          {isSlackInstallRoute &&
           <Link target="_blank" href="https://sphenoid-rhodium-e2a.notion.site/Customer-Onboarding-Document-126563cdf41d8072a083ead5cef71299">
-            <span onClick={() => trackEvent("blogs_click")}>FAQs</span>
+            <span onClick={() => trackEvent("faqs_click")}>FAQs</span>
           </Link>
+}
         </div>
         <div className="social-media">
           <h4>Contact Us</h4>
