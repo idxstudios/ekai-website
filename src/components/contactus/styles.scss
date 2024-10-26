@@ -60,7 +60,6 @@
     height: 213px;
 }
 .outlinem {
-    border: 1px gray solid ; 
     border-radius: 8px;
 }
 input.outlinem:focus, input.outlinem:active {
@@ -83,4 +82,10 @@ input::placeholder {
     color: #34393266;
 
      /* Ensure full opacity, as some browsers use a default opacity */
+}
+.selectitem{
+    display: block;
+    width: 100%;
+    
+    background-color: white;
 }

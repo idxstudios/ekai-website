@@ -10,7 +10,7 @@ import { addDoc, collection } from "firebase/firestore";
 import LockAndKey from "../../assets/lockandkey.png";
 import Vector from "../../assets/vector.png";
 import { SendMailClient } from "zeptomail";
-
+import Select from "react-select";
 const Contactus = ({ isvisible, setIsVisible }) => {
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
@@ -31,6 +31,40 @@ const Contactus = ({ isvisible, setIsVisible }) => {
     organizationSize: "",
     position: "",
   });
+  const customStyles = {
+    control: (base) => ({
+      ...base,
+      border: "none", // Customize border color
+      borderRadius: "0.375rem", // Customize border radius
+      padding: "0.125rem", // Customize padding
+      boxShadow: "none", // Remove default shadow
+      
+    }),
+    placeholder: (base) => ({
+      ...base,
+      color: "#A0AEC0", // Customize placeholder text color
+    }),
+    singleValue: (base) => ({
+      ...base,
+      color: "#4A5568", // Customize selected option color
+    }),
+    menu: (base) => ({
+      ...base,
+      backgroundColor: "#FFFFFF", // Customize dropdown background color
+    }),
+    option: (base, { isFocused, isSelected }) => ({
+      ...base,
+      backgroundColor: isSelected
+        ? "#FFFFFF"
+        : isFocused
+        ? "#E8E1DB4D"
+        : "#FFFFFF", // Colors for selection and focus
+      color: isSelected ? "#4A5568" : "#4A5568", // Text color for selected and focused
+      "&:active": {
+      backgroundColor: "#E8E1DB4D", // Customize color when clicking
+    },
+    }),
+  };
   const url = "api.zeptomail.in/";
   const token =
     "Zoho-enczapikey PHtE6r0IF+7u2TUo+hRW4KftFsGkN9srrr81eAhAt4gRWacAGk0BrdkvkGXkqU0iXPZBEfefy4JrsLqV4uOGIG+5Y2xOWGqyqK3sx/VYSPOZsbq6x00YsVQTcEXaVYLuddZo0yHRudjdNA==";
@@ -46,7 +80,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
     }
 
     // Validate email
-    if (data.email &&  !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)){
+    if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
       newErrors.email = "Please fill your email";
     } else {
       const [username, domain] = data.email.split("@");
@@ -166,35 +200,31 @@ const Contactus = ({ isvisible, setIsVisible }) => {
 
   console.log("userData: ", data);
   const hearAbout = [
-    "Select",
-    "Search Engine",
-    "LinkedIn",
-    "Friend or Family",
-    " Email Marketing",
-    "Event or Conference",
-    " Other",
+    { label: "Search Engine", value: "Search Engine" },
+    { label: "LinkedIn", value: "LinkedIn" },
+    { label: "Friend or Family", value: "Friend or Family" },
+    { label: "Email Marketing", value: "Email Marketing" },
+    { label: "Event or Conference", value: "Event or Conference" },
+    { label: "Other", value: "Other" },
   ];
   const workType = [
-    "Select",
-    "Software Development",
-    "Data Analysis",
-    "Project Management",
-    "Sales/Marketing",
-    " HR/Admin",
+    { label: "Software Development", value: "Software Development" },
+    { label: "Data Analysis", value: "Data Analysis" },
+    { label: "Project Management", value: "Project Management" },
+    { label: "Sales/Marketing", value: "Sales/Marketing" },
+    { label: "HR/Admin", value: "HR/Admin" },
   ];
   const size = [
-    "Select",
-    "0-50",
-    "50-500",
-    "501-5000",
-    ">5000",
-    "Individual Contributer",
+    { label: "0-50", value: "0-50" },
+    { label: "50-500", value: "50-500" },
+    { label: "501-5000", value: "501-5000" },
+    { label: ">5000", value: ">5000" },
+    { label: "Individual Contributer", value: "Individual Contributer" },
   ];
   const position = [
-    "Select",
-    "Senior Management",
-    "Manager",
-    "Individual Contributer",
+    { label: "Senior Management", value: "Senior Management" },
+    { label: "Manager", value: "Manager" },
+    { label: "Individual Contributer", value: "Individual Contributer" },
   ];
   if (!isvisible) return null;
   return (
@@ -298,19 +328,19 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                         >
                           How did you hear about ekai?
                         </label>
-                        <select
-                          className="border rounded w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem"
-                          value={data.hearAbout}
-                          onChange={(e) =>
-                            setData({ ...data, hearAbout: e.target.value })
-                          }
-                        >
-                          {hearAbout.map((val, index) => (
-                            <option className="bg-white-900" key={index}>
-                              {val}
-                            </option>
-                          ))}
-                        </select>
+                        <div>
+                          <Select
+                            styles={customStyles}
+                            components={{ IndicatorSeparator: () => null }}
+                            placeholder="Select"
+                            className="basic-single border rounded w-full text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem"
+                            value={data.hearAbout}
+                            onChange={(value) =>
+                              setData({ ...data, hearAbout: value })
+                            }
+                            options={hearAbout}
+                          />
+                        </div>
                         {error.hearAbout && (
                           <p className="error">
                             <Image
@@ -338,19 +368,18 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                         >
                           What type of work do you do?
                         </label>
-                        <select
-                          className=" border rounded w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem"
+
+                        <Select
+                          styles={customStyles}
+                          components={{ IndicatorSeparator: () => null }}
+                          placeholder="Select"
+                          className="basic-single border rounded w-full text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem"
                           value={data.workType}
-                          onChange={(e) =>
-                            setData({ ...data, workType: e.target.value })
+                          onChange={(value) =>
+                            setData({ ...data, workType: value })
                           }
-                        >
-                          {workType.map((val, index) => (
-                            <option className="bg-white-900" key={index}>
-                              {val}
-                            </option>
-                          ))}
-                        </select>
+                          options={workType}
+                        />
                         {error.workType && (
                           <p className="error">
                             <Image
@@ -375,25 +404,17 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                         >
                           What is the size of your organization?
                         </label>
-                        <select
-                          className="border rounded w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem "
+                        <Select
+                          styles={customStyles}
+                          components={{ IndicatorSeparator: () => null }}
+                          placeholder="Select"
+                          className="basic-single border rounded w-full text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem"
                           value={data.organizationSize}
-                          onChange={(e) =>
-                            setData({
-                              ...data,
-                              organizationSize: e.target.value,
-                            })
+                          onChange={(value) =>
+                            setData({ ...data, organizationSize: value })
                           }
-                        >
-                          {size.map((val, index) => (
-                            <option
-                              className="bg-white-900 focus:bg-blue-500"
-                              key={index}
-                            >
-                              {val}
-                            </option>
-                          ))}
-                        </select>
+                          options={size}
+                        />
                         {error.organizationSize && (
                           <p className="error">
                             <Image
@@ -418,19 +439,17 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                         >
                           What is your current position within the organization?
                         </label>
-                        <select
-                          className=" border rounded w-full py-2 px-3 text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem"
+                        <Select
+                          styles={customStyles}
+                          components={{ IndicatorSeparator: () => null }}
+                          placeholder="Select"
+                          className="basic-single border rounded w-full text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem"
                           value={data.position}
-                          onChange={(e) =>
-                            setData({ ...data, position: e.target.value })
+                          onChange={(value) =>
+                            setData({ ...data, position: value })
                           }
-                        >
-                          {position.map((val, index) => (
-                            <option className="bg-white-900" key={index}>
-                              {val}
-                            </option>
-                          ))}
-                        </select>
+                          options={position}
+                        />
                         {error.position && (
                           <p className="error">
                             <Image
