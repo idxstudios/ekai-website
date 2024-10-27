@@ -98,7 +98,10 @@ const Contactus = ({ isvisible, setIsVisible }) => {
     }
 
     // Validate email
-    if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+    if (!data.email) {
+      newErrors.email = "Please fill your email";
+    }
+    else if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
       newErrors.email = "Please fill your email";
     } else {
       const [username, domain] = data.email.split("@");
@@ -298,8 +301,8 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                                 height: "12px",
                                 margin: "2px",
                               }}
-                            />{" "}
-                            <p>{error.name}</p>{" "}
+                            />
+                            <p style={{fontSize: "12px"}}>{error.name}</p>{" "}
                           </p>
                         )}
                       </div>
@@ -334,8 +337,9 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                                 height: "12px",
                                 margin: "2px",
                               }}
-                            />{" "}
-                            {error.email}
+                            />
+                            <p style={{fontSize: "12px"}}>
+                            {error.email} </p>
                           </p>
                         )}
                       </div>
@@ -371,8 +375,8 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                                 height: "12px",
                                 margin: "2px",
                               }}
-                            />{" "}
-                            {error.hearAbout}
+                            /><p style={{fontSize: "12px"}}>
+                            {error.hearAbout} </p>
                           </p>
                         )}
                       </div>
@@ -410,8 +414,8 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                                 height: "12px",
                                 margin: "2px",
                               }}
-                            />{" "}
-                            {error.workType}
+                            /><p style={{fontSize: "12px"}}>
+                            {error.workType} </p>
                           </p>
                         )}
                       </div>
@@ -445,8 +449,8 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                                 height: "12px",
                                 margin: "2px",
                               }}
-                            />{" "}
-                            {error.organizationSize}
+                            /><p style={{fontSize: "12px"}}>
+                            {error.organizationSize} </p>
                           </p>
                         )}
                       </div>
@@ -480,8 +484,8 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                                 height: "12px",
                                 margin: "2px",
                               }}
-                            />{" "}
-                            {error.position}
+                            /><p style={{fontSize: "12px"}}>
+                            {error.position} </p>
                           </p>
                         )}
                       </div>

@@ -77,9 +77,9 @@ const Footer = () => {
               Privacy Policy
             </span>
           </Link>
-          <Link href="/blogs">
+          {/* <Link href="/blogs">
             <span onClick={() => trackEvent("blogs_click")}>Blogs</span>
-          </Link>
+          </Link> */}
           {isSlackInstallRoute &&
           <Link target="_blank" href="https://sphenoid-rhodium-e2a.notion.site/Customer-Onboarding-Document-126563cdf41d8072a083ead5cef71299">
             <span onClick={() => trackEvent("faqs_click")}>FAQs</span>

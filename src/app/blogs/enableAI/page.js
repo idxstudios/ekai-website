@@ -1,15 +1,14 @@
 import React from "react";
 import "../buildingEkai/styles.css";
-
+import ashutosh from '../../../assets/ashutosh.jpg';
+import Image from "next/image";
 const Blog1 = () => {
   const src =
-    "https://media.licdn.com/dms/image/v2/D5612AQEXnxrZx2DYmQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1722273329594?e=1735171200&v=beta&t=iUPz3TWmapDdcYPg_ye7Lw7TByw47qi_9Pz5k5yASzg";
+    "https://i.ibb.co/XVZgw8d/compl-Updated.png";
   return (
     <div className="blog-container">
       <h1 className="blog-title">{`AI {You} for the matters that don't need REAL YOU`}</h1>
       <img
-        loading="eager"
-        priority={true}
         src={src}
         alt="Blog image"
         className="blog-image"
@@ -71,8 +70,22 @@ const Blog1 = () => {
       </div>
 
       <div className="blog-footer">
-        <h3 className="blog-author">By Ashutosh Tiwari</h3>
-        <h3 className="blog-date">July 12, 2024</h3>
+      <div className="flex justify-center">
+                        <div className="flex">
+                          <div className="profile rounded">
+                            <Image
+                              className="profile"
+                              src={ashutosh}
+                              alt="profile"
+                            />
+                          </div>
+                          <div className="ml-4">
+                            <p className="text-center"> By Ashutosh Tiwari</p>
+                            <p className="text-center"> July 12, 2024</p>
+                          </div>
+                        </div>
+                        
+                      </div>
       </div>
     </div>
   );
