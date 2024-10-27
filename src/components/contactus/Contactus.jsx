@@ -51,7 +51,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
     }),
     menu: (base) => ({
       ...base,
-      position: 'absolute',
+      position: "absolute",
       zIndex: 1000,
       backgroundColor: "#FFFFFF", // Customize dropdown background color
     }),
@@ -59,8 +59,8 @@ const Contactus = ({ isvisible, setIsVisible }) => {
       ...base,
       borderBottom: `0.6px solid #E8E1DB`,
       "&:last-of-type": {
-      borderBottom: "none",
-    },
+        borderBottom: "none",
+      },
       width: "calc(100%-16px)",
       margin: "4px 8px 4px 8px",
       backgroundColor: isSelected
@@ -71,7 +71,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
       color: isSelected ? "#4A5568" : "#4A5568", // Text color for selected and focused
       "&:active": {
         backgroundColor: "#E8E1DB4D", // Customize color when clicking
-        
+
         // "&:last-of-type": {
         //   borderBottom: "none", // Remove border from the last option if desired
         // },
@@ -100,8 +100,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
     // Validate email
     if (!data.email) {
       newErrors.email = "Please fill your email";
-    }
-    else if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+    } else if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
       newErrors.email = "Please fill your email";
     } else {
       const [username, domain] = data.email.split("@");
@@ -171,19 +170,28 @@ const Contactus = ({ isvisible, setIsVisible }) => {
       try {
         client
           .sendMail({
-            from: {
-              address: "noreply@yourekai.com",
-              name: "ekai-notification",
+            "from": {
+             "address": "noreply@yourekai.com",
+              "name": "ekai-notification",
             },
-            to: [
+            "to": [
               {
-                email_address: {
-                  address: "gtmadmin@yourekai.com",
+                "email_address": {
+                  "address": "gtmadmin@yourekai.com",
+                  "name": "gt-admin",
                 },
               },
             ],
-            subject: "lead from website",
-            htmlbody: `<div><b><h3>User details are:</h3> 
+            "cc": [
+              {
+                "email_address": {
+                  "address": "gaurav@yourekai.com",
+                  "name": "Gaurav",
+                },
+              },
+            ],
+            "subject": "lead from website",
+            "htmlbody": `<div><b><h3>User details are:</h3> 
                       <h4>Email: ${data.email}</h4>
                       <h4>Name: ${data.name}</h4>
                       <h4>Heard About: ${data.hearAbout}</h4>
@@ -302,7 +310,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                                 margin: "2px",
                               }}
                             />
-                            <p style={{fontSize: "12px"}}>{error.name}</p>{" "}
+                            <p style={{ fontSize: "12px" }}>{error.name}</p>{" "}
                           </p>
                         )}
                       </div>
@@ -338,8 +346,7 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                                 margin: "2px",
                               }}
                             />
-                            <p style={{fontSize: "12px"}}>
-                            {error.email} </p>
+                            <p style={{ fontSize: "12px" }}>{error.email} </p>
                           </p>
                         )}
                       </div>
@@ -375,8 +382,10 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                                 height: "12px",
                                 margin: "2px",
                               }}
-                            /><p style={{fontSize: "12px"}}>
-                            {error.hearAbout} </p>
+                            />
+                            <p style={{ fontSize: "12px" }}>
+                              {error.hearAbout}{" "}
+                            </p>
                           </p>
                         )}
                       </div>
@@ -414,8 +423,10 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                                 height: "12px",
                                 margin: "2px",
                               }}
-                            /><p style={{fontSize: "12px"}}>
-                            {error.workType} </p>
+                            />
+                            <p style={{ fontSize: "12px" }}>
+                              {error.workType}{" "}
+                            </p>
                           </p>
                         )}
                       </div>
@@ -449,8 +460,10 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                                 height: "12px",
                                 margin: "2px",
                               }}
-                            /><p style={{fontSize: "12px"}}>
-                            {error.organizationSize} </p>
+                            />
+                            <p style={{ fontSize: "12px" }}>
+                              {error.organizationSize}{" "}
+                            </p>
                           </p>
                         )}
                       </div>
@@ -484,8 +497,10 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                                 height: "12px",
                                 margin: "2px",
                               }}
-                            /><p style={{fontSize: "12px"}}>
-                            {error.position} </p>
+                            />
+                            <p style={{ fontSize: "12px" }}>
+                              {error.position}{" "}
+                            </p>
                           </p>
                         )}
                       </div>
