@@ -66,7 +66,7 @@ const Blog1 = () => {
             </div>
             <div className="ml-4">
               <p className="text-center"> By Gaurav Agrawal</p>
-              <p className="text-center"> July 29, 2024</p>
+              <p className="text-center"> July 12, 2024</p>
             </div>
           </div>
         </div>

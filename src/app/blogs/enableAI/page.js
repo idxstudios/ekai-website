@@ -1,18 +1,13 @@
 import React from "react";
 import "../buildingEkai/styles.css";
-import ashutosh from '../../../assets/ashutosh.jpg';
+import ashutosh from "../../../assets/ashutosh.jpg";
 import Image from "next/image";
 const Blog1 = () => {
-  const src =
-    "https://i.ibb.co/XVZgw8d/compl-Updated.png";
+  const src = "https://i.ibb.co/XVZgw8d/compl-Updated.png";
   return (
     <div className="blog-container">
       <h1 className="blog-title">{`AI {You} for the matters that don't need REAL YOU`}</h1>
-      <img
-        src={src}
-        alt="Blog image"
-        className="blog-image"
-      />
+      <img src={src} alt="Blog image" className="blog-image" />
 
       <div className="blog-content">
         <p>{`Imagine a world where your team's productivity isn't hindered by time zones, scattered information, or constant interruptions. A world where you can focus on what truly matters without the constant interruptions of the digital age.`}</p>
@@ -34,15 +29,16 @@ const Blog1 = () => {
 
       <div className="blog-content">
         <p>
-          {`As Cal Newport wisely said, "If you don't produce, you won't thrive - no matter how skilled or talented you are."`}</p>
-          <p>
-          {`The tools we use today weren't designed for the complexities of hybrid work. They're remnants of an era when everyone worked in the same office, at the same time. But the world has changed, and it's time our tools caught up. `}</p>
-          <p>
-          {`The current state of hybrid work is hindering our ability to produce. We're spending more time managing communication than creating value. This isn't sustainable, and it's certainly not the future of work we envisioned.`}</p>
+          {`As Cal Newport wisely said, "If you don't produce, you won't thrive - no matter how skilled or talented you are."`}
+        </p>
+        <p>
+          {`The tools we use today weren't designed for the complexities of hybrid work. They're remnants of an era when everyone worked in the same office, at the same time. But the world has changed, and it's time our tools caught up. `}
+        </p>
+        <p>
+          {`The current state of hybrid work is hindering our ability to produce. We're spending more time managing communication than creating value. This isn't sustainable, and it's certainly not the future of work we envisioned.`}
+        </p>
       </div>
-      <div className="blog-subheader">
-        {`Introducing Ekai: Your AI Twin`}
-      </div>
+      <div className="blog-subheader">{`Introducing Ekai: Your AI Twin`}</div>
 
       <div className="blog-content">
         <p>{`At Ekai, we believe the solution lies not in more tools, but in smarter integration of the ones we already use. We're creating an AI-powered twin that:`}</p>
@@ -54,9 +50,7 @@ const Blog1 = () => {
         </ul>
         <p>{` Imagine an assistant that knows your work style, understands your priorities, and ensures you're always in the loop - without constant interruptions.`}</p>
       </div>
-      <div className="blog-subheader">
-        {`The Future of Work is Here`}
-      </div>
+      <div className="blog-subheader">{`The Future of Work is Here`}</div>
 
       <div className="blog-content">
         <p>{`We're not just building another productivity tool. We're reimagining how teams collaborate in the digital age. With Ekai, you can spend more time doing what really MATTERS, leaving the rest to your AI twin.`}</p>
@@ -70,22 +64,17 @@ const Blog1 = () => {
       </div>
 
       <div className="blog-footer">
-      <div className="flex justify-center">
-                        <div className="flex">
-                          <div className="profile rounded">
-                            <Image
-                              className="profile"
-                              src={ashutosh}
-                              alt="profile"
-                            />
-                          </div>
-                          <div className="ml-4">
-                            <p className="text-center"> By Ashutosh Tiwari</p>
-                            <p className="text-center"> July 12, 2024</p>
-                          </div>
-                        </div>
-                        
-                      </div>
+        <div className="flex justify-center">
+          <div className="flex">
+            <div className="profile rounded">
+              <Image className="profile" src={ashutosh} alt="profile" />
+            </div>
+            <div className="ml-4">
+              <p className="text-center"> By Ashutosh Tiwari</p>
+              <p className="text-center"> July 29, 2024</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

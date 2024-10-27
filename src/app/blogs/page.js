@@ -7,6 +7,16 @@ import Image from "next/image";
 import "./style.css";
 const blogData = [
   {
+    id: 2,
+    header: `Building Ekai: Revolutionizing Productivity with AI in a Global Team`,
+    imagesrc: "https://i.ibb.co/ZYn2KF6/realtime.png",
+    para: `In early 2023, I first connected with Ashutosh Tiwari, a close friend of my elder brother and now co-founder and CEO at Ekai, while I was exploring new opportunities and he was thriving at Coinbase.`,
+    creator: "Gaurav Agrawal",
+    url: "/blogs/buildingEkai",
+    profileUrl: gaurav,
+    date: "Jul 12, 2024",
+  },
+  {
     id: 1,
     header: `AI {You} for the matters that don't need REAL YOU`,
     // imagesrc: "https://i.ibb.co/Z8LHXRk/b2.png",
@@ -15,16 +25,6 @@ const blogData = [
     creator: "Ashutosh Tiwari",
     url: "/blogs/enableAI",
     profileUrl: ashutosh,
-    date: "Jul 12, 2024",
-  },
-  {
-    id: 2,
-    header: `Building Ekai: Revolutionizing Productivity with AI in a Global Team`,
-    imagesrc: "https://i.ibb.co/ZYn2KF6/realtime.png",
-    para: `In early 2023, I first connected with Ashutosh Tiwari, a close friend of my elder brother and now co-founder and CEO at Ekai, while I was exploring new opportunities and he was thriving at Coinbase.`,
-    creator: "Gaurav Agrawal",
-    url: "/blogs/buildingEkai",
-    profileUrl: gaurav,
     date: "Jul 29, 2024",
   },
 ];
@@ -32,11 +32,11 @@ const blogData = [
 const page = () => {
   return (
     <div>
-      <h1 className="text-5xl text-black-500 text-center  font-bold my-5">
+      <h1 className="text-5xl text-black-500 text-center  font-bold mt-5">
         {`What's new at Ekai`}
       </h1>
 
-      <div className="mt-10 mb-20 grid grid-cols-1 lg:mx-20 lg:px-10 md:mx-5 sm:mx-2  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+      <div className="mt-5 mb-20 grid grid-cols-1 lg:mx-20 lg:px-10 md:mx-5 sm:mx-2  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
         {blogData.map((blog) => (
           <div key={blog.id} className="p-5 my-5 blog lg:px-30 gap-5">
             <div className=" m-auto">
