@@ -8,16 +8,14 @@
   body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9;
     color: #333;
   }
   
   .blog-container {
-    max-width: 800px;
+    width: 80%;
     margin: 2rem auto;
     padding: 1.5rem;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
   }
   
@@ -30,25 +28,24 @@
   }
   
   .blog-image {
-    width: 100%;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin: 20px auto;
   }
   
   .blog-subheader {
     font-size: 1.5rem;
     color: black;
     font-weight: 500;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     text-align: center;
   }
   
   .blog-content {
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 1.5rem;
     color: #555;
-    margin-bottom: 2rem;
+    margin-bottom: .5rem;
   }
   
   .blog-content p {
@@ -72,13 +69,16 @@
 .dotted-list {
   list-style-type: none; /* Remove default bullet points */
   padding: 0;
+  font-size: 1.5rem;
+  color: #555;
 }
 
 .dotted-list li {
   position: relative;
   padding-left: 20px; /* Space for the custom dot */
   margin-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  align-items: center;
   color: #333;
 }
 

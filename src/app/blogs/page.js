@@ -36,99 +36,52 @@ const page = () => {
         {`What's new at Ekai`}
       </h1>
 
-      <div className="mt-10 mb-20 ">
+      <div className="mt-10 mb-20 grid grid-cols-1 lg:mx-20 lg:px-10 md:mx-5 sm:mx-2  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
         {blogData.map((blog) => (
-          
-            <div key={blog.id} className="p-5 my-5 blog lg:px-30 grid grid-cols-1 lg:mx-20 lg:px-10 md:mx-5 sm:mx-2  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
-              {blog.id % 2 === 0 ? (
-                <div className=" m-auto">
-                  <img
-                    className="img m-auto w-full"
-                    src={blog.imagesrc}
-                    alt="blogimage"
-                  />
-                </div>
-              ) : (
-                <div className="p-4 flex flex-col justify-center items-center">
-                  <div>
-                    <div className="py-2">
-                      <h1 className="text-4xl">{blog.header}</h1>
-                    </div>
-                    <div>
-                      <h3 className="text-xl">{blog.para}</h3>
-                    </div>
-                    <div className="flex mt-4 justify-between">
-                      <div className="flex">
-                        <div className="flex">
-                          <div className="profile rounded">
-                            <Image
-                              className="profile"
-                              src={blog.profileUrl}
-                              alt="profile"
-                            />
-                          </div>
-                          <div className="ml-4">
-                            <p className="text-center"> {blog.creator}</p>
-                            <p className="text-center"> {blog.date}</p>
-                          </div>
-                        </div>
-                        <div className="bg-primary">{blog.date}</div>
-                      </div>
-                      <a  href={blog.url}>
-                      <div className="flex btnrm text-center mr-4">
-                        <span className="m-auto ">Read More</span>
-                      </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              )}
-              {blog.id % 2 !== 0 ? (
-                <div className=" m-auto">
-                  <img
-                    className="img m-auto w-full"
-                    src={blog.imagesrc}
-                    alt="blogimage"
-                  />
-                </div>
-              ) : (
-                <div className="p-4 flex flex-col justify-center items-center">
-                  <div className="my-auto ">
-                    <div className="py-2">
-                      <h1 className="text-4xl">{blog.header}</h1>
-                    </div>
-                    <div>
-                      <h3 className="text-xl">{blog.para}</h3>
-                    </div>
-
-                    <div className="flex mt-4 justify-between">
-                      <div className="flex my-3">
-                        <div className="flex">
-                          <div className="profile rounded">
-                            <Image
-                              className="profile"
-                              src={blog.profileUrl}
-                              alt="profile"
-                            />
-                          </div>
-                          <div className="ml-4">
-                            <p className="text-center"> {blog.creator}</p>
-                            <p className="text-center"> {blog.date}</p>
-                          </div>
-                        </div>
-                        <div className="bg-primary">{blog.date}</div>
-                      </div>
-                      <a  href={blog.url}>
-                      <div className="flex btnrm text-center">
-                        <span className="m-auto ">Read More</span>
-                      </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              )}
+          <div key={blog.id} className="p-5 my-5 blog lg:px-30 gap-5">
+            <div className=" m-auto">
+              <img
+                className="img m-auto w-full"
+                src={blog.imagesrc}
+                alt="blogimage"
+              />
             </div>
-          
+            <div className="p-4 flex flex-col justify-center items-center">
+              <div className="my-auto ">
+                <div className="py-2">
+                  <h1 className="text-3xl">{blog.header}</h1>
+                </div>
+                <div>
+                  <h3 className="text-xl">{blog.para}</h3>
+                </div>
+
+                <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+                  <div className="flex my-3 ">
+                    <div className="flex">
+                      <div className="profile rounded">
+                        <Image
+                          className="profile"
+                          src={blog.profileUrl}
+                          alt="profile"
+                        />
+                      </div>
+                      <div className="ml-4">
+                        <p className="text-center">{blog.creator}</p>
+                        <p className="text-center">{blog.date}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex justify-end lg:justify-center my-auto py-auto">
+                    <a href={blog.url}>
+                      <div className="flex btnrm text-center my-auto">
+                        <span className="m-auto">Read More</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         ))}
       </div>
     </div>

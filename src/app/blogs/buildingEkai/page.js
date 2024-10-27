@@ -6,7 +6,7 @@ import gaurav from "../../../assets/gaurav.jpg";
 const Blog1 = () => {
   const src = "https://i.ibb.co/ZYn2KF6/realtime.png";
   return (
-    <div className="blog-container">
+    <div className="blog-container items-center">
       <h1 className="blog-title">{`Building Ekai: Revolutionizing Productivity with AI in a Global Team`}</h1>
       <img
         src={src}
