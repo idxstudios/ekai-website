@@ -11,6 +11,9 @@ import LockAndKey from "../../assets/lockandkey.png";
 import Vector from "../../assets/vector.png";
 import { SendMailClient } from "zeptomail";
 import Select from "react-select";
+import axios from "axios";
+import { trackEvent } from "@/mixpanel";
+
 const Contactus = ({ isvisible, setIsVisible }) => {
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
@@ -161,53 +164,25 @@ const Contactus = ({ isvisible, setIsVisible }) => {
         creation_date: new Date(),
         email: data.email,
         name: data.name,
-        hearAbout: data.hearAbout,
-        org_size: data.organizationSize,
-        role_function: data.position,
-        job_function: data.workType,
+        hearAbout: data.hearAbout.value,
+        org_size: data.organizationSize.value,
+        role_function: data.position.value,
+        job_function: data.workType.value,
       });
 
-      try {
-        client
-          .sendMail({
-            "from": {
-             "address": "noreply@yourekai.com",
-              "name": "ekai-notification",
-            },
-            "to": [
-              {
-                "email_address": {
-                  "address": "gtmadmin@yourekai.com",
-                  "name": "gt-admin",
-                },
-              },
-            ],
-            "cc": [
-              {
-                "email_address": {
-                  "address": "gaurav@yourekai.com",
-                  "name": "Gaurav",
-                },
-              },
-            ],
-            "subject": "lead from website",
-            "htmlbody": `<div><b><h3>User details are:</h3> 
-                      <h4>Email: ${data.email}</h4>
-                      <h4>Name: ${data.name}</h4>
-                      <h4>Heard About: ${data.hearAbout}</h4>
-                      <h4>Organization Size: ${data.organizationSize}</h4>
-                      <h4>Position: ${data.position}</h4>
-                      <h4>Work Type: ${data.workType}</h4>
-                      </b>
-                    </div>`,
-          })
-          .then((resp) => console.log("success"))
-          .catch((error) => console.log("error"));
-
-        return true;
-      } catch (error) {
-        console.error("Error sending mail:", error);
-      }
+      const responsemail = await axios.post(
+        "https://mailserver-production-035a.up.railway.app/sendMail",
+        {
+          name: data.name,
+          email: data.email,
+          hearAbout: data.hearAbout.value,
+          workType: data.workType.value,
+          position: data.position.value,
+          organizationSize: data.organizationSize.value,
+        }
+      );
+      trackEvent("lead_final");
+      return true;
     } catch (error) {
       console.error("Error adding document:", error);
       return error;
@@ -364,8 +339,8 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                             placeholder="Select"
                             className="basic-single border rounded w-full text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem"
                             value={data.hearAbout}
-                            onChange={(value) =>
-                              setData({ ...data, hearAbout: value })
+                            onChange={(option) =>
+                              setData({ ...data, hearAbout: option })
                             }
                             options={hearAbout}
                           />
@@ -406,8 +381,8 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                           placeholder="Select"
                           className="basic-single border rounded w-full text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem"
                           value={data.workType}
-                          onChange={(value) =>
-                            setData({ ...data, workType: value })
+                          onChange={(option) =>
+                            setData({ ...data, workType: option })
                           }
                           options={workType}
                         />
@@ -443,8 +418,8 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                           placeholder="Select"
                           className="basic-single border rounded w-full text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem"
                           value={data.organizationSize}
-                          onChange={(value) =>
-                            setData({ ...data, organizationSize: value })
+                          onChange={(option) =>
+                            setData({ ...data, organizationSize: option })
                           }
                           options={size}
                         />
@@ -480,8 +455,8 @@ const Contactus = ({ isvisible, setIsVisible }) => {
                           placeholder="Select"
                           className="basic-single border rounded w-full text-gray-700 focus:shadow-outline active:shadow-lg active:border-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-300 outlinem"
                           value={data.position}
-                          onChange={(value) =>
-                            setData({ ...data, position: value })
+                          onChange={(option) =>
+                            setData({ ...data, position: option })
                           }
                           options={position}
                         />

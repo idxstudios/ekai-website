@@ -1,3 +1,4 @@
+"use client";
 import Footer from "@/components/Footer/footer";
 import Pricing from "@/components/pricing/Pricing";
 import PromoBanner from "@/components/promo/PromoBanner";
@@ -9,9 +10,14 @@ import Section5 from "@/components/section5/Section5";
 import Section6 from "@/components/section6/Section6";
 import Section7 from "@/components/section7/Section7";
 import TechnologyPartner from "@/components/technologypartner/TechnologyPartner";
+import { trackEvent } from "@/mixpanel";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(()=>{
+    trackEvent("website_open");
+  }, []);
   return (
     <div>
       <Section1 />
