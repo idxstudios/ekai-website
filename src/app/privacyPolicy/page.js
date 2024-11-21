@@ -274,24 +274,30 @@ export default function PrivacyPolicy() {
       </p>
 
       <h3>1. Request to Delete Your Data</h3>
-      <p>
-        If you would like to delete your data, you can submit a request by:
-      </p>
+      <p>If you would like to delete your data, you can submit a request by:</p>
       <ul>
-        <li><strong>Emailing us:</strong> Send an email to <a href="mailto:gtmadmin@yourekai.com">gtmadmin@yourekai.com</a> with the subject line "Data Deletion Request."</li>
-        <li><strong>Using the in-app request feature:</strong> Navigate to "Account Settings" &gt; "Privacy Settings" and submit a deletion request.</li>
+        <li>
+          <strong>Emailing us:</strong> Send an email to{' '}
+          <a href="mailto:gtmadmin@yourekai.com">gtmadmin@yourekai.com</a> with the subject line &quot;Data Deletion Request.&quot;
+        </li>
+        <li>
+          <strong>Using the in-app request feature:</strong> Navigate to &quot;Account Settings&quot; &gt; &quot;Privacy Settings&quot; and submit a deletion request.
+        </li>
       </ul>
       <p>
         Once we receive your request, we will verify your identity and process the deletion of your data within 30 days, unless a longer period is required by applicable law.
       </p>
 
       <h3>2. Request to Access Your Data</h3>
-      <p>
-        You may request a copy of the data we have stored about you by:
-      </p>
+      <p>You may request a copy of the data we have stored about you by:</p>
       <ul>
-        <li>Sending an email to <a href="mailto:gtmadmin@yourekai.com">gtmadmin@yourekai.com</a> with the subject line "Data Access Request."</li>
-        <li>Using the "Privacy Settings" section within the app to generate a data access report.</li>
+        <li>
+          Sending an email to{' '}
+          <a href="mailto:gtmadmin@yourekai.com">gtmadmin@yourekai.com</a> with the subject line &quot;Data Access Request.&quot;
+        </li>
+        <li>
+          Using the &quot;Privacy Settings&quot; section within the app to generate a data access report.
+        </li>
       </ul>
       <p>
         We will provide a copy of your data in a structured, commonly used, and machine-readable format.
@@ -302,7 +308,7 @@ export default function PrivacyPolicy() {
         If you would like your data transferred to another service, please:
       </p>
       <ul>
-        <li>Email us at <a href="mailto:gtmadmin@yourekai.com">gtmadmin@yourekai.com</a> with the subject line "Data Transfer Request."</li>
+        <li>Email us at <a href="mailto:gtmadmin@yourekai.com">gtmadmin@yourekai.com</a> with the subject line &quot;Data Transfer Request.&quot;</li>
         <li>Specify the destination service and format preferences, and we will assist with the secure transfer of your data.</li>
       </ul>
       <h1>Disclosure of Your Personal Data</h1>
