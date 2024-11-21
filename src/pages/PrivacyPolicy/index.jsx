@@ -275,26 +275,43 @@ export default function PrivacyPolicy() {
         a country unless there are adequate controls in place including the
         security of Your data and other personal information.
       </p>
-      <h1>Delete Your Personal Data</h1>
+      <h1>Data Deletion, Access, and Transfer Requests</h1>
       <p>
-        You have the right to delete or request that We assist in deleting the
-        Personal Data that We have collected about You.
+        We are committed to respecting your privacy and providing transparency regarding your personal data. As part of our compliance with applicable privacy laws, we offer the following mechanisms for managing your data:
       </p>
+
+      <h3>1. Request to Delete Your Data</h3>
       <p>
-        Our Service may give You the ability to delete certain information about
-        You from within the Service.
+        If you would like to delete your data, you can submit a request by:
       </p>
+      <ul>
+        <li><strong>Emailing us:</strong> Send an email to <a href="mailto:gtmadmin@yourekai.com">gtmadmin@yourekai.com</a> with the subject line "Data Deletion Request."</li>
+        <li><strong>Using the in-app request feature:</strong> Navigate to "Account Settings" &gt; "Privacy Settings" and submit a deletion request.</li>
+      </ul>
       <p>
-        You may update, amend, or delete Your information at any time by signing
-        in to Your Account, if you have one, and visiting the account settings
-        section that allows you to manage Your personal information. You may
-        also contact Us to request access to, correct, or delete any personal
-        information that You have provided to Us.
+        Once we receive your request, we will verify your identity and process the deletion of your data within 30 days, unless a longer period is required by applicable law.
       </p>
+
+      <h3>2. Request to Access Your Data</h3>
       <p>
-        Please note, however, that We may need to retain certain information
-        when we have a legal obligation or lawful basis to do so.
+        You may request a copy of the data we have stored about you by:
       </p>
+      <ul>
+        <li>Sending an email to <a href="mailto:gtmadmin@yourekai.com">gtmadmin@yourekai.com</a> with the subject line "Data Access Request."</li>
+        <li>Using the "Privacy Settings" section within the app to generate a data access report.</li>
+      </ul>
+      <p>
+        We will provide a copy of your data in a structured, commonly used, and machine-readable format.
+      </p>
+
+      <h3>3. Request to Transfer Your Data</h3>
+      <p>
+        If you would like your data transferred to another service, please:
+      </p>
+      <ul>
+        <li>Email us at <a href="mailto:gtmadmin@yourekai.com">gtmadmin@yourekai.com</a> with the subject line "Data Transfer Request."</li>
+        <li>Specify the destination service and format preferences, and we will assist with the secure transfer of your data.</li>
+      </ul>
       <h1>Disclosure of Your Personal Data</h1>
       <h2>Business Transactions</h2>
       <p>
